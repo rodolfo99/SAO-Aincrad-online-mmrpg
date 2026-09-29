@@ -1,0 +1,14 @@
+{
+  "browser": "153.0.8010.0",
+  "checks": [
+    "Draconiano tanque: armadura de placas, escudo y rasgos visibles",
+    "Cambio de clase y elección de báculo de una mano con vara secundaria",
+    "Herrería: receta, pago, mejora y equipo artesanal en secundaria",
+    "Tienda: compra de pino y venta de objeto desequipado",
+    "Minería: acercamiento físico, cobre, experiencia y agotamiento compartido",
+    "Rama de fuego e invocación desbloqueadas mediante talentos",
+    "Patio: daño en área, invocación, DPS y reinicio sin EXP ni sanción",
+    "Recarga conserva especialidad, talentos y experiencia de minería"
+  ],
+  "errors": []
+}

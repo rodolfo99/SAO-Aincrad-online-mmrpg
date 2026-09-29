@@ -1,0 +1,1835 @@
+{
+  "enabled": true,
+  "maxInventory": 100,
+  "maxProfessionLevel": 50,
+  "xpPerLevel": 100,
+  "upgradeExperience": 10,
+  "stationRange": 4,
+  "initialMaterials": {
+    "iron": 6,
+    "wood": 4,
+    "fiber": 8,
+    "leather": 4,
+    "crystal": 2
+  },
+  "potionPrice": 12,
+  "saleMultiplier": 0.3,
+  "professions": [
+    {
+      "id": "blacksmith",
+      "name": "Herrería",
+      "stationRole": "smith",
+      "description": "Forja armas, escudos y armaduras. Da forma a báculos, varas y focos mágicos."
+    },
+    {
+      "id": "tailor",
+      "name": "Sastrería",
+      "stationRole": "tailor",
+      "description": "Cose ropa, túnicas y conjuntos para magos y sanadores."
+    }
+  ],
+  "materials": [
+    {
+      "id": "iron",
+      "name": "Hierro",
+      "price": 6
+    },
+    {
+      "id": "wood",
+      "name": "Madera",
+      "price": 3
+    },
+    {
+      "id": "fiber",
+      "name": "Fibra",
+      "price": 2
+    },
+    {
+      "id": "leather",
+      "name": "Cuero",
+      "price": 4
+    },
+    {
+      "id": "crystal",
+      "name": "Cristal",
+      "price": 12
+    }
+  ],
+  "monsterDrops": {
+    "boar": {
+      "fiber": 2,
+      "leather": 1
+    },
+    "guardian": {
+      "iron": 4,
+      "crystal": 2,
+      "wood": 3
+    }
+  },
+  "recipes": [
+    {
+      "id": "craft-warrior-guardia-1-mainHand",
+      "name": "Espada del comienzo · Guardia de acero · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-guardia-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "iron": 3,
+        "wood": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-guardia-1-offHand",
+      "name": "Escudo del comienzo · Guardia de acero · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-guardia-1",
+      "slot": "offHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "iron": 3,
+        "wood": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "defense": 1
+      },
+      "upgradeAttributes": {
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-duelista-1-mainHand",
+      "name": "Espada del comienzo · Filos gemelos · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-duelista-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "iron": 3,
+        "wood": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-duelista-1-offHand",
+      "name": "Daga del comienzo · Filos gemelos · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-duelista-1",
+      "slot": "offHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "iron": 3,
+        "wood": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-vanguardia-1-mainHand",
+      "name": "Mandoble del comienzo · Vanguardia · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-vanguardia-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "iron": 3,
+        "wood": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-guardia-5-mainHand",
+      "name": "Espada · Nv. 5 · Guardia de acero · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-guardia-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "iron": 6,
+        "wood": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-guardia-5-offHand",
+      "name": "Escudo · Nv. 5 · Guardia de acero · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-guardia-5",
+      "slot": "offHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "iron": 6,
+        "wood": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "defense": 1
+      },
+      "upgradeAttributes": {
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-duelista-5-mainHand",
+      "name": "Espada · Nv. 5 · Filos gemelos · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-duelista-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "iron": 6,
+        "wood": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-duelista-5-offHand",
+      "name": "Daga · Nv. 5 · Filos gemelos · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-duelista-5",
+      "slot": "offHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "iron": 6,
+        "wood": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-vanguardia-5-mainHand",
+      "name": "Mandoble · Nv. 5 · Vanguardia · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-vanguardia-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "iron": 6,
+        "wood": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-guardia-10-mainHand",
+      "name": "Espada · Nv. 10 · Guardia de acero · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-guardia-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "iron": 9,
+        "wood": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-guardia-10-offHand",
+      "name": "Escudo · Nv. 10 · Guardia de acero · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-guardia-10",
+      "slot": "offHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "iron": 9,
+        "wood": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "defense": 1
+      },
+      "upgradeAttributes": {
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-duelista-10-mainHand",
+      "name": "Espada · Nv. 10 · Filos gemelos · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-duelista-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "iron": 9,
+        "wood": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-duelista-10-offHand",
+      "name": "Daga · Nv. 10 · Filos gemelos · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-duelista-10",
+      "slot": "offHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "iron": 9,
+        "wood": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-warrior-vanguardia-10-mainHand",
+      "name": "Mandoble · Nv. 10 · Vanguardia · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "warrior-vanguardia-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "iron": 9,
+        "wood": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-astral-1-mainHand",
+      "name": "Báculo del comienzo · Báculo astral · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-astral-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-canalizador-1-mainHand",
+      "name": "Báculo corto del comienzo · Canalizador dual · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-canalizador-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-canalizador-1-offHand",
+      "name": "Vara arcana del comienzo · Canalizador dual · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-canalizador-1",
+      "slot": "offHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-orbe-1-mainHand",
+      "name": "Vara de cristal del comienzo · Círculo de enfoque · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-orbe-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-orbe-1-offHand",
+      "name": "Orbe del comienzo · Círculo de enfoque · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-orbe-1",
+      "slot": "offHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-astral-5-mainHand",
+      "name": "Báculo · Nv. 5 · Báculo astral · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-astral-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-canalizador-5-mainHand",
+      "name": "Báculo corto · Nv. 5 · Canalizador dual · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-canalizador-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-canalizador-5-offHand",
+      "name": "Vara arcana · Nv. 5 · Canalizador dual · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-canalizador-5",
+      "slot": "offHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-orbe-5-mainHand",
+      "name": "Vara de cristal · Nv. 5 · Círculo de enfoque · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-orbe-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-orbe-5-offHand",
+      "name": "Orbe · Nv. 5 · Círculo de enfoque · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-orbe-5",
+      "slot": "offHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-astral-10-mainHand",
+      "name": "Báculo · Nv. 10 · Báculo astral · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-astral-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-canalizador-10-mainHand",
+      "name": "Báculo corto · Nv. 10 · Canalizador dual · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-canalizador-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-canalizador-10-offHand",
+      "name": "Vara arcana · Nv. 10 · Canalizador dual · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-canalizador-10",
+      "slot": "offHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-orbe-10-mainHand",
+      "name": "Vara de cristal · Nv. 10 · Círculo de enfoque · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-orbe-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-mage-orbe-10-offHand",
+      "name": "Orbe · Nv. 10 · Círculo de enfoque · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "mage-orbe-10",
+      "slot": "offHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "attack": 1
+      },
+      "upgradeAttributes": {
+        "attack": 1
+      }
+    },
+    {
+      "id": "craft-healer-alba-1-mainHand",
+      "name": "Vara de luz del comienzo · Varas del alba · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-alba-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-alba-1-offHand",
+      "name": "Vara de amparo del comienzo · Varas del alba · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-alba-1",
+      "slot": "offHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-santuario-1-mainHand",
+      "name": "Vara bendita del comienzo · Custodio del santuario · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-santuario-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-santuario-1-offHand",
+      "name": "Escudo consagrado del comienzo · Custodio del santuario · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-santuario-1",
+      "slot": "offHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "iron": 3,
+        "wood": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "defense": 1
+      },
+      "upgradeAttributes": {
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-healer-liturgia-1-mainHand",
+      "name": "Vara del canto del comienzo · Liturgia de luz · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-liturgia-1",
+      "slot": "mainHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-liturgia-1-offHand",
+      "name": "Libro de plegarias del comienzo · Liturgia de luz · Nv. 1",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-liturgia-1",
+      "slot": "offHand",
+      "minProfessionLevel": 1,
+      "colCost": 10,
+      "materials": {
+        "wood": 2,
+        "crystal": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 15,
+      "upgradeMaterials": {
+        "iron": 1,
+        "crystal": 1
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-alba-5-mainHand",
+      "name": "Vara de luz · Nv. 5 · Varas del alba · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-alba-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-alba-5-offHand",
+      "name": "Vara de amparo · Nv. 5 · Varas del alba · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-alba-5",
+      "slot": "offHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-santuario-5-mainHand",
+      "name": "Vara bendita · Nv. 5 · Custodio del santuario · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-santuario-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-santuario-5-offHand",
+      "name": "Escudo consagrado · Nv. 5 · Custodio del santuario · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-santuario-5",
+      "slot": "offHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "iron": 6,
+        "wood": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "defense": 1
+      },
+      "upgradeAttributes": {
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-healer-liturgia-5-mainHand",
+      "name": "Vara del canto · Nv. 5 · Liturgia de luz · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-liturgia-5",
+      "slot": "mainHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-liturgia-5-offHand",
+      "name": "Libro de plegarias · Nv. 5 · Liturgia de luz · Nv. 5",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-liturgia-5",
+      "slot": "offHand",
+      "minProfessionLevel": 2,
+      "colCost": 20,
+      "materials": {
+        "wood": 4,
+        "crystal": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 30,
+      "upgradeMaterials": {
+        "iron": 2,
+        "crystal": 2
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-alba-10-mainHand",
+      "name": "Vara de luz · Nv. 10 · Varas del alba · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-alba-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-alba-10-offHand",
+      "name": "Vara de amparo · Nv. 10 · Varas del alba · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-alba-10",
+      "slot": "offHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-santuario-10-mainHand",
+      "name": "Vara bendita · Nv. 10 · Custodio del santuario · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-santuario-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-santuario-10-offHand",
+      "name": "Escudo consagrado · Nv. 10 · Custodio del santuario · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-santuario-10",
+      "slot": "offHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "iron": 9,
+        "wood": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "defense": 1
+      },
+      "upgradeAttributes": {
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-healer-liturgia-10-mainHand",
+      "name": "Vara del canto · Nv. 10 · Liturgia de luz · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-liturgia-10",
+      "slot": "mainHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-liturgia-10-offHand",
+      "name": "Libro de plegarias · Nv. 10 · Liturgia de luz · Nv. 10",
+      "professionId": "blacksmith",
+      "kind": "weapon",
+      "targetId": "healer-liturgia-10",
+      "slot": "offHand",
+      "minProfessionLevel": 3,
+      "colCost": 30,
+      "materials": {
+        "wood": 6,
+        "crystal": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 45,
+      "upgradeMaterials": {
+        "iron": 3,
+        "crystal": 3
+      },
+      "bonusAttributes": {
+        "healing": 1
+      },
+      "upgradeAttributes": {
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-warrior-male-1",
+      "name": "Vestiduras del aprendiz · chico",
+      "professionId": "blacksmith",
+      "kind": "armor",
+      "targetId": "warrior-male-1",
+      "slot": "armor",
+      "minProfessionLevel": 1,
+      "colCost": 8,
+      "materials": {
+        "iron": 3,
+        "leather": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 12,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-male-5",
+      "name": "Cota del caminante · chico",
+      "professionId": "blacksmith",
+      "kind": "armor",
+      "targetId": "warrior-male-5",
+      "slot": "armor",
+      "minProfessionLevel": 2,
+      "colCost": 16,
+      "materials": {
+        "iron": 6,
+        "leather": 4
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 24,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-male-10",
+      "name": "Placas del horizonte · chico",
+      "professionId": "blacksmith",
+      "kind": "armor",
+      "targetId": "warrior-male-10",
+      "slot": "armor",
+      "minProfessionLevel": 3,
+      "colCost": 24,
+      "materials": {
+        "iron": 9,
+        "leather": 6
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 36,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-female-1",
+      "name": "Vestiduras del aprendiz · chica",
+      "professionId": "blacksmith",
+      "kind": "armor",
+      "targetId": "warrior-female-1",
+      "slot": "armor",
+      "minProfessionLevel": 1,
+      "colCost": 8,
+      "materials": {
+        "iron": 3,
+        "leather": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 12,
+      "upgradeMaterials": {
+        "iron": 2
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-female-5",
+      "name": "Cota del caminante · chica",
+      "professionId": "blacksmith",
+      "kind": "armor",
+      "targetId": "warrior-female-5",
+      "slot": "armor",
+      "minProfessionLevel": 2,
+      "colCost": 16,
+      "materials": {
+        "iron": 6,
+        "leather": 4
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 24,
+      "upgradeMaterials": {
+        "iron": 4
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-warrior-female-10",
+      "name": "Placas del horizonte · chica",
+      "professionId": "blacksmith",
+      "kind": "armor",
+      "targetId": "warrior-female-10",
+      "slot": "armor",
+      "minProfessionLevel": 3,
+      "colCost": 24,
+      "materials": {
+        "iron": 9,
+        "leather": 6
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 36,
+      "upgradeMaterials": {
+        "iron": 6
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "defense": 1
+      }
+    },
+    {
+      "id": "craft-mage-male-1",
+      "name": "Túnica del iniciado · chico",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "mage-male-1",
+      "slot": "armor",
+      "minProfessionLevel": 1,
+      "colCost": 8,
+      "materials": {
+        "fiber": 4,
+        "leather": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 12,
+      "upgradeMaterials": {
+        "fiber": 3
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-mage-male-5",
+      "name": "Manto de runas · chico",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "mage-male-5",
+      "slot": "armor",
+      "minProfessionLevel": 2,
+      "colCost": 16,
+      "materials": {
+        "fiber": 8,
+        "leather": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 24,
+      "upgradeMaterials": {
+        "fiber": 6
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-mage-male-10",
+      "name": "Vestiduras del firmamento · chico",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "mage-male-10",
+      "slot": "armor",
+      "minProfessionLevel": 3,
+      "colCost": 24,
+      "materials": {
+        "fiber": 12,
+        "leather": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 36,
+      "upgradeMaterials": {
+        "fiber": 9
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-mage-female-1",
+      "name": "Túnica del iniciado · chica",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "mage-female-1",
+      "slot": "armor",
+      "minProfessionLevel": 1,
+      "colCost": 8,
+      "materials": {
+        "fiber": 4,
+        "leather": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 12,
+      "upgradeMaterials": {
+        "fiber": 3
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-mage-female-5",
+      "name": "Manto de runas · chica",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "mage-female-5",
+      "slot": "armor",
+      "minProfessionLevel": 2,
+      "colCost": 16,
+      "materials": {
+        "fiber": 8,
+        "leather": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 24,
+      "upgradeMaterials": {
+        "fiber": 6
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-mage-female-10",
+      "name": "Vestiduras del firmamento · chica",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "mage-female-10",
+      "slot": "armor",
+      "minProfessionLevel": 3,
+      "colCost": 24,
+      "materials": {
+        "fiber": 12,
+        "leather": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 36,
+      "upgradeMaterials": {
+        "fiber": 9
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-male-1",
+      "name": "Hábito del alba · chico",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "healer-male-1",
+      "slot": "armor",
+      "minProfessionLevel": 1,
+      "colCost": 8,
+      "materials": {
+        "fiber": 4,
+        "leather": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 12,
+      "upgradeMaterials": {
+        "fiber": 3
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-male-5",
+      "name": "Manto del amparo · chico",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "healer-male-5",
+      "slot": "armor",
+      "minProfessionLevel": 2,
+      "colCost": 16,
+      "materials": {
+        "fiber": 8,
+        "leather": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 24,
+      "upgradeMaterials": {
+        "fiber": 6
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-male-10",
+      "name": "Vestiduras del santuario · chico",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "healer-male-10",
+      "slot": "armor",
+      "minProfessionLevel": 3,
+      "colCost": 24,
+      "materials": {
+        "fiber": 12,
+        "leather": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 36,
+      "upgradeMaterials": {
+        "fiber": 9
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-female-1",
+      "name": "Hábito del alba · chica",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "healer-female-1",
+      "slot": "armor",
+      "minProfessionLevel": 1,
+      "colCost": 8,
+      "materials": {
+        "fiber": 4,
+        "leather": 1
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 12,
+      "upgradeMaterials": {
+        "fiber": 3
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-female-5",
+      "name": "Manto del amparo · chica",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "healer-female-5",
+      "slot": "armor",
+      "minProfessionLevel": 2,
+      "colCost": 16,
+      "materials": {
+        "fiber": 8,
+        "leather": 2
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 24,
+      "upgradeMaterials": {
+        "fiber": 6
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    },
+    {
+      "id": "craft-healer-female-10",
+      "name": "Vestiduras del santuario · chica",
+      "professionId": "tailor",
+      "kind": "armor",
+      "targetId": "healer-female-10",
+      "slot": "armor",
+      "minProfessionLevel": 3,
+      "colCost": 24,
+      "materials": {
+        "fiber": 12,
+        "leather": 3
+      },
+      "experience": 25,
+      "maxUpgrade": 5,
+      "upgradeColCost": 36,
+      "upgradeMaterials": {
+        "fiber": 9
+      },
+      "bonusAttributes": {
+        "health": 5
+      },
+      "upgradeAttributes": {
+        "health": 5,
+        "healing": 1
+      }
+    }
+  ]
+}

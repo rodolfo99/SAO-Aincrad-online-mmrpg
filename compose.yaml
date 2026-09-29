@@ -1,0 +1,60 @@
+name: aincrad-seed
+services:
+  game:
+    build: .
+    ports:
+      - "${HOST_BIND:-127.0.0.1}:${WEB_PORT:-8080}:8080"
+    environment:
+      ROOT_PASSWORD: ${ROOT_PASSWORD:-}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:8080,http://127.0.0.1:8080}
+      PLAYER_REGISTRATION_ENABLED: ${PLAYER_REGISTRATION_ENABLED:-true}
+      PLAYER_SESSION_HOURS: ${PLAYER_SESSION_HOURS:-12}
+      PLAYER_COOKIE_SECURE: ${PLAYER_COOKIE_SECURE:-false}
+      MAIL_ENABLED: ${MAIL_ENABLED:-false}
+      MAIL_HOST: mail
+      MAIL_PORT: 25
+      MAIL_FROM: ${MAIL_FROM:-noreply@[127.0.0.1]}
+      APP_PUBLIC_URL: ${APP_PUBLIC_URL:-http://localhost:8080}
+      PASSWORD_RESET_MINUTES: ${PASSWORD_RESET_MINUTES:-30}
+      JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=70 -Dfile.encoding=UTF-8"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - game-data:/app/data
+      - game-world:/app/world
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 1536m
+    networks: [default, mail-private]
+  mail:
+    build: ./mail
+    profiles: [mail]
+    environment:
+      MAIL_PUBLIC_IP: ${MAIL_PUBLIC_IP:-}
+      MAIL_NETWORK_SUBNET: ${MAIL_NETWORK_SUBNET:-172.30.42.0/28}
+    volumes:
+      - mail-queue:/var/spool/postfix
+    networks: [mail-private, mail-outbound]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 256m
+  ollama:
+    image: ollama/ollama:0.17.7
+    profiles: [ai]
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+    # Internal to the Compose network. In World Studio use http://ollama:11434.
+    # No model is downloaded automatically; see docs/OLLAMA.md.
+volumes:
+  game-data:
+  game-world:
+  ollama-data:
+  mail-queue:
+networks:
+  mail-private:
+    internal: true
+    ipam:
+      config:
+        - subnet: ${MAIL_NETWORK_SUBNET:-172.30.42.0/28}
+  mail-outbound:

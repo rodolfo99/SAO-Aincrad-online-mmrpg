@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-29T16:57:04.074Z",
+  "browser": "145.0.7632.6",
+  "checks": [
+    "Los dos pisos tienen rutas desde la aparición hasta portales, NPC, cinco zonas y 22 recursos; el sendero central está libre",
+    "Root muestra 184/168 m de diámetro, valida y aplica el mundo ampliado; los portales conservan sus coordenadas",
+    "Movimiento real hasta Z=-52, fuera del piso antiguo; el servidor sigue rechazando destinos fuera del radio nuevo",
+    "Portal norte en Z=-76 y llegada al bosque en Z=58, con personaje conservado y minimapa completo en ambos pisos",
+    "El portal de regreso en Z=63 devuelve al refugio con la misma identidad"
+  ],
+  "navigation": [
+    {
+      "floor": 1,
+      "radius": 92,
+      "area": 26590,
+      "generatedTrees": 255,
+      "reachableGridCells": 23587,
+      "zones": 3,
+      "resources": 12
+    },
+    {
+      "floor": 2,
+      "radius": 84,
+      "area": 22167,
+      "generatedTrees": 225,
+      "reachableGridCells": 19666,
+      "zones": 2,
+      "resources": 10
+    }
+  ],
+  "errors": [],
+  "testWorldOverride": "Sólo requiresBoss=false en el portal 1; posiciones, obstáculos y criaturas originales conservados."
+}

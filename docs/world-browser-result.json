@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-29T04:41:06.535Z",
+  "browser": "153.0.8010.0",
+  "checks": [
+    "Angular, la elfa, los NPC, los talleres, movimiento WASD y conversación con Lyra funcionan juntos",
+    "Las tres calidades se aplican y persisten sin desconectar ni sustituir el personaje",
+    "Selección, daño y curación de muñecos se validan en el servidor con los nuevos modelos y efectos",
+    "Root previsualiza el Centinela nuevo, cambia su color y aplica el mundo; portal de prueba acercado al refugio",
+    "El portal carga el bosque de cristal y conserva identidad, progreso y ajuste gráfico"
+  ],
+  "events": [
+    {
+      "type": "hit",
+      "target": "dummy-straw",
+      "damage": 12
+    },
+    {
+      "type": "heal",
+      "target": "dummy-ally",
+      "amount": 36
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-29T03:52:20.824Z",
+  "browser": "153.0.8010.0",
+  "checks": [
+    "Angular crea una elfa sanadora y permite primer plano, cuerpo entero y giro con ratón",
+    "Modelo en el mundo, movimiento y conversación con Lyra funcionan con el servidor real",
+    "Autoedición de raza y género se propaga al personaje conectado",
+    "Root modifica raza, género, clase, especialidad y nivel del perfil guardado",
+    "Vista root representa el conjunto seleccionado, incluidos colores y casco antes de guardarlo",
+    "Recargar conserva la identidad, el nivel y el equipo compatible"
+  ],
+  "errors": []
+}

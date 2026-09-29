@@ -1,0 +1,9 @@
+data/
+.env
+client/node_modules/
+client/.angular/
+client/dist/
+server/target/
+.tools/
+logs/
+*.partial

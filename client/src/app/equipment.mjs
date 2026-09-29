@@ -1,0 +1,4 @@
+export const permits=(ids,id)=>!ids?.length||ids.includes(id);
+export const specialty=(catalog,appearance)=>catalog?.specializations?.find(s=>s.classId===appearance?.classId&&s.id===appearance?.specializationId)||catalog?.specializations?.find(s=>s.classId===appearance?.classId);
+export const weaponFits=(catalog,set,appearance)=>{const s=specialty(catalog,appearance);return set.classId===appearance?.classId&&(!s||permits(set.specializationIds,s.id)&&s.weaponKinds.includes(set.mainHand.kind)&&(!set.offHand||s.weaponKinds.includes(set.offHand.kind)));};
+export const armorFits=(catalog,set,appearance)=>{const s=specialty(catalog,appearance);return set.classId===appearance?.classId&&set.gender===appearance?.gender&&(!s||permits(set.specializationIds,s.id)&&s.armorStyles.includes(set.style));};

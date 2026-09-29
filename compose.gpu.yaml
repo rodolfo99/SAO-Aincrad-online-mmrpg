@@ -1,0 +1,10 @@
+# Optional NVIDIA overlay; requires NVIDIA Container Toolkit configured on the host.
+services:
+  ollama:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

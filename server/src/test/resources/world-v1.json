@@ -1,0 +1,970 @@
+{
+  "version": 1,
+  "seed": 20260928,
+  "name": "Aincrad · Ecos del primer piso",
+  "floors": [
+    {
+      "id": 1,
+      "name": "Praderas del comienzo",
+      "subtitle": "El primer paso hacia el cielo",
+      "biome": "meadow",
+      "radius": 46,
+      "treeCount": 85,
+      "spawn": {
+        "x": 0,
+        "z": 16
+      },
+      "portal": {
+        "x": 0,
+        "z": -33,
+        "to": 2,
+        "requiresBoss": true
+      },
+      "npcs": [
+        {
+          "id": "lyra",
+          "name": "Lyra",
+          "role": "guide",
+          "x": 3,
+          "z": 13
+        },
+        {
+          "id": "brann",
+          "name": "Brann",
+          "role": "smith",
+          "x": -5,
+          "z": 14
+        }
+      ],
+      "monsters": [
+        {
+          "id": "boar-1",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": 9,
+          "z": 8
+        },
+        {
+          "id": "boar-2",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": -10,
+          "z": 5
+        },
+        {
+          "id": "boar-3",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": 9,
+          "z": -3
+        },
+        {
+          "id": "boar-4",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": -10,
+          "z": -8
+        },
+        {
+          "id": "guardian-1",
+          "kind": "guardian",
+          "name": "Centinela del umbral",
+          "x": 0,
+          "z": -23
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bosque de cristal",
+      "subtitle": "Más allá de la primera puerta",
+      "biome": "crystal",
+      "radius": 42,
+      "treeCount": 75,
+      "spawn": {
+        "x": 0,
+        "z": 15
+      },
+      "portal": {
+        "x": 0,
+        "z": 20,
+        "to": 1,
+        "requiresBoss": false
+      },
+      "npcs": [
+        {
+          "id": "lyra-2",
+          "name": "Eco de Lyra",
+          "role": "guide",
+          "x": 4,
+          "z": 14
+        }
+      ],
+      "monsters": [
+        {
+          "id": "boar-5",
+          "kind": "boar",
+          "name": "Jabalí de cristal",
+          "x": 9,
+          "z": 3
+        },
+        {
+          "id": "boar-6",
+          "kind": "boar",
+          "name": "Jabalí de cristal",
+          "x": -9,
+          "z": -4
+        },
+        {
+          "id": "guardian-2",
+          "kind": "guardian",
+          "name": "Guardián de zafiro",
+          "x": 0,
+          "z": -22
+        }
+      ]
+    }
+  ],
+  "characterOptions": {
+    "genders": [
+      {
+        "id": "male",
+        "name": "Chico"
+      },
+      {
+        "id": "female",
+        "name": "Chica"
+      }
+    ],
+    "faces": [
+      {
+        "id": "calm",
+        "name": "Sereno"
+      },
+      {
+        "id": "bold",
+        "name": "Decidido"
+      },
+      {
+        "id": "kind",
+        "name": "Alegre"
+      }
+    ],
+    "classes": [
+      {
+        "id": "warrior",
+        "name": "Guerrero",
+        "description": "Espada y armadura. Elige la senda de guardia o furia al ganar niveles.",
+        "hp": 100,
+        "damage": 19,
+        "speed": 5.5,
+        "attackRange": 3.1,
+        "ability": {
+          "name": "Corte celeste",
+          "kind": "strike",
+          "range": 4.4,
+          "power": 2,
+          "cooldown": 4
+        }
+      },
+      {
+        "id": "mage",
+        "name": "Mago",
+        "description": "Bastón y ataques arcanos a distancia. Desarrolla poder o dominio de la magia.",
+        "hp": 85,
+        "damage": 17,
+        "speed": 5.6,
+        "attackRange": 10,
+        "ability": {
+          "name": "Descarga arcana",
+          "kind": "arcane",
+          "range": 13,
+          "power": 2.2,
+          "cooldown": 5
+        }
+      },
+      {
+        "id": "healer",
+        "name": "Sanador",
+        "description": "Luz protectora. Cura a tus aliados cercanos y elige amparo o restauración.",
+        "hp": 110,
+        "damage": 12,
+        "speed": 5.2,
+        "attackRange": 8,
+        "ability": {
+          "name": "Luz compartida",
+          "kind": "heal",
+          "range": 8,
+          "power": 30,
+          "cooldown": 6
+        }
+      }
+    ],
+    "races": [
+      {
+        "id": "human",
+        "name": "Humano",
+        "description": "Aventureros versátiles del mundo de Aincrad.",
+        "scale": 1.0,
+        "ears": "round"
+      },
+      {
+        "id": "elf",
+        "name": "Elfo",
+        "description": "Orejas puntiagudas y silueta esbelta.",
+        "scale": 1.04,
+        "ears": "pointed"
+      },
+      {
+        "id": "dwarf",
+        "name": "Enano",
+        "description": "Complexión robusta y estatura compacta.",
+        "scale": 0.82,
+        "ears": "round"
+      },
+      {
+        "id": "caitsith",
+        "name": "Cait Sith",
+        "description": "Orejas felinas y espíritu curioso.",
+        "scale": 0.97,
+        "ears": "cat"
+      }
+    ],
+    "hairColors": [
+      "#342f32",
+      "#74503a",
+      "#c39757",
+      "#dddac9",
+      "#9d493c",
+      "#427d83"
+    ],
+    "skinColors": [
+      "#f0d0ad",
+      "#dfb18b",
+      "#bb835d",
+      "#855637",
+      "#573a2b"
+    ],
+    "equipmentSets": [
+      {
+        "id": "warrior-male-1",
+        "name": "Vestiduras del aprendiz · chico",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        }
+      },
+      {
+        "id": "warrior-male-5",
+        "name": "Cota del caminante · chico",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "mail",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 4,
+          "speed": 0,
+          "critical": 5
+        }
+      },
+      {
+        "id": "warrior-male-10",
+        "name": "Placas del horizonte · chico",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "plate",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 8,
+          "speed": 0,
+          "critical": 12
+        }
+      },
+      {
+        "id": "warrior-female-1",
+        "name": "Vestiduras del aprendiz · chica",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        }
+      },
+      {
+        "id": "warrior-female-5",
+        "name": "Cota del caminante · chica",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "mail",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 4,
+          "speed": 0,
+          "critical": 5
+        }
+      },
+      {
+        "id": "warrior-female-10",
+        "name": "Placas del horizonte · chica",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "plate",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 8,
+          "speed": 0,
+          "critical": 12
+        }
+      },
+      {
+        "id": "mage-male-1",
+        "name": "Túnica del iniciado · chico",
+        "classId": "mage",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        }
+      },
+      {
+        "id": "mage-male-5",
+        "name": "Manto de runas · chico",
+        "classId": "mage",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5
+        }
+      },
+      {
+        "id": "mage-male-10",
+        "name": "Vestiduras del firmamento · chico",
+        "classId": "mage",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12
+        }
+      },
+      {
+        "id": "mage-female-1",
+        "name": "Túnica del iniciado · chica",
+        "classId": "mage",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        }
+      },
+      {
+        "id": "mage-female-5",
+        "name": "Manto de runas · chica",
+        "classId": "mage",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5
+        }
+      },
+      {
+        "id": "mage-female-10",
+        "name": "Vestiduras del firmamento · chica",
+        "classId": "mage",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12
+        }
+      },
+      {
+        "id": "healer-male-1",
+        "name": "Hábito del alba · chico",
+        "classId": "healer",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0,
+          "healing": 0
+        }
+      },
+      {
+        "id": "healer-male-5",
+        "name": "Manto del amparo · chico",
+        "classId": "healer",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5,
+          "healing": 5
+        }
+      },
+      {
+        "id": "healer-male-10",
+        "name": "Vestiduras del santuario · chico",
+        "classId": "healer",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12,
+          "healing": 10
+        }
+      },
+      {
+        "id": "healer-female-1",
+        "name": "Hábito del alba · chica",
+        "classId": "healer",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0,
+          "healing": 0
+        }
+      },
+      {
+        "id": "healer-female-5",
+        "name": "Manto del amparo · chica",
+        "classId": "healer",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5,
+          "healing": 5
+        }
+      },
+      {
+        "id": "healer-female-10",
+        "name": "Vestiduras del santuario · chica",
+        "classId": "healer",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12,
+          "healing": 10
+        }
+      }
+    ],
+    "attributeDefinitions": [
+      {
+        "id": "health",
+        "name": "Vida adicional",
+        "effect": "maxHp",
+        "min": -30,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "id": "attack",
+        "name": "Daño adicional",
+        "effect": "damage",
+        "min": -10,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "id": "defense",
+        "name": "Defensa",
+        "effect": "defense",
+        "min": 0,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "id": "speed",
+        "name": "Velocidad adicional",
+        "effect": "speed",
+        "min": -2,
+        "max": 3,
+        "step": 0.1
+      },
+      {
+        "id": "critical",
+        "name": "Crítico (%)",
+        "effect": "criticalChance",
+        "min": 0,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "id": "healing",
+        "name": "Poder de curación",
+        "effect": "healing",
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "id": "skillPower",
+        "name": "Potencia de habilidad (multiplicador adicional)",
+        "effect": "skillPower",
+        "min": 0,
+        "max": 2,
+        "step": 0.1
+      },
+      {
+        "id": "recovery",
+        "name": "Reducción de enfriamiento (s)",
+        "effect": "cooldownReduction",
+        "min": 0,
+        "max": 5,
+        "step": 0.1
+      }
+    ],
+    "progression": {
+      "xpPerLevel": 100,
+      "maxLevel": 100,
+      "attributePointsPerLevel": 3,
+      "talentPointsPerLevel": 1,
+      "hpPerLevel": 15,
+      "damagePerLevel": 2,
+      "allowRespec": true,
+      "attributes": [
+        {
+          "id": "vitality",
+          "name": "Vitalidad",
+          "description": "Cada punto añade 5 a la vida máxima.",
+          "maxRank": 50,
+          "effects": {
+            "maxHp": 5
+          }
+        },
+        {
+          "id": "power",
+          "name": "Poder",
+          "description": "Cada punto añade 1 al daño base.",
+          "maxRank": 50,
+          "effects": {
+            "damage": 1
+          }
+        },
+        {
+          "id": "agility",
+          "name": "Agilidad",
+          "description": "Cada punto añade 0.04 velocidad y 0.15 % de crítico.",
+          "maxRank": 50,
+          "effects": {
+            "speed": 0.04,
+            "criticalChance": 0.15
+          }
+        },
+        {
+          "id": "spirit",
+          "name": "Espíritu",
+          "description": "Cada punto añade 2 a la curación y 0.05 s de recuperación.",
+          "maxRank": 50,
+          "effects": {
+            "healing": 2,
+            "cooldownReduction": 0.05
+          }
+        }
+      ],
+      "talents": [
+        {
+          "id": "warrior-discipline",
+          "classId": "warrior",
+          "name": "Disciplina",
+          "description": "+2 de daño por rango.",
+          "branch": "Fundamento",
+          "minLevel": 2,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [],
+          "effects": {
+            "damage": 2
+          }
+        },
+        {
+          "id": "warrior-guard",
+          "classId": "warrior",
+          "name": "Baluarte",
+          "description": "+2 de defensa por rango.",
+          "branch": "Guardia",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-discipline"
+          ],
+          "effects": {
+            "defense": 2
+          }
+        },
+        {
+          "id": "warrior-veteran",
+          "classId": "warrior",
+          "name": "Veterano",
+          "description": "+12 de vida máxima por rango.",
+          "branch": "Guardia",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-guard"
+          ],
+          "effects": {
+            "maxHp": 12
+          }
+        },
+        {
+          "id": "warrior-fury",
+          "classId": "warrior",
+          "name": "Furia",
+          "description": "+3 % de crítico por rango.",
+          "branch": "Furia",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-discipline"
+          ],
+          "effects": {
+            "criticalChance": 3
+          }
+        },
+        {
+          "id": "warrior-sky",
+          "classId": "warrior",
+          "name": "Filo del cielo",
+          "description": "+0.2 al multiplicador de habilidad por rango.",
+          "branch": "Furia",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-fury"
+          ],
+          "effects": {
+            "skillPower": 0.2
+          }
+        },
+        {
+          "id": "mage-focus",
+          "classId": "mage",
+          "name": "Concentración",
+          "description": "+2 de daño por rango.",
+          "branch": "Fundamento",
+          "minLevel": 2,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [],
+          "effects": {
+            "damage": 2
+          }
+        },
+        {
+          "id": "mage-flame",
+          "classId": "mage",
+          "name": "Runas ardientes",
+          "description": "+0.2 al multiplicador de descarga por rango.",
+          "branch": "Poder",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-focus"
+          ],
+          "effects": {
+            "skillPower": 0.2
+          }
+        },
+        {
+          "id": "mage-star",
+          "classId": "mage",
+          "name": "Estrella arcana",
+          "description": "+4 % de crítico por rango.",
+          "branch": "Poder",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-flame"
+          ],
+          "effects": {
+            "criticalChance": 4
+          }
+        },
+        {
+          "id": "mage-flow",
+          "classId": "mage",
+          "name": "Flujo mágico",
+          "description": "Reduce 0.3 s el enfriamiento por rango.",
+          "branch": "Dominio",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-focus"
+          ],
+          "effects": {
+            "cooldownReduction": 0.3
+          }
+        },
+        {
+          "id": "mage-ward",
+          "classId": "mage",
+          "name": "Velo arcano",
+          "description": "+8 de vida y +1 defensa por rango.",
+          "branch": "Dominio",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-flow"
+          ],
+          "effects": {
+            "maxHp": 8,
+            "defense": 1
+          }
+        },
+        {
+          "id": "healer-grace",
+          "classId": "healer",
+          "name": "Gracia",
+          "description": "+5 de curación por rango.",
+          "branch": "Fundamento",
+          "minLevel": 2,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [],
+          "effects": {
+            "healing": 5
+          }
+        },
+        {
+          "id": "healer-guard",
+          "classId": "healer",
+          "name": "Amparo",
+          "description": "+2 de defensa por rango.",
+          "branch": "Amparo",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-grace"
+          ],
+          "effects": {
+            "defense": 2
+          }
+        },
+        {
+          "id": "healer-sanctuary",
+          "classId": "healer",
+          "name": "Santuario",
+          "description": "+12 de vida máxima por rango.",
+          "branch": "Amparo",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-guard"
+          ],
+          "effects": {
+            "maxHp": 12
+          }
+        },
+        {
+          "id": "healer-renew",
+          "classId": "healer",
+          "name": "Renovación",
+          "description": "Reduce 0.4 s el enfriamiento por rango.",
+          "branch": "Restauración",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-grace"
+          ],
+          "effects": {
+            "cooldownReduction": 0.4
+          }
+        },
+        {
+          "id": "healer-radiance",
+          "classId": "healer",
+          "name": "Resplandor",
+          "description": "+4 de daño y +4 de curación por rango.",
+          "branch": "Restauración",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-renew"
+          ],
+          "effects": {
+            "damage": 4,
+            "healing": 4
+          }
+        }
+      ]
+    }
+  }
+}

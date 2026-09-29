@@ -1,0 +1,173 @@
+{
+  "date": "2026-09-29T04:37:57.003Z",
+  "browser": "153.0.8010.0",
+  "checks": [
+    "Ambos pisos y los talleres/portal se dibujan con los props públicos del servidor, sin errores WebGL",
+    "El picking sobre las mallas nuevas selecciona el muñeco y la veta de cobre correctos",
+    "Tres calidades y seis cambios de piso liberan las geometrías y texturas anteriores",
+    "Siete especies detalladas, con materiales y geometría idénticos a los del juego y root",
+    "Talleres, tres recursos y efectos de seis elementos inspeccionados con las mismas fábricas de mallas"
+  ],
+  "metrics": [
+    {
+      "id": "20-refugio-detallado",
+      "triangles": 969726,
+      "drawCalls": 719,
+      "memory": {
+        "geometries": 824,
+        "textures": 18
+      },
+      "error": 0
+    },
+    {
+      "id": "21-talleres",
+      "triangles": 794436,
+      "drawCalls": 595,
+      "memory": {
+        "geometries": 841,
+        "textures": 19
+      },
+      "error": 0
+    },
+    {
+      "id": "22-bosque-cristal",
+      "triangles": 676434,
+      "drawCalls": 613,
+      "memory": {
+        "geometries": 628,
+        "textures": 9
+      },
+      "error": 0
+    },
+    {
+      "id": "23-portal",
+      "triangles": 170276,
+      "drawCalls": 138,
+      "memory": {
+        "geometries": 461,
+        "textures": 6
+      },
+      "error": 0
+    },
+    {
+      "id": "boar",
+      "triangles": 22072,
+      "drawCalls": 27,
+      "memory": {
+        "geometries": 27,
+        "textures": 1
+      },
+      "error": 0
+    },
+    {
+      "id": "guardian",
+      "triangles": 19008,
+      "drawCalls": 28,
+      "memory": {
+        "geometries": 28,
+        "textures": 1
+      },
+      "error": 0
+    },
+    {
+      "id": "slime",
+      "triangles": 6448,
+      "drawCalls": 9,
+      "memory": {
+        "geometries": 9,
+        "textures": 1
+      },
+      "error": 0
+    },
+    {
+      "id": "dog",
+      "triangles": 21496,
+      "drawCalls": 34,
+      "memory": {
+        "geometries": 34,
+        "textures": 1
+      },
+      "error": 0
+    },
+    {
+      "id": "goblin",
+      "triangles": 21988,
+      "drawCalls": 28,
+      "memory": {
+        "geometries": 28,
+        "textures": 1
+      },
+      "error": 0
+    },
+    {
+      "id": "orc",
+      "triangles": 22636,
+      "drawCalls": 35,
+      "memory": {
+        "geometries": 35,
+        "textures": 1
+      },
+      "error": 0
+    },
+    {
+      "id": "troll",
+      "triangles": 24964,
+      "drawCalls": 37,
+      "memory": {
+        "geometries": 37,
+        "textures": 1
+      },
+      "error": 0
+    }
+  ],
+  "picks": {
+    "dummy": {
+      "type": "target",
+      "id": "dummy-straw",
+      "kind": "monster"
+    },
+    "ore": {
+      "type": "gather",
+      "nodeId": "resource-1-0"
+    }
+  },
+  "lifecycle": {
+    "low": {
+      "triangles": 910610,
+      "drawCalls": 719,
+      "memory": {
+        "geometries": 704,
+        "textures": 17
+      },
+      "error": 0
+    },
+    "high": {
+      "triangles": 1100610,
+      "drawCalls": 719,
+      "memory": {
+        "geometries": 805,
+        "textures": 18
+      },
+      "error": 0
+    },
+    "start": {
+      "triangles": 988630,
+      "drawCalls": 718,
+      "memory": {
+        "geometries": 804,
+        "textures": 18
+      },
+      "error": 0
+    },
+    "end": {
+      "triangles": 988630,
+      "drawCalls": 718,
+      "memory": {
+        "geometries": 804,
+        "textures": 18
+      },
+      "error": 0
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,154 @@
+{
+  "gathering": {
+    "enabled": true,
+    "range": 3,
+    "cooldownSeconds": 1.5,
+    "resources": [
+      {
+        "id": "copper-vein",
+        "name": "Veta de cobre",
+        "professionId": "mining",
+        "materialId": "copper",
+        "minProfessionLevel": 1,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 20,
+        "kind": "rock",
+        "color": "#b97852"
+      },
+      {
+        "id": "iron-vein",
+        "name": "Veta de hierro",
+        "professionId": "mining",
+        "materialId": "iron",
+        "minProfessionLevel": 1,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 25,
+        "kind": "rock",
+        "color": "#9babb3"
+      },
+      {
+        "id": "mithril-vein",
+        "name": "Veta de mithril",
+        "professionId": "mining",
+        "materialId": "mithril",
+        "minProfessionLevel": 2,
+        "amount": 2,
+        "experience": 25,
+        "respawnSeconds": 35,
+        "kind": "rock",
+        "color": "#83d0e9"
+      },
+      {
+        "id": "crystal-vein",
+        "name": "Cristal arcano",
+        "professionId": "mining",
+        "materialId": "crystal",
+        "minProfessionLevel": 2,
+        "amount": 2,
+        "experience": 25,
+        "respawnSeconds": 35,
+        "kind": "rock",
+        "color": "#b498e9"
+      },
+      {
+        "id": "pine-tree",
+        "name": "Pino maderable",
+        "professionId": "lumberjack",
+        "materialId": "wood",
+        "minProfessionLevel": 1,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 20,
+        "kind": "tree",
+        "color": "#738e46"
+      },
+      {
+        "id": "oak-tree",
+        "name": "Roble maderable",
+        "professionId": "lumberjack",
+        "materialId": "oak",
+        "minProfessionLevel": 2,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 30,
+        "kind": "tree",
+        "color": "#769044"
+      },
+      {
+        "id": "ancient-tree",
+        "name": "Árbol ancestral",
+        "professionId": "lumberjack",
+        "materialId": "ancientwood",
+        "minProfessionLevel": 3,
+        "amount": 2,
+        "experience": 25,
+        "respawnSeconds": 45,
+        "kind": "tree",
+        "color": "#759eaa"
+      }
+    ]
+  },
+  "materials": [
+    {
+      "id": "iron",
+      "name": "Hierro",
+      "price": 6
+    },
+    {
+      "id": "wood",
+      "name": "Pino",
+      "price": 3
+    },
+    {
+      "id": "fiber",
+      "name": "Fibra",
+      "price": 2
+    },
+    {
+      "id": "leather",
+      "name": "Cuero",
+      "price": 4
+    },
+    {
+      "id": "crystal",
+      "name": "Cristal",
+      "price": 12
+    },
+    {
+      "id": "copper",
+      "name": "Cobre",
+      "price": 4
+    },
+    {
+      "id": "mithril",
+      "name": "Mithril",
+      "price": 18
+    },
+    {
+      "id": "oak",
+      "name": "Roble",
+      "price": 9
+    },
+    {
+      "id": "ancientwood",
+      "name": "Madera ancestral",
+      "price": 20
+    }
+  ],
+  "professions": [
+    {
+      "id": "mining",
+      "name": "Minería",
+      "stationRole": "mine",
+      "description": "Extrae cobre, hierro, mithril y cristal. Los yacimientos más raros requieren experiencia."
+    },
+    {
+      "id": "lumberjack",
+      "name": "Leñador",
+      "stationRole": "forest",
+      "description": "Recolecta pino, roble y madera ancestral para armas y talleres."
+    }
+  ]
+}

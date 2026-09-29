@@ -4,24 +4,6 @@ Proyecto semilla de un MMORPG 3D inspirado en el universo de **Sword Art Online*
 
 Es un prototipo fan con gráficos originales y dos pisos jugables. No es un juego oficial ni una recreación completa de los cien pisos, y no contiene recursos extraídos del anime ni de otros juegos.
 
-Repositorio: [rodolfo99/SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). El nombre del repositorio se conserva como `SAO-Aircraft-online-mmrpg`; el mundo del juego se llama **Aincrad**.
-
-## Obtener el proyecto desde GitHub
-
-El repositorio incluye fuentes, recursos originales, el JAR v0.2.0 y Angular compilado. Para la ejecución directa utiliza Java 17 o 21; para recompilar instala también las herramientas indicadas más adelante.
-
-```bash
-git clone https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg.git
-cd SAO-Aircraft-online-mmrpg
-chmod +x scripts/*.sh
-PORT=8081 \
-ALLOWED_ORIGINS=http://localhost:8081,http://127.0.0.1:8081 \
-APP_PUBLIC_URL=http://localhost:8081 \
-./scripts/iniciar.sh
-```
-
-Abre <http://localhost:8081>. El primer inicio solicita la contraseña de root. Consulta [la guía de arranque y puertos](docs/ARRANQUE-Y-PUERTOS.md) y [los resultados de validación](docs/VALIDACION.md).
-
 ## Inicio rápido en Linux
 
 El paquete de entrega incluye el servidor compilado y el cliente construido. Para ejecutarlos basta **Java 17 o 21** y un navegador de escritorio con WebGL 2.
@@ -43,21 +25,6 @@ En el **primer inicio** el script solicita y confirma la contraseña de `root` (
 La contraseña se almacena mediante PBKDF2-HMAC-SHA256, sal aleatoria y 210 000 iteraciones en `data/admin.json`. En arranques siguientes se utiliza la contraseña guardada; cambiar `ROOT_PASSWORD` no reemplaza la existente. Puedes cambiarla desde el panel. No compartas `data/`, respaldos ni `.env`.
 
 Si actualizas una instalación anterior, consulta [PISOS-AMPLIADOS.md](docs/PISOS-AMPLIADOS.md) para ampliar su mundo conservando los personajes, la cuenta root y los ajustes. Una instalación nueva ya incluye los pisos grandes.
-
-### Usar el puerto 8081
-
-Desde la raíz del proyecto, detén la instancia anterior y arranca con:
-
-```bash
-PORT=8081 \
-ALLOWED_ORIGINS=http://localhost:8081,http://127.0.0.1:8081 \
-APP_PUBLIC_URL=http://localhost:8081 \
-./scripts/iniciar.sh
-```
-
-Abre <http://localhost:8081> o <http://localhost:8081/admin>. El JAR sirve también Angular en ese puerto. La guía [ARRANQUE-Y-PUERTOS.md](docs/ARRANQUE-Y-PUERTOS.md) explica cómo imponer `--server.port=8081` directamente a Spring Boot, comprobar el puerto real de Tomcat y resolver `BindException: La dirección ya se está usando`. Incluye Docker Compose, Angular en desarrollo y correo.
-
-El script `iniciar.sh` no reenvía argumentos como `--server.port` ni lee `.env` automáticamente. Para Compose usa `WEB_PORT=8081` en `.env`; el puerto interno del contenedor sigue siendo 8080.
 
 ## Cuentas de jugador
 
@@ -182,8 +149,6 @@ npm start
 # http://localhost:4200 — /api y /ws se redirigen al Java local
 ```
 
-El proxy apunta inicialmente a Java en 8080. Si cambias el backend a 8081, actualiza `/api` y `/ws` en `client/proxy.conf.json` y permite el origen 4200 en Java; consulta [la guía de puertos](docs/ARRANQUE-Y-PUERTOS.md).
-
 ## Docker Compose
 
 ```bash
@@ -230,7 +195,7 @@ Las pruebas de navegador editan perfiles de prueba y modifican/restauran el nomb
 - `scripts/`, `Dockerfile`, `compose*.yaml`, `.env.example`: construcción y operación.
 - `docs/ARQUITECTURA.md`, `docs/MUNDO.md`: protocolo y puntos de extensión.
 
-Esta semilla tiene límite de 32 jugadores conectados y un único proceso/zona lógica. **Ese límite no es una prueba de carga ni una promesa de escala MMORPG.** El registro, la autenticación y la recuperación de cuentas están implementados. Quedan por desarrollar shards, comercio entre jugadores, subastas, grupos, rutas, terreno avanzado, mallas GLTF y contenido extenso. No se ha validado una partida real completa en Ubuntu 26.04 ni una ejecución masiva en producción.
+Esta semilla tiene límite de 32 jugadores conectados y un único proceso/zona lógica. **Ese límite no es una prueba de carga ni una promesa de escala MMORPG.** Quedan por desarrollar cuentas completas, autenticación de jugadores con recuperación, shards, comercio entre jugadores, subastas, grupos, rutas, terreno avanzado, mallas GLTF y contenido extenso. No se ha validado una partida real completa en Ubuntu 26.04 ni una ejecución masiva en producción.
 
 ## Revisión visual del mundo
 

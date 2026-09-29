@@ -1,0 +1,17 @@
+{
+  "browser": "153.0.8010.0",
+  "checks": [
+    "Creación de personaje, vista previa WebGL y estilos",
+    "Movimiento W correcto, a velocidad de la clase",
+    "Dos sesiones reales comparten posición y aspecto",
+    "Chat del piso entre navegadores",
+    "Autoedición autorizada del propio personaje sin alterar progreso",
+    "Root edita personajes, cliente recibe cambio en vivo",
+    "Subida de nivel, puntos de atributo y árbol de mago guardados desde el personaje",
+    "Root añade un conjunto y configura atributos variables",
+    "Edición del mundo, respaldo, aplicación y reconexión",
+    "Ilustraciones locales de personaje, criatura y árbol",
+    "Recarga recupera personaje, nivel y talentos"
+  ],
+  "errors": []
+}

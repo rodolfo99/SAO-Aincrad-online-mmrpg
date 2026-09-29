@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-29T02:43:05.148Z",
+  "browser": "153.0.8010.0",
+  "checks": [
+    "Servidor y Angular cargan cinco zonas, siete especies y 16 criaturas de zona en el primer piso",
+    "Panel de zonas muestra niveles, población, reaparición y aviso de dificultad de ambos pisos",
+    "Root edita niveles, valida, aplica y actualiza la sesión conectada; se restaura la configuración original",
+    "Root presenta las cinco especies con modelos 3D, crecimiento por nivel y materiales editables",
+    "El objetivo de combate identifica especie, nivel y vida de la criatura",
+    "Acercamiento físico y entrada en la marisma muestran el rótulo de zona y sus criaturas"
+  ],
+  "errors": []
+}

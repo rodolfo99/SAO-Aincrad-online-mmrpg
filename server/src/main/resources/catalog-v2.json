@@ -1,0 +1,963 @@
+{
+  "races": [
+    {
+      "id": "human",
+      "name": "Humano",
+      "description": "Habitantes de ciudades y caminos; versátiles y capaces de recuperar el aliento. No tienen un bono pasivo fijo.",
+      "model": "human",
+      "scale": 1,
+      "width": 1,
+      "ears": "round",
+      "horns": false,
+      "tail": false,
+      "wings": false,
+      "beard": false,
+      "eyeColor": "#344a40",
+      "skinColors": [
+        "#dfb18b",
+        "#bb835d",
+        "#784f3b",
+        "#f0d4b4"
+      ],
+      "hairColors": [
+        "#342f32",
+        "#74503a",
+        "#c39757",
+        "#dad7cb"
+      ],
+      "effects": {},
+      "portrait": "assets/race-human.png",
+      "ability": {
+        "name": "Segundo aliento",
+        "kind": "heal",
+        "value": 20,
+        "duration": 0,
+        "cooldown": 30,
+        "range": 0
+      }
+    },
+    {
+      "id": "dwarf",
+      "name": "Enano",
+      "description": "Pueblos de montaña y forja. Su constitución robusta aporta vida y defensa a cambio de algo de velocidad.",
+      "model": "dwarf",
+      "scale": 0.78,
+      "width": 1.25,
+      "ears": "round",
+      "horns": false,
+      "tail": false,
+      "wings": false,
+      "beard": true,
+      "eyeColor": "#66492c",
+      "skinColors": [
+        "#c9936b",
+        "#e1b48d",
+        "#81553c"
+      ],
+      "hairColors": [
+        "#713c25",
+        "#49362e",
+        "#c9c6bf"
+      ],
+      "effects": {
+        "maxHp": 15,
+        "defense": 1,
+        "speed": -0.2
+      },
+      "portrait": "assets/race-dwarf.png",
+      "ability": {
+        "name": "Piel de piedra",
+        "kind": "shield",
+        "value": 30,
+        "duration": 8,
+        "cooldown": 30,
+        "range": 0
+      }
+    },
+    {
+      "id": "elf",
+      "name": "Elfo",
+      "description": "Custodios de bosques y memoria. Precisión natural y un paso ligero temporal para explorar o retirarse.",
+      "model": "elf",
+      "scale": 1.06,
+      "width": 0.94,
+      "ears": "pointed",
+      "horns": false,
+      "tail": false,
+      "wings": false,
+      "beard": false,
+      "eyeColor": "#4a865f",
+      "skinColors": [
+        "#dfb18b",
+        "#efd8b4",
+        "#b58b65"
+      ],
+      "hairColors": [
+        "#c39757",
+        "#e8dec2",
+        "#6d4b32",
+        "#342f32"
+      ],
+      "effects": {
+        "criticalChance": 2
+      },
+      "portrait": "assets/race-elf.png",
+      "ability": {
+        "name": "Paso del bosque",
+        "kind": "sprint",
+        "value": 2,
+        "duration": 5,
+        "cooldown": 25,
+        "range": 0
+      }
+    },
+    {
+      "id": "darkelf",
+      "name": "Elfo oscuro",
+      "description": "Comunidades de cavernas luminosas y ciudades bajo las estrellas. Afinidad con la magia del crepúsculo. Su origen no determina su ciudadanía.",
+      "model": "darkelf",
+      "scale": 1.03,
+      "width": 0.95,
+      "ears": "pointed",
+      "horns": false,
+      "tail": false,
+      "wings": false,
+      "beard": false,
+      "eyeColor": "#bca3fb",
+      "skinColors": [
+        "#807394",
+        "#675c7d",
+        "#a092b2",
+        "#544b65"
+      ],
+      "hairColors": [
+        "#e5e2ef",
+        "#9a93b8",
+        "#332a47"
+      ],
+      "effects": {
+        "damage": 1,
+        "criticalChance": 3,
+        "maxHp": -5
+      },
+      "portrait": "assets/race-darkelf.png",
+      "ability": {
+        "name": "Velo umbrío",
+        "kind": "critical",
+        "value": 15,
+        "duration": 6,
+        "cooldown": 30,
+        "range": 0
+      }
+    },
+    {
+      "id": "draconian",
+      "name": "Draconiano",
+      "description": "Linajes de escamas, cuernos y cola. Alas ornamentales y aliento ígneo; su constitución refuerza vida y daño.",
+      "model": "draconian",
+      "scale": 1.12,
+      "width": 1.1,
+      "ears": "horned",
+      "horns": true,
+      "tail": true,
+      "wings": true,
+      "beard": false,
+      "eyeColor": "#f4c563",
+      "skinColors": [
+        "#8b5043",
+        "#5c806e",
+        "#53677e",
+        "#c09558"
+      ],
+      "hairColors": [
+        "#3c3935",
+        "#682e28",
+        "#ded0a7"
+      ],
+      "effects": {
+        "maxHp": 10,
+        "damage": 1,
+        "speed": -0.1
+      },
+      "portrait": "assets/race-draconian.png",
+      "ability": {
+        "name": "Aliento dracónico",
+        "kind": "flame",
+        "value": 18,
+        "duration": 0,
+        "cooldown": 25,
+        "range": 6
+      }
+    }
+  ],
+  "weaponSets": [
+    {
+      "id": "warrior-guardia-1",
+      "name": "Guardia de acero · Nv. 1",
+      "classId": "warrior",
+      "minLevel": 1,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Espada del comienzo",
+        "kind": "sword",
+        "hands": 1,
+        "attributes": {
+          "attack": 0
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": {
+        "name": "Escudo del comienzo",
+        "kind": "shield",
+        "hands": 1,
+        "attributes": {
+          "defense": 2
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      }
+    },
+    {
+      "id": "warrior-duelista-1",
+      "name": "Filos gemelos · Nv. 1",
+      "classId": "warrior",
+      "minLevel": 1,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Espada del comienzo",
+        "kind": "sword",
+        "hands": 1,
+        "attributes": {
+          "attack": 0
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": {
+        "name": "Daga del comienzo",
+        "kind": "dagger",
+        "hands": 1,
+        "attributes": {
+          "attack": 0
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      }
+    },
+    {
+      "id": "warrior-vanguardia-1",
+      "name": "Vanguardia · Nv. 1",
+      "classId": "warrior",
+      "minLevel": 1,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Mandoble del comienzo",
+        "kind": "greatsword",
+        "hands": 2,
+        "attributes": {
+          "attack": 2
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": null
+    },
+    {
+      "id": "warrior-guardia-5",
+      "name": "Guardia de acero · Nv. 5",
+      "classId": "warrior",
+      "minLevel": 5,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Espada · Nv. 5",
+        "kind": "sword",
+        "hands": 1,
+        "attributes": {
+          "attack": 3
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": {
+        "name": "Escudo · Nv. 5",
+        "kind": "shield",
+        "hands": 1,
+        "attributes": {
+          "defense": 4
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      }
+    },
+    {
+      "id": "warrior-duelista-5",
+      "name": "Filos gemelos · Nv. 5",
+      "classId": "warrior",
+      "minLevel": 5,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Espada · Nv. 5",
+        "kind": "sword",
+        "hands": 1,
+        "attributes": {
+          "attack": 3
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": {
+        "name": "Daga · Nv. 5",
+        "kind": "dagger",
+        "hands": 1,
+        "attributes": {
+          "attack": 1
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      }
+    },
+    {
+      "id": "warrior-vanguardia-5",
+      "name": "Vanguardia · Nv. 5",
+      "classId": "warrior",
+      "minLevel": 5,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Mandoble · Nv. 5",
+        "kind": "greatsword",
+        "hands": 2,
+        "attributes": {
+          "attack": 6
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": null
+    },
+    {
+      "id": "warrior-guardia-10",
+      "name": "Guardia de acero · Nv. 10",
+      "classId": "warrior",
+      "minLevel": 10,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Espada · Nv. 10",
+        "kind": "sword",
+        "hands": 1,
+        "attributes": {
+          "attack": 6
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": {
+        "name": "Escudo · Nv. 10",
+        "kind": "shield",
+        "hands": 1,
+        "attributes": {
+          "defense": 6
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      }
+    },
+    {
+      "id": "warrior-duelista-10",
+      "name": "Filos gemelos · Nv. 10",
+      "classId": "warrior",
+      "minLevel": 10,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Espada · Nv. 10",
+        "kind": "sword",
+        "hands": 1,
+        "attributes": {
+          "attack": 6
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": {
+        "name": "Daga · Nv. 10",
+        "kind": "dagger",
+        "hands": 1,
+        "attributes": {
+          "attack": 2
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      }
+    },
+    {
+      "id": "warrior-vanguardia-10",
+      "name": "Vanguardia · Nv. 10",
+      "classId": "warrior",
+      "minLevel": 10,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Mandoble · Nv. 10",
+        "kind": "greatsword",
+        "hands": 2,
+        "attributes": {
+          "attack": 10
+        },
+        "primary": "#d9e5e6",
+        "secondary": "#947b4c",
+        "glow": "#609687"
+      },
+      "offHand": null
+    },
+    {
+      "id": "mage-astral-1",
+      "name": "Báculo astral · Nv. 1",
+      "classId": "mage",
+      "minLevel": 1,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Báculo del comienzo",
+        "kind": "staff",
+        "hands": 2,
+        "attributes": {
+          "attack": 0
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": null
+    },
+    {
+      "id": "mage-canalizador-1",
+      "name": "Canalizador dual · Nv. 1",
+      "classId": "mage",
+      "minLevel": 1,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Báculo corto del comienzo",
+        "kind": "staff",
+        "hands": 1,
+        "attributes": {
+          "attack": 0
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": {
+        "name": "Vara arcana del comienzo",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 0
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      }
+    },
+    {
+      "id": "mage-orbe-1",
+      "name": "Círculo de enfoque · Nv. 1",
+      "classId": "mage",
+      "minLevel": 1,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara de cristal del comienzo",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 0
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": {
+        "name": "Orbe del comienzo",
+        "kind": "orb",
+        "hands": 1,
+        "attributes": {
+          "attack": 0,
+          "critical": 1
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      }
+    },
+    {
+      "id": "mage-astral-5",
+      "name": "Báculo astral · Nv. 5",
+      "classId": "mage",
+      "minLevel": 5,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Báculo · Nv. 5",
+        "kind": "staff",
+        "hands": 2,
+        "attributes": {
+          "attack": 3
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": null
+    },
+    {
+      "id": "mage-canalizador-5",
+      "name": "Canalizador dual · Nv. 5",
+      "classId": "mage",
+      "minLevel": 5,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Báculo corto · Nv. 5",
+        "kind": "staff",
+        "hands": 1,
+        "attributes": {
+          "attack": 3
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": {
+        "name": "Vara arcana · Nv. 5",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 1
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      }
+    },
+    {
+      "id": "mage-orbe-5",
+      "name": "Círculo de enfoque · Nv. 5",
+      "classId": "mage",
+      "minLevel": 5,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara de cristal · Nv. 5",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 3
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": {
+        "name": "Orbe · Nv. 5",
+        "kind": "orb",
+        "hands": 1,
+        "attributes": {
+          "attack": 1,
+          "critical": 2
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      }
+    },
+    {
+      "id": "mage-astral-10",
+      "name": "Báculo astral · Nv. 10",
+      "classId": "mage",
+      "minLevel": 10,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Báculo · Nv. 10",
+        "kind": "staff",
+        "hands": 2,
+        "attributes": {
+          "attack": 6
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": null
+    },
+    {
+      "id": "mage-canalizador-10",
+      "name": "Canalizador dual · Nv. 10",
+      "classId": "mage",
+      "minLevel": 10,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Báculo corto · Nv. 10",
+        "kind": "staff",
+        "hands": 1,
+        "attributes": {
+          "attack": 6
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": {
+        "name": "Vara arcana · Nv. 10",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 2
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      }
+    },
+    {
+      "id": "mage-orbe-10",
+      "name": "Círculo de enfoque · Nv. 10",
+      "classId": "mage",
+      "minLevel": 10,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara de cristal · Nv. 10",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 6
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      },
+      "offHand": {
+        "name": "Orbe · Nv. 10",
+        "kind": "orb",
+        "hands": 1,
+        "attributes": {
+          "attack": 2,
+          "critical": 3
+        },
+        "primary": "#b9c5ef",
+        "secondary": "#6d527e",
+        "glow": "#af91ef"
+      }
+    },
+    {
+      "id": "healer-alba-1",
+      "name": "Varas del alba · Nv. 1",
+      "classId": "healer",
+      "minLevel": 1,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Vara de luz del comienzo",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 0,
+          "healing": 0
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Vara de amparo del comienzo",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 0,
+          "healing": 0
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-santuario-1",
+      "name": "Custodio del santuario · Nv. 1",
+      "classId": "healer",
+      "minLevel": 1,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara bendita del comienzo",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 0,
+          "healing": 0
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Escudo consagrado del comienzo",
+        "kind": "shield",
+        "hands": 1,
+        "attributes": {
+          "defense": 2,
+          "healing": 0
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-liturgia-1",
+      "name": "Liturgia de luz · Nv. 1",
+      "classId": "healer",
+      "minLevel": 1,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara del canto del comienzo",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 0,
+          "healing": 0
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Libro de plegarias del comienzo",
+        "kind": "tome",
+        "hands": 1,
+        "attributes": {
+          "attack": 0,
+          "healing": 0,
+          "recovery": 0.1
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-alba-5",
+      "name": "Varas del alba · Nv. 5",
+      "classId": "healer",
+      "minLevel": 5,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Vara de luz · Nv. 5",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 3,
+          "healing": 4
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Vara de amparo · Nv. 5",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 1,
+          "healing": 2
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-santuario-5",
+      "name": "Custodio del santuario · Nv. 5",
+      "classId": "healer",
+      "minLevel": 5,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara bendita · Nv. 5",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 3,
+          "healing": 4
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Escudo consagrado · Nv. 5",
+        "kind": "shield",
+        "hands": 1,
+        "attributes": {
+          "defense": 4,
+          "healing": 2
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-liturgia-5",
+      "name": "Liturgia de luz · Nv. 5",
+      "classId": "healer",
+      "minLevel": 5,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara del canto · Nv. 5",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 3,
+          "healing": 4
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Libro de plegarias · Nv. 5",
+        "kind": "tome",
+        "hands": 1,
+        "attributes": {
+          "attack": 1,
+          "healing": 2,
+          "recovery": 0.30000000000000004
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-alba-10",
+      "name": "Varas del alba · Nv. 10",
+      "classId": "healer",
+      "minLevel": 10,
+      "autoEquip": true,
+      "mainHand": {
+        "name": "Vara de luz · Nv. 10",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 6,
+          "healing": 8
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Vara de amparo · Nv. 10",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 2,
+          "healing": 4
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-santuario-10",
+      "name": "Custodio del santuario · Nv. 10",
+      "classId": "healer",
+      "minLevel": 10,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara bendita · Nv. 10",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 6,
+          "healing": 8
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Escudo consagrado · Nv. 10",
+        "kind": "shield",
+        "hands": 1,
+        "attributes": {
+          "defense": 6,
+          "healing": 4
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    },
+    {
+      "id": "healer-liturgia-10",
+      "name": "Liturgia de luz · Nv. 10",
+      "classId": "healer",
+      "minLevel": 10,
+      "autoEquip": false,
+      "mainHand": {
+        "name": "Vara del canto · Nv. 10",
+        "kind": "wand",
+        "hands": 1,
+        "attributes": {
+          "attack": 6,
+          "healing": 8
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      },
+      "offHand": {
+        "name": "Libro de plegarias · Nv. 10",
+        "kind": "tome",
+        "hands": 1,
+        "attributes": {
+          "attack": 2,
+          "healing": 4,
+          "recovery": 0.5
+        },
+        "primary": "#eee4ba",
+        "secondary": "#709987",
+        "glow": "#b7efc9"
+      }
+    }
+  ],
+  "pvp": {
+    "enabled": true,
+    "selfDefense": true,
+    "penalizeMurdererKills": true,
+    "minLevel": 1,
+    "initialCitizenship": 100,
+    "minCitizenship": -1000,
+    "maxCitizenship": 100,
+    "murderPenalty": 25,
+    "murdererThreshold": 50,
+    "murdererSeconds": 600,
+    "aggressionSeconds": 60,
+    "combatSeconds": 20,
+    "spawnProtectionSeconds": 15,
+    "safeRadius": 10,
+    "portalSafeRadius": 4,
+    "damageMultiplier": 0.65,
+    "redemptionCost": 100,
+    "redemptionPoints": 5,
+    "redemptionCooldownSeconds": 60
+  }
+}

@@ -1,0 +1,35 @@
+# Outbound only. Addresses use the machine's IPv4 literal; no owned domain is required.
+compatibility_level = 3.6
+myhostname = aincrad.localhost
+mydestination =
+relayhost =
+relay_domains =
+inet_interfaces = all
+inet_protocols = ipv4
+myorigin = [127.0.0.1]
+smtp_helo_name = [127.0.0.1]
+mynetworks = 127.0.0.0/8
+smtpd_relay_restrictions = permit_mynetworks, reject
+smtpd_recipient_restrictions = permit_mynetworks, reject
+smtpd_sasl_auth_enable = no
+disable_vrfy_command = yes
+strict_rfc821_envelopes = yes
+smtpd_helo_required = yes
+smtpd_client_connection_count_limit = 10
+smtpd_client_message_rate_limit = 60
+message_size_limit = 65536
+default_process_limit = 20
+# Prefer STARTTLS on outbound port 25 when the destination supports it.
+smtp_tls_security_level = may
+smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+smtp_connect_timeout = 10s
+smtp_helo_timeout = 15s
+smtp_mail_timeout = 15s
+smtp_rcpt_timeout = 15s
+smtp_data_done_timeout = 60s
+maximal_queue_lifetime = 1d
+bounce_queue_lifetime = 1d
+minimal_backoff_time = 300s
+maximal_backoff_time = 1h
+maillog_file = /dev/stdout
+maillog_file_prefixes = /var, /dev/stdout

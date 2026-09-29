@@ -1,0 +1,43 @@
+<section class="account-panel">
+@if(!game.sessionReady()){
+  <p role="status">Comprobando sesión…</p>
+} @else if(!game.account()){
+  @if(mode==='login'||mode==='register'){
+    <div class="account-tabs"><button type="button" [class.selected]="mode==='login'" (click)="switchMode('login')">Iniciar sesión</button>@if(game.registrationEnabled()){<button type="button" [class.selected]="mode==='register'" (click)="switchMode('register')">Crear cuenta</button>}</div>
+  } @else {
+    <h2>{{mode==='forgot'?'Recuperar contraseña':'Nueva contraseña'}}</h2>
+    <p>{{mode==='forgot'?'Escribe el correo que guardaste en tu cuenta.':'Elige tu nueva contraseña. Se cerrarán las sesiones anteriores.'}}</p>
+  }
+  <form (ngSubmit)="submit()" class="account-form">
+    @if(mode==='login'||mode==='register'){
+      <label for="account-username">Usuario</label><input id="account-username" name="username" [(ngModel)]="username" required minlength="3" maxlength="32" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="Tu usuario">
+    }
+    @if(mode==='register'||mode==='forgot'){
+      <label for="account-email">Correo electrónico</label><input id="account-email" name="email" [(ngModel)]="email" type="email" required maxlength="254" autocomplete="email" autocapitalize="none" spellcheck="false">
+    }
+    @if(mode!=='forgot'){
+      <label for="account-password">{{mode==='reset'?'Nueva contraseña':'Contraseña'}}</label><input id="account-password" name="password" [(ngModel)]="password" type="password" required minlength="12" maxlength="128" [attr.autocomplete]="mode==='login'?'current-password':'new-password'">
+    }
+    @if(mode==='register'||mode==='reset'){
+      <label for="account-confirm">Repetir contraseña</label><input id="account-confirm" name="confirm" [(ngModel)]="confirmPassword" type="password" required minlength="12" maxlength="128" autocomplete="new-password"><small>Contraseña: 12–128 caracteres.</small>
+    }
+    @if(mode==='register'){<small>Usuario: 3–32 caracteres (a-z, 0-9, _ o -), comenzando con una letra. Usa un correo al que tengas acceso para recuperar tu cuenta.</small>}
+    <button class="primary" type="submit" [disabled]="busy()">{{busy()?'Espera…':mode==='register'?'Registrarme':mode==='forgot'?'Enviar enlace de recuperación':mode==='reset'?'Restablecer contraseña':'Entrar a mi cuenta'}} →</button>
+  </form>
+  @if(mode==='login'){
+    @if(game.recoveryEnabled()){<button type="button" class="account-link" (click)="switchMode('forgot')">Olvidé mi contraseña</button>}
+    @else{<small>Si olvidaste tu contraseña, contacta con root. La recuperación por correo aún no está activada.</small>}
+  }
+  @if(mode==='forgot'||mode==='reset'){<button type="button" class="account-link" (click)="switchMode('login')">Volver a iniciar sesión</button>}
+  @if(mode==='login'||mode==='register'){<small>{{game.registrationEnabled()?'Regístrate e inicia sesión para crear o recuperar tus personajes.':'El registro está cerrado. Utiliza una cuenta existente.'}}</small>}
+} @else {
+  <div class="account-status"><span>CUENTA <b>{{game.account().username}}</b></span><button type="button" (click)="logout()" [disabled]="busy()">Cerrar sesión</button></div>
+  <small class="account-email">{{game.account().email||'Añade un correo para poder recuperar tu contraseña.'}}</small>
+  <div class="account-links"><button type="button" class="account-link" (click)="changing=!changing;editingEmail=false;error.set('')">{{changing?'Cancelar cambio':'Cambiar mi contraseña'}}</button><button type="button" class="account-link" (click)="editingEmail=!editingEmail;changing=false;email=game.account().email;error.set('')">{{editingEmail?'Cancelar correo':game.account().email?'Cambiar mi correo':'Añadir correo'}}</button></div>
+  @if(changing){<form class="account-form" (ngSubmit)="changePassword()"><label for="current-password">Contraseña actual</label><input id="current-password" name="current" [(ngModel)]="currentPassword" type="password" required maxlength="128" autocomplete="current-password"><label for="new-password">Nueva contraseña</label><input id="new-password" name="new" [(ngModel)]="password" type="password" required minlength="12" maxlength="128" autocomplete="new-password"><label for="new-password-confirm">Repetir nueva contraseña</label><input id="new-password-confirm" name="repeat" [(ngModel)]="confirmPassword" type="password" required minlength="12" maxlength="128" autocomplete="new-password"><button class="primary" [disabled]="busy()">Guardar contraseña</button><small>Se cerrarán las sesiones abiertas de tu cuenta.</small></form>}
+  @if(editingEmail){<form class="account-form" (ngSubmit)="changeEmail()"><label for="change-email">Correo electrónico</label><input id="change-email" name="email" [(ngModel)]="email" type="email" required maxlength="254" autocomplete="email"><label for="email-current-password">Contraseña actual</label><input id="email-current-password" name="current" [(ngModel)]="currentPassword" type="password" required maxlength="128" autocomplete="current-password"><button class="primary" [disabled]="busy()">Guardar correo</button><small>Confirma tu contraseña. Se cerrarán las sesiones y se invalidarán los enlaces anteriores.</small></form>}
+  @if(legacy()){<div class="legacy-character"><p>Hay una clave de personaje anterior en este navegador.</p><button type="button" (click)="claim()" [disabled]="busy()">Vincular personaje anterior</button><small>Vincúlalo sólo si te pertenece. Conservará su progreso.</small></div>}
+}
+@if(message()){<p class="account-success" role="status">{{message()}}</p>}
+@if(error()){<p class="error" role="alert">{{error()}}</p>}
+</section>

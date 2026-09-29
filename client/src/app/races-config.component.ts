@@ -1,0 +1,20 @@
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+@Component({selector:'races-config',standalone:true,imports:[FormsModule],template:`
+@if(catalog?.races){<section class="editor-card races-config" id="races-config"><span class="eyebrow gold">APARIENCIA Y HABILIDADES</span><h2>Pueblos de Aincrad</h2><p class="muted">Todas las razas pueden elegir cualquier clase. Los rasgos visuales, pasivas y habilidad racial se guardan con el mundo.</p>
+<div class="race-gallery">@for(r of catalog.races;track r.id;let i=$index){<button (click)="index=i" [class.selected]="index===i">@if(r.portrait){<img [src]="r.portrait" [alt]="r.name" loading="lazy">}<span>{{r.name}}</span></button>}</div>
+@if(race();as r){<div class="field-row"><label>Nombre<input [(ngModel)]="r.name" maxlength="80"></label><label>Modelo<select [(ngModel)]="r.model">@for(model of models;track model){<option [value]="model">{{model}}</option>}</select></label><label>Altura<input type="number" step=".01" min=".6" max="1.4" [(ngModel)]="r.scale"></label><label>Anchura<input type="number" step=".01" min=".6" max="1.5" [(ngModel)]="r.width"></label></div>
+<label>Historia y rasgos<textarea rows="2" maxlength="600" [(ngModel)]="r.description"></textarea></label>
+<div class="field-row"><label>Orejas<select [(ngModel)]="r.ears"><option value="round">Redondas</option><option value="pointed">Puntiagudas</option><option value="horned">Dracónicas</option><option value="cat">Felinas (legado)</option></select></label><label>Ojos<input type="color" [(ngModel)]="r.eyeColor"></label><label>Imagen local<input [(ngModel)]="r.portrait" placeholder="assets/race-human.png"></label></div>
+<div class="race-flags">@for(f of flags;track f.id){<label class="check"><input type="checkbox" [(ngModel)]="r[f.id]">{{f.name}}</label>}</div>
+@for(p of palettes;track p.id){<label>{{p.name}}</label><div class="palette-editor">@for(color of r[p.id];track $index;let i=$index){<div><input type="color" [(ngModel)]="r[p.id][i]" [attr.aria-label]="p.name+' '+i"><button (click)="r[p.id].splice(i,1)" [disabled]="r[p.id].length===1" aria-label="Eliminar color">×</button></div>}<button (click)="r[p.id].push('#dfb18b')" [disabled]="r[p.id].length>=30">+ Color</button></div>}
+<h3>Bonificaciones pasivas</h3><div class="effect-fields">@for(e of effects;track e.id){<label>{{e.name}}<input type="number" step=".1" min="-200" max="200" [ngModel]="r.effects[e.id]||0" (ngModelChange)="r.effects[e.id]=$event"></label>}</div>
+<h3>Habilidad racial · T</h3><div class="field-row"><label>Nombre<input [(ngModel)]="r.ability.name"></label><label>Efecto<select [(ngModel)]="r.ability.kind"><option value="heal">Curarse</option><option value="shield">Escudo absorbente</option><option value="sprint">Velocidad temporal</option><option value="critical">Crítico temporal</option><option value="flame">Aliento dirigido</option></select></label></div><div class="effect-fields"><label>Potencia<input type="number" min="0" max="100" [(ngModel)]="r.ability.value"></label><label>Duración (s)<input type="number" min="0" max="30" [(ngModel)]="r.ability.duration"></label><label>Recarga (s)<input type="number" min="5" max="300" [(ngModel)]="r.ability.cooldown"></label><label>Alcance<input type="number" min="0" max="15" [(ngModel)]="r.ability.range"></label></div>
+}
+</section>}`})
+export class RacesConfigComponent{
+ @Input() catalog:any;index=0;models=['human','dwarf','elf','darkelf','draconian','cat'];
+ flags=[{id:'horns',name:'Cuernos'},{id:'tail',name:'Cola'},{id:'wings',name:'Alas ornamentales'},{id:'beard',name:'Barba en chico'}];palettes=[{id:'skinColors',name:'Paleta de piel'},{id:'hairColors',name:'Paleta de cabello'}];
+ effects=[{id:'maxHp',name:'PV máximos'},{id:'damage',name:'Daño'},{id:'defense',name:'Defensa'},{id:'speed',name:'Velocidad'},{id:'criticalChance',name:'Crítico (%)'},{id:'healing',name:'Curación'},{id:'skillPower',name:'Potencia de clase'},{id:'cooldownReduction',name:'Reducción recarga (s)'}];
+ race(){return this.catalog?.races[this.index];}
+}

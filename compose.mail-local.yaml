@@ -1,0 +1,7 @@
+# Use only for a local Java process; SMTP remains bound to loopback.
+services:
+  mail:
+    environment:
+      MAIL_ALLOW_HOST: 'true'
+    ports:
+      - "127.0.0.1:2525:25"

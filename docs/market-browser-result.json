@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-29T16:54:51.148Z",
+  "browser": "145.0.7632.6",
+  "isolatedPriceFixture": true,
+  "checks": [
+    "Minería real, recursos visibles en la bolsa y venta desactivada lejos del mercader",
+    "Venta parcial y completa con precio root, rechazo de exceso y conservación exacta de bolsa/monedas",
+    "El mercado vende arma y armadura compatibles, cobra el precio del servidor y entrega dos piezas individuales sin EXP de oficio gratis",
+    "Las piezas compradas se equipan desde la bolsa en el refugio y conservan su identidad",
+    "Root cambia precios de equipo y de recursos desde los formularios, guarda y aplica el catálogo",
+    "Después de aplicar el mundo y volver a entrar se conservan monedas, recursos vendidos y equipo comprado"
+  ],
+  "errors": []
+}

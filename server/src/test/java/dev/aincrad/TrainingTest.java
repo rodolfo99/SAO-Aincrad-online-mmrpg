@@ -1,0 +1,26 @@
+package dev.aincrad;
+import com.fasterxml.jackson.databind.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.io.TempDir;
+import static org.junit.jupiter.api.Assertions.*;
+import java.nio.file.*;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicLong;
+
+class TrainingTest {
+ @TempDir Path dir;ObjectMapper json=new ObjectMapper();PlayerStore store;GameWorld world;AtomicLong now=new AtomicLong(2_000_000_000_000L);
+ @BeforeEach void setup()throws Exception{store=new PlayerStore(dir.resolve("players"),json);world=new GameWorld(WorldData.load(Path.of("../world/world.json"),json),store,(id,e)->{},now::get);}
+ @AfterEach void close()throws Exception{store.close();}
+ GameWorld.Player player(String cls,String spec)throws Exception{var w=world.join("Practicante","",new WorldData.Appearance("male","calm","#342f32","#dfb18b",cls,"human",spec));var p=world.online.get(w.get("id"));p.xp=600;return p;}
+ void cmd(GameWorld.Player p,String type,Object... fields){var n=json.createObjectNode().put("type",type);for(int i=0;i<fields.length;i+=2)n.set((String)fields[i],json.valueToTree(fields[i+1]));world.command(p.id,n);}
+ void at(GameWorld.Player p,String id){var m=world.monsters.get(id);p.x=m.x;p.z=m.z-1.5;p.target=id;p.targetKind="monster";}
+ void tick(long ms){now.addAndGet(ms);world.tick(.05);}
+ @Test void dummyLethalHitsAndIdleRecoveryNeverGrantRewards()throws Exception{var p=player("warrior","swordsman");p.quest=true;at(p,"dummy-straw");var m=world.monsters.get(p.target);m.hp=1;int xp=p.xp,col=p.col,citizen=p.pvp.citizenship;var materials=Map.copyOf(p.crafting.materials);cmd(p,"attack");assertEquals(m.maxHp,m.hp);assertEquals(1,p.training.damage);assertEquals(1,p.training.hits);assertEquals(xp,p.xp);assertEquals(col,p.col);assertEquals(citizen,p.pvp.citizenship);assertEquals(materials,p.crafting.materials);assertEquals(0,p.kills);double x=m.x,z=m.z;int hp=p.hp;tick(5100);assertEquals(x,m.x);assertEquals(z,m.z);assertEquals(hp,p.hp);assertTrue(m.participants.isEmpty());}
+ @Test void armorRangeCooldownAndManualSessionResetAreReal()throws Exception{var p=player("warrior","tank");at(p,"dummy-armor");var m=world.monsters.get(p.target);int before=m.hp;p.x=20;cmd(p,"attack");assertEquals(before,m.hp);at(p,m.id);cmd(p,"attack");assertTrue(m.hp<before);assertTrue(p.training.damage<=Math.max(1,Math.round(p.damage()*1.5)-12));int hp=m.hp;cmd(p,"attack");assertEquals(hp,m.hp);cmd(p,"resetTraining");assertEquals(0,p.training.hits);tick(5100);assertEquals(m.maxHp,m.hp);}
+ @Test void learnedAreaSkillsHitThreeTargetsAndSummonsCountTowardOwner()throws Exception{var p=player("mage","fire");cmd(p,"progression","attributes",Map.of(),"talents",Map.of("learn-fire-bolt",1,"learn-fire-storm",1,"learn-summon-sprite",1));at(p,"dummy-straw");cmd(p,"castSkill","skillId","fire-storm");assertEquals(3,p.training.hits);assertEquals(0,p.training.healing);long damage=p.training.damage;cmd(p,"castSkill","skillId","summon-sprite");tick(100);assertTrue(p.training.damage>damage);assertEquals(4,p.training.hits);}
+ @Test void supportDummyAcceptsHealingAndBuffsAndResetsToWoundedState()throws Exception{var p=player("healer","healer");cmd(p,"progression","attributes",Map.of(),"talents",Map.of("learn-healer-mend",1,"learn-healer-blessing",1));at(p,"dummy-ally");var m=world.monsters.get(p.target);int hp=m.hp;cmd(p,"attack");assertEquals(hp,m.hp);cmd(p,"castSkill","skillId","healer-mend");assertTrue(m.hp>hp);assertEquals(m.hp-hp,p.training.healing);cmd(p,"castSkill","skillId","healer-blessing");assertEquals(1,p.training.buffs);assertFalse(m.effects.isEmpty());tick(5100);assertEquals(m.maxHp/2,m.hp);assertTrue(m.effects.isEmpty());}
+ @Test void baseHealerSkillCanBePracticedWithoutWoundedPlayers()throws Exception{var p=player("healer","healer");p.hp=p.maxHp();at(p,"dummy-ally");cmd(p,"attack","skill",true);assertTrue(p.training.healing>0);assertTrue(world.monsters.get(p.target).hp>2500);}
+ @Test void trainingZoneBlocksPvpEvenWithRefugeProtectionDisabled()throws Exception{world.data.pvp.safeRadius=0;world.data.pvp.portalSafeRadius=0;var a=player("warrior","assassin");var b=player("mage","fire");at(a,"dummy-straw");at(b,"dummy-straw");a.pvp.spawnProtectedUntil=b.pvp.spawnProtectedUntil=0;a.pvpMode=true;cmd(a,"target","kind","player","id",b.id);int hp=b.hp;assertThrows(IllegalArgumentException.class,()->cmd(a,"attack"));assertEquals(hp,b.hp);assertEquals(100,a.pvp.citizenship);}
+ @Test void sessionPausesDoNotDiluteDpsAndIdleGapStartsNewSession()throws Exception{var s=new Training.Session();s.record("Paja",100,0,false,false,1000,15);s.record("Paja",100,0,true,false,3000,15);assertEquals(100.0,s.view().get("dps"));s.record("Paja",30,0,false,false,19001,15);assertEquals(30,s.damage);assertEquals(1,s.hits);assertEquals(0,s.criticals);}
+ @Test void rootCannotPlaceBlockedOrOverlappingPracticeTargets()throws Exception{var z=world.data.floors.get(0).training;z.dummies.add(z.dummies.get(0));assertThrows(IllegalArgumentException.class,()->world.data.validateAndGenerate());z.dummies.remove(z.dummies.size()-1);z.x=10;z.z=19;z.dummies=new ArrayList<>(List.of(new Training.Dummy("new-dummy","Nuevo",10,19,5000,0,false)));assertThrows(IllegalArgumentException.class,()->world.data.validateAndGenerate());}
+}

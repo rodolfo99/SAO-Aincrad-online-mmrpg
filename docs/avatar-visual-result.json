@@ -1,0 +1,134 @@
+{
+  "date": "2026-09-29T03:55:06.431Z",
+  "browser": "153.0.8010.0",
+  "checks": [
+    "Diez combinaciones de cinco razas y dos géneros, tres clases y niveles 1/5/10, sin errores WebGL",
+    "Lyra usa pelo corto, capa verde, armadura y libro propios en el mismo renderizador",
+    "Doce cambios de aspecto no aumentan las geometrías ni texturas residentes",
+    "Giro con teclado y encuadre de rostro en canvas estrecho"
+  ],
+  "metrics": [
+    {
+      "race": "human",
+      "gender": "female",
+      "triangles": 46102,
+      "drawCalls": 72,
+      "memory": {
+        "geometries": 72,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "human",
+      "gender": "male",
+      "triangles": 44518,
+      "drawCalls": 67,
+      "memory": {
+        "geometries": 67,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "dwarf",
+      "gender": "male",
+      "triangles": 52982,
+      "drawCalls": 72,
+      "memory": {
+        "geometries": 72,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "dwarf",
+      "gender": "female",
+      "triangles": 44518,
+      "drawCalls": 67,
+      "memory": {
+        "geometries": 67,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "elf",
+      "gender": "female",
+      "triangles": 43358,
+      "drawCalls": 69,
+      "memory": {
+        "geometries": 69,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "elf",
+      "gender": "male",
+      "triangles": 41374,
+      "drawCalls": 64,
+      "memory": {
+        "geometries": 64,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "darkelf",
+      "gender": "male",
+      "triangles": 42886,
+      "drawCalls": 66,
+      "memory": {
+        "geometries": 66,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "darkelf",
+      "gender": "female",
+      "triangles": 44102,
+      "drawCalls": 69,
+      "memory": {
+        "geometries": 69,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "draconian",
+      "gender": "female",
+      "triangles": 54682,
+      "drawCalls": 82,
+      "memory": {
+        "geometries": 82,
+        "textures": 2
+      },
+      "error": 0
+    },
+    {
+      "race": "draconian",
+      "gender": "male",
+      "triangles": 47634,
+      "drawCalls": 75,
+      "memory": {
+        "geometries": 75,
+        "textures": 2
+      },
+      "error": 0
+    }
+  ],
+  "lifecycle": {
+    "start": {
+      "geometries": 67,
+      "textures": 2
+    },
+    "end": {
+      "geometries": 67,
+      "textures": 2
+    },
+    "error": 0
+  },
+  "errors": []
+}

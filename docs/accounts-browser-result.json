@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-29T16:43:49.959Z",
+  "browser": "145.0.7632.6",
+  "legacyReleaseFixture": true,
+  "localSmtpFixture": true,
+  "checks": [
+    "La portada bloquea el juego anónimo; registro con confirmación de contraseña y acceso separado mediante inicio de sesión",
+    "Una partida creada por el JAR anterior se vincula tras iniciar sesión, conserva EXP/col/pociones y deja de usar la clave del navegador",
+    "Creación de otro personaje, movimiento real y cierre de sesión desde el juego; se elimina la sesión del navegador",
+    "Un navegador sin almacenamiento previo recupera los personajes con usuario/contraseña; el cambio de contraseña exige volver a iniciar sesión",
+    "Root administra las cuentas y restablece contraseñas; la sesión anterior queda invalidada y los personajes se conservan",
+    "Recuperación por correo con SMTP local real, enlace sin filtrarlo en URL/referrer y nueva contraseña que conserva los personajes",
+    "Root consulta el correo integrado y envía una prueba al receptor local sin exponer credenciales ni enlaces privados",
+    "El formulario de registro permanece accesible a 390 px de ancho"
+  ],
+  "errors": []
+}

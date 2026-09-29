@@ -1,0 +1,6204 @@
+{
+  "version": 1,
+  "seed": 20260928,
+  "name": "Aincrad · Ecos del primer piso",
+  "floors": [
+    {
+      "id": 1,
+      "name": "Praderas del comienzo",
+      "subtitle": "El primer paso hacia el cielo",
+      "biome": "meadow",
+      "radius": 46,
+      "treeCount": 85,
+      "spawn": {
+        "x": 0,
+        "z": 16
+      },
+      "portal": {
+        "x": 0,
+        "z": -33,
+        "to": 2,
+        "requiresBoss": true
+      },
+      "npcs": [
+        {
+          "id": "lyra",
+          "name": "Lyra",
+          "role": "guide",
+          "x": 3,
+          "z": 13
+        },
+        {
+          "id": "brann",
+          "name": "Brann",
+          "role": "smith",
+          "x": -6,
+          "z": 16
+        },
+        {
+          "id": "mira",
+          "name": "Mira",
+          "role": "tailor",
+          "x": 6,
+          "z": 16
+        },
+        {
+          "id": "tessa",
+          "name": "Tessa",
+          "role": "merchant",
+          "x": 6,
+          "z": 23
+        }
+      ],
+      "monsters": [
+        {
+          "id": "boar-1",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": 9,
+          "z": 8
+        },
+        {
+          "id": "boar-2",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": -10,
+          "z": 5
+        },
+        {
+          "id": "boar-3",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": 9,
+          "z": -3
+        },
+        {
+          "id": "boar-4",
+          "kind": "boar",
+          "name": "Jabalí de la pradera",
+          "x": -10,
+          "z": -8
+        },
+        {
+          "id": "guardian-1",
+          "kind": "guardian",
+          "name": "Centinela del umbral",
+          "x": 0,
+          "z": -23
+        }
+      ],
+      "buildings": [
+        {
+          "id": "forge",
+          "kind": "smithy",
+          "name": "Herrería de Brann",
+          "x": -10,
+          "z": 19,
+          "rotation": 0
+        },
+        {
+          "id": "tailors",
+          "kind": "tailor",
+          "name": "Sastrería de Mira",
+          "x": 10,
+          "z": 19,
+          "rotation": 0
+        },
+        {
+          "id": "store",
+          "kind": "shop",
+          "name": "Tienda de Tessa",
+          "x": 10,
+          "z": 27,
+          "rotation": 0
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource-1-0",
+          "typeId": "copper-vein",
+          "x": -16,
+          "z": 6
+        },
+        {
+          "id": "resource-1-1",
+          "typeId": "iron-vein",
+          "x": -20,
+          "z": -5
+        },
+        {
+          "id": "resource-1-2",
+          "typeId": "pine-tree",
+          "x": 17,
+          "z": 6
+        },
+        {
+          "id": "resource-1-3",
+          "typeId": "pine-tree",
+          "x": 23,
+          "z": -3
+        },
+        {
+          "id": "resource-1-4",
+          "typeId": "oak-tree",
+          "x": 19,
+          "z": -15
+        }
+      ],
+      "training": {
+        "name": "Patio de entrenamiento",
+        "x": 0,
+        "z": 27,
+        "radius": 5,
+        "recoverySeconds": 5,
+        "sessionResetSeconds": 15,
+        "dummies": [
+          {
+            "id": "dummy-straw",
+            "name": "Muñeco de paja",
+            "x": -2,
+            "z": 27,
+            "maxHp": 5000,
+            "defense": 0,
+            "ally": false
+          },
+          {
+            "id": "dummy-armor",
+            "name": "Muñeco acorazado",
+            "x": 2,
+            "z": 27,
+            "maxHp": 5000,
+            "defense": 12,
+            "ally": false
+          },
+          {
+            "id": "dummy-area",
+            "name": "Muñeco de área",
+            "x": 0,
+            "z": 30,
+            "maxHp": 5000,
+            "defense": 0,
+            "ally": false
+          },
+          {
+            "id": "dummy-ally",
+            "name": "Aliado de prácticas",
+            "x": 0,
+            "z": 24,
+            "maxHp": 5000,
+            "defense": 0,
+            "ally": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Bosque de cristal",
+      "subtitle": "Más allá de la primera puerta",
+      "biome": "crystal",
+      "radius": 42,
+      "treeCount": 75,
+      "spawn": {
+        "x": 0,
+        "z": 15
+      },
+      "portal": {
+        "x": 0,
+        "z": 20,
+        "to": 1,
+        "requiresBoss": false
+      },
+      "npcs": [
+        {
+          "id": "lyra-2",
+          "name": "Eco de Lyra",
+          "role": "guide",
+          "x": 4,
+          "z": 14
+        }
+      ],
+      "monsters": [
+        {
+          "id": "boar-5",
+          "kind": "boar",
+          "name": "Jabalí de cristal",
+          "x": 9,
+          "z": 3
+        },
+        {
+          "id": "boar-6",
+          "kind": "boar",
+          "name": "Jabalí de cristal",
+          "x": -9,
+          "z": -4
+        },
+        {
+          "id": "guardian-2",
+          "kind": "guardian",
+          "name": "Guardián de zafiro",
+          "x": 0,
+          "z": -22
+        }
+      ],
+      "buildings": [],
+      "resources": [
+        {
+          "id": "resource-2-0",
+          "typeId": "mithril-vein",
+          "x": -17,
+          "z": 4
+        },
+        {
+          "id": "resource-2-1",
+          "typeId": "crystal-vein",
+          "x": -19,
+          "z": -8
+        },
+        {
+          "id": "resource-2-2",
+          "typeId": "ancient-tree",
+          "x": 18,
+          "z": 4
+        },
+        {
+          "id": "resource-2-3",
+          "typeId": "oak-tree",
+          "x": 22,
+          "z": -10
+        }
+      ]
+    }
+  ],
+  "characterOptions": {
+    "genders": [
+      {
+        "id": "male",
+        "name": "Chico"
+      },
+      {
+        "id": "female",
+        "name": "Chica"
+      }
+    ],
+    "faces": [
+      {
+        "id": "calm",
+        "name": "Sereno"
+      },
+      {
+        "id": "bold",
+        "name": "Decidido"
+      },
+      {
+        "id": "kind",
+        "name": "Alegre"
+      }
+    ],
+    "classes": [
+      {
+        "id": "warrior",
+        "name": "Guerrero",
+        "description": "Espada y armadura. Elige la senda de guardia o furia al ganar niveles.",
+        "hp": 100,
+        "damage": 19,
+        "speed": 5.5,
+        "attackRange": 3.1,
+        "ability": {
+          "name": "Corte celeste",
+          "kind": "strike",
+          "range": 4.4,
+          "power": 2,
+          "cooldown": 4
+        }
+      },
+      {
+        "id": "mage",
+        "name": "Mago",
+        "description": "Bastón y ataques arcanos a distancia. Desarrolla poder o dominio de la magia.",
+        "hp": 85,
+        "damage": 17,
+        "speed": 5.6,
+        "attackRange": 10,
+        "ability": {
+          "name": "Descarga arcana",
+          "kind": "arcane",
+          "range": 13,
+          "power": 2.2,
+          "cooldown": 5
+        }
+      },
+      {
+        "id": "healer",
+        "name": "Sanador",
+        "description": "Luz protectora. Cura a tus aliados cercanos y elige amparo o restauración.",
+        "hp": 110,
+        "damage": 12,
+        "speed": 5.2,
+        "attackRange": 8,
+        "ability": {
+          "name": "Luz compartida",
+          "kind": "heal",
+          "range": 8,
+          "power": 30,
+          "cooldown": 6
+        }
+      }
+    ],
+    "races": [
+      {
+        "id": "human",
+        "name": "Humano",
+        "description": "Habitantes de ciudades y caminos; versátiles y capaces de recuperar el aliento. No tienen un bono pasivo fijo.",
+        "model": "human",
+        "scale": 1,
+        "width": 1,
+        "ears": "round",
+        "horns": false,
+        "tail": false,
+        "wings": false,
+        "beard": false,
+        "eyeColor": "#344a40",
+        "skinColors": [
+          "#dfb18b",
+          "#bb835d",
+          "#784f3b",
+          "#f0d4b4"
+        ],
+        "hairColors": [
+          "#342f32",
+          "#74503a",
+          "#c39757",
+          "#dad7cb"
+        ],
+        "effects": {},
+        "portrait": "assets/race-human.png",
+        "ability": {
+          "name": "Segundo aliento",
+          "kind": "heal",
+          "value": 20,
+          "duration": 0,
+          "cooldown": 30,
+          "range": 0
+        }
+      },
+      {
+        "id": "dwarf",
+        "name": "Enano",
+        "description": "Pueblos de montaña y forja. Su constitución robusta aporta vida y defensa a cambio de algo de velocidad.",
+        "model": "dwarf",
+        "scale": 0.78,
+        "width": 1.25,
+        "ears": "round",
+        "horns": false,
+        "tail": false,
+        "wings": false,
+        "beard": true,
+        "eyeColor": "#66492c",
+        "skinColors": [
+          "#c9936b",
+          "#e1b48d",
+          "#81553c"
+        ],
+        "hairColors": [
+          "#713c25",
+          "#49362e",
+          "#c9c6bf"
+        ],
+        "effects": {
+          "maxHp": 15,
+          "defense": 1,
+          "speed": -0.2
+        },
+        "portrait": "assets/race-dwarf.png",
+        "ability": {
+          "name": "Piel de piedra",
+          "kind": "shield",
+          "value": 30,
+          "duration": 8,
+          "cooldown": 30,
+          "range": 0
+        }
+      },
+      {
+        "id": "elf",
+        "name": "Elfo",
+        "description": "Custodios de bosques y memoria. Precisión natural y un paso ligero temporal para explorar o retirarse.",
+        "model": "elf",
+        "scale": 1.06,
+        "width": 0.94,
+        "ears": "pointed",
+        "horns": false,
+        "tail": false,
+        "wings": false,
+        "beard": false,
+        "eyeColor": "#4a865f",
+        "skinColors": [
+          "#dfb18b",
+          "#efd8b4",
+          "#b58b65"
+        ],
+        "hairColors": [
+          "#c39757",
+          "#e8dec2",
+          "#6d4b32",
+          "#342f32"
+        ],
+        "effects": {
+          "criticalChance": 2
+        },
+        "portrait": "assets/race-elf.png",
+        "ability": {
+          "name": "Paso del bosque",
+          "kind": "sprint",
+          "value": 2,
+          "duration": 5,
+          "cooldown": 25,
+          "range": 0
+        }
+      },
+      {
+        "id": "darkelf",
+        "name": "Elfo oscuro",
+        "description": "Comunidades de cavernas luminosas y ciudades bajo las estrellas. Afinidad con la magia del crepúsculo. Su origen no determina su ciudadanía.",
+        "model": "darkelf",
+        "scale": 1.03,
+        "width": 0.95,
+        "ears": "pointed",
+        "horns": false,
+        "tail": false,
+        "wings": false,
+        "beard": false,
+        "eyeColor": "#bca3fb",
+        "skinColors": [
+          "#807394",
+          "#675c7d",
+          "#a092b2",
+          "#544b65"
+        ],
+        "hairColors": [
+          "#e5e2ef",
+          "#9a93b8",
+          "#332a47"
+        ],
+        "effects": {
+          "damage": 1,
+          "criticalChance": 3,
+          "maxHp": -5
+        },
+        "portrait": "assets/race-darkelf.png",
+        "ability": {
+          "name": "Velo umbrío",
+          "kind": "critical",
+          "value": 15,
+          "duration": 6,
+          "cooldown": 30,
+          "range": 0
+        }
+      },
+      {
+        "id": "draconian",
+        "name": "Draconiano",
+        "description": "Linajes de escamas, cuernos y cola. Alas ornamentales y aliento ígneo; su constitución refuerza vida y daño.",
+        "model": "draconian",
+        "scale": 1.12,
+        "width": 1.1,
+        "ears": "horned",
+        "horns": true,
+        "tail": true,
+        "wings": true,
+        "beard": false,
+        "eyeColor": "#f4c563",
+        "skinColors": [
+          "#8b5043",
+          "#5c806e",
+          "#53677e",
+          "#c09558"
+        ],
+        "hairColors": [
+          "#3c3935",
+          "#682e28",
+          "#ded0a7"
+        ],
+        "effects": {
+          "maxHp": 10,
+          "damage": 1,
+          "speed": -0.1
+        },
+        "portrait": "assets/race-draconian.png",
+        "ability": {
+          "name": "Aliento dracónico",
+          "kind": "flame",
+          "value": 18,
+          "duration": 0,
+          "cooldown": 25,
+          "range": 6
+        }
+      }
+    ],
+    "hairColors": [
+      "#342f32",
+      "#74503a",
+      "#c39757",
+      "#dddac9",
+      "#9d493c",
+      "#427d83"
+    ],
+    "skinColors": [
+      "#f0d0ad",
+      "#dfb18b",
+      "#bb835d",
+      "#855637",
+      "#573a2b"
+    ],
+    "equipmentSets": [
+      {
+        "id": "warrior-male-1",
+        "name": "Vestiduras del aprendiz · chico",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "leather",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-male-5",
+        "name": "Cota del caminante · chico",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "mail",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 4,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-male-10",
+        "name": "Placas del horizonte · chico",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "mail",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 8,
+          "speed": 0,
+          "critical": 12
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-female-1",
+        "name": "Vestiduras del aprendiz · chica",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "leather",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-female-5",
+        "name": "Cota del caminante · chica",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "mail",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 4,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-female-10",
+        "name": "Placas del horizonte · chica",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "mail",
+        "primary": "#4c6e71",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 8,
+          "speed": 0,
+          "critical": 12
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "mage-male-1",
+        "name": "Túnica del iniciado · chico",
+        "classId": "mage",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-male-5",
+        "name": "Manto de runas · chico",
+        "classId": "mage",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-male-10",
+        "name": "Vestiduras del firmamento · chico",
+        "classId": "mage",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-female-1",
+        "name": "Túnica del iniciado · chica",
+        "classId": "mage",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-female-5",
+        "name": "Manto de runas · chica",
+        "classId": "mage",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-female-10",
+        "name": "Vestiduras del firmamento · chica",
+        "classId": "mage",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#514d80",
+        "metal": "#b9c5df",
+        "accent": "#ae9ae4",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-male-1",
+        "name": "Hábito del alba · chico",
+        "classId": "healer",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0,
+          "healing": 0
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-male-5",
+        "name": "Manto del amparo · chico",
+        "classId": "healer",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5,
+          "healing": 5
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-male-10",
+        "name": "Vestiduras del santuario · chico",
+        "classId": "healer",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12,
+          "healing": 10
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-female-1",
+        "name": "Hábito del alba · chica",
+        "classId": "healer",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 0,
+          "healing": 0
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-female-5",
+        "name": "Manto del amparo · chica",
+        "classId": "healer",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 2,
+          "speed": 0,
+          "critical": 5,
+          "healing": 5
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-female-10",
+        "name": "Vestiduras del santuario · chica",
+        "classId": "healer",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "tunic",
+        "primary": "#e1ddc3",
+        "metal": "#c8d9cf",
+        "accent": "#6aa894",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 3,
+          "speed": 0,
+          "critical": 12,
+          "healing": 10
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "warrior-male-1-assassin",
+        "name": "Acechador · chico · Nv. 1",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "leather",
+        "primary": "#41414b",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-male-1-tank",
+        "name": "Bastión · chico · Nv. 1",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 1,
+        "style": "plate",
+        "primary": "#657e8d",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 4,
+          "speed": 0,
+          "critical": 0
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-male-5-assassin",
+        "name": "Acechador · chico · Nv. 5",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "leather",
+        "primary": "#41414b",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 4,
+          "speed": 0,
+          "critical": 10
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-male-5-tank",
+        "name": "Bastión · chico · Nv. 5",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 5,
+        "style": "plate",
+        "primary": "#657e8d",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": false,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 7,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-male-10-assassin",
+        "name": "Acechador · chico · Nv. 10",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "leather",
+        "primary": "#41414b",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 8,
+          "speed": 0,
+          "critical": 17
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-male-10-tank",
+        "name": "Bastión · chico · Nv. 10",
+        "classId": "warrior",
+        "gender": "male",
+        "minLevel": 10,
+        "style": "plate",
+        "primary": "#657e8d",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": false,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 11,
+          "speed": 0,
+          "critical": 12
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-female-1-assassin",
+        "name": "Acechador · chica · Nv. 1",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "leather",
+        "primary": "#41414b",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 1,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-female-1-tank",
+        "name": "Bastión · chica · Nv. 1",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 1,
+        "style": "plate",
+        "primary": "#657e8d",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": false,
+        "attributes": {
+          "health": 0,
+          "attack": 0,
+          "defense": 4,
+          "speed": 0,
+          "critical": 0
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-female-5-assassin",
+        "name": "Acechador · chica · Nv. 5",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "leather",
+        "primary": "#41414b",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 4,
+          "speed": 0,
+          "critical": 10
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-female-5-tank",
+        "name": "Bastión · chica · Nv. 5",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 5,
+        "style": "plate",
+        "primary": "#657e8d",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": false,
+        "attributes": {
+          "health": 15,
+          "attack": 3,
+          "defense": 7,
+          "speed": 0,
+          "critical": 5
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-female-10-assassin",
+        "name": "Acechador · chica · Nv. 10",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "leather",
+        "primary": "#41414b",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": false,
+        "cape": true,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 8,
+          "speed": 0,
+          "critical": 17
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-female-10-tank",
+        "name": "Bastión · chica · Nv. 10",
+        "classId": "warrior",
+        "gender": "female",
+        "minLevel": 10,
+        "style": "plate",
+        "primary": "#657e8d",
+        "metal": "#d4dedb",
+        "accent": "#ceb577",
+        "helmet": true,
+        "cape": false,
+        "attributes": {
+          "health": 35,
+          "attack": 7,
+          "defense": 11,
+          "speed": 0,
+          "critical": 12
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      }
+    ],
+    "attributeDefinitions": [
+      {
+        "id": "health",
+        "name": "Vida adicional",
+        "effect": "maxHp",
+        "min": -30,
+        "max": 200,
+        "step": 1
+      },
+      {
+        "id": "attack",
+        "name": "Daño adicional",
+        "effect": "damage",
+        "min": -10,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "id": "defense",
+        "name": "Defensa",
+        "effect": "defense",
+        "min": 0,
+        "max": 30,
+        "step": 1
+      },
+      {
+        "id": "speed",
+        "name": "Velocidad adicional",
+        "effect": "speed",
+        "min": -2,
+        "max": 3,
+        "step": 0.1
+      },
+      {
+        "id": "critical",
+        "name": "Crítico (%)",
+        "effect": "criticalChance",
+        "min": 0,
+        "max": 50,
+        "step": 1
+      },
+      {
+        "id": "healing",
+        "name": "Poder de curación",
+        "effect": "healing",
+        "min": 0,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "id": "skillPower",
+        "name": "Potencia de habilidad (multiplicador adicional)",
+        "effect": "skillPower",
+        "min": 0,
+        "max": 2,
+        "step": 0.1
+      },
+      {
+        "id": "recovery",
+        "name": "Reducción de enfriamiento (s)",
+        "effect": "cooldownReduction",
+        "min": 0,
+        "max": 5,
+        "step": 0.1
+      }
+    ],
+    "progression": {
+      "xpPerLevel": 100,
+      "maxLevel": 100,
+      "attributePointsPerLevel": 3,
+      "talentPointsPerLevel": 1,
+      "hpPerLevel": 15,
+      "damagePerLevel": 2,
+      "allowRespec": true,
+      "attributes": [
+        {
+          "id": "vitality",
+          "name": "Vitalidad",
+          "description": "Cada punto añade 5 a la vida máxima.",
+          "maxRank": 50,
+          "effects": {
+            "maxHp": 5
+          }
+        },
+        {
+          "id": "power",
+          "name": "Poder",
+          "description": "Cada punto añade 1 al daño base.",
+          "maxRank": 50,
+          "effects": {
+            "damage": 1
+          }
+        },
+        {
+          "id": "agility",
+          "name": "Agilidad",
+          "description": "Cada punto añade 0.04 velocidad y 0.15 % de crítico.",
+          "maxRank": 50,
+          "effects": {
+            "speed": 0.04,
+            "criticalChance": 0.15
+          }
+        },
+        {
+          "id": "spirit",
+          "name": "Espíritu",
+          "description": "Cada punto añade 2 a la curación y 0.05 s de recuperación.",
+          "maxRank": 50,
+          "effects": {
+            "healing": 2,
+            "cooldownReduction": 0.05
+          }
+        }
+      ],
+      "talents": [
+        {
+          "id": "warrior-discipline",
+          "classId": "warrior",
+          "name": "Disciplina",
+          "description": "+2 de daño por rango.",
+          "branch": "Fundamento",
+          "minLevel": 2,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [],
+          "effects": {
+            "damage": 2
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "warrior-guard",
+          "classId": "warrior",
+          "name": "Baluarte",
+          "description": "+2 de defensa por rango.",
+          "branch": "Guardia",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-discipline"
+          ],
+          "effects": {
+            "defense": 2
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "warrior-veteran",
+          "classId": "warrior",
+          "name": "Veterano",
+          "description": "+12 de vida máxima por rango.",
+          "branch": "Guardia",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-guard"
+          ],
+          "effects": {
+            "maxHp": 12
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "warrior-fury",
+          "classId": "warrior",
+          "name": "Furia",
+          "description": "+3 % de crítico por rango.",
+          "branch": "Furia",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-discipline"
+          ],
+          "effects": {
+            "criticalChance": 3
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "warrior-sky",
+          "classId": "warrior",
+          "name": "Filo del cielo",
+          "description": "+0.2 al multiplicador de habilidad por rango.",
+          "branch": "Furia",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "warrior-fury"
+          ],
+          "effects": {
+            "skillPower": 0.2
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "mage-focus",
+          "classId": "mage",
+          "name": "Concentración",
+          "description": "+2 de daño por rango.",
+          "branch": "Fundamento",
+          "minLevel": 2,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [],
+          "effects": {
+            "damage": 2
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "mage-flame",
+          "classId": "mage",
+          "name": "Runas ardientes",
+          "description": "+0.2 al multiplicador de descarga por rango.",
+          "branch": "Poder",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-focus"
+          ],
+          "effects": {
+            "skillPower": 0.2
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "mage-star",
+          "classId": "mage",
+          "name": "Estrella arcana",
+          "description": "+4 % de crítico por rango.",
+          "branch": "Poder",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-flame"
+          ],
+          "effects": {
+            "criticalChance": 4
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "mage-flow",
+          "classId": "mage",
+          "name": "Flujo mágico",
+          "description": "Reduce 0.3 s el enfriamiento por rango.",
+          "branch": "Dominio",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-focus"
+          ],
+          "effects": {
+            "cooldownReduction": 0.3
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "mage-ward",
+          "classId": "mage",
+          "name": "Velo arcano",
+          "description": "+8 de vida y +1 defensa por rango.",
+          "branch": "Dominio",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "mage-flow"
+          ],
+          "effects": {
+            "maxHp": 8,
+            "defense": 1
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "healer-grace",
+          "classId": "healer",
+          "name": "Gracia",
+          "description": "+5 de curación por rango.",
+          "branch": "Fundamento",
+          "minLevel": 2,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [],
+          "effects": {
+            "healing": 5
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "healer-guard",
+          "classId": "healer",
+          "name": "Amparo",
+          "description": "+2 de defensa por rango.",
+          "branch": "Amparo",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-grace"
+          ],
+          "effects": {
+            "defense": 2
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "healer-sanctuary",
+          "classId": "healer",
+          "name": "Santuario",
+          "description": "+12 de vida máxima por rango.",
+          "branch": "Amparo",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-guard"
+          ],
+          "effects": {
+            "maxHp": 12
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "healer-renew",
+          "classId": "healer",
+          "name": "Renovación",
+          "description": "Reduce 0.4 s el enfriamiento por rango.",
+          "branch": "Restauración",
+          "minLevel": 3,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-grace"
+          ],
+          "effects": {
+            "cooldownReduction": 0.4
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "healer-radiance",
+          "classId": "healer",
+          "name": "Resplandor",
+          "description": "+4 de daño y +4 de curación por rango.",
+          "branch": "Restauración",
+          "minLevel": 5,
+          "maxRank": 3,
+          "cost": 1,
+          "requires": [
+            "healer-renew"
+          ],
+          "effects": {
+            "damage": 4,
+            "healing": 4
+          },
+          "specializationIds": []
+        },
+        {
+          "id": "learn-sword-sweep",
+          "classId": "warrior",
+          "name": "Barrido de acero",
+          "description": "Desbloquea Barrido de acero. Espadachín.",
+          "branch": "Espadachín",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": [
+            "swordsman"
+          ]
+        },
+        {
+          "id": "learn-sword-cross",
+          "classId": "warrior",
+          "name": "Corte cruzado",
+          "description": "Desbloquea Corte cruzado. Espadachín.",
+          "branch": "Espadachín",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-sword-sweep"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "swordsman"
+          ]
+        },
+        {
+          "id": "learn-sword-focus",
+          "classId": "warrior",
+          "name": "Ritmo del duelista",
+          "description": "Desbloquea Ritmo del duelista. Espadachín.",
+          "branch": "Espadachín",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-sword-cross"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "swordsman"
+          ]
+        },
+        {
+          "id": "learn-assassin-ambush",
+          "classId": "warrior",
+          "name": "Golpe furtivo",
+          "description": "Desbloquea Golpe furtivo. Asesino.",
+          "branch": "Asesino",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": [
+            "assassin"
+          ]
+        },
+        {
+          "id": "learn-assassin-venom",
+          "classId": "warrior",
+          "name": "Veneno de sombra",
+          "description": "Desbloquea Veneno de sombra. Asesino.",
+          "branch": "Asesino",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-assassin-ambush"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "assassin"
+          ]
+        },
+        {
+          "id": "learn-assassin-step",
+          "classId": "warrior",
+          "name": "Paso de sombra",
+          "description": "Desbloquea Paso de sombra. Asesino.",
+          "branch": "Asesino",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-assassin-venom"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "assassin"
+          ]
+        },
+        {
+          "id": "learn-tank-bash",
+          "classId": "warrior",
+          "name": "Golpe de escudo",
+          "description": "Desbloquea Golpe de escudo. Tanque.",
+          "branch": "Tanque",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": [
+            "tank"
+          ]
+        },
+        {
+          "id": "learn-tank-taunt",
+          "classId": "warrior",
+          "name": "Desafío del bastión",
+          "description": "Desbloquea Desafío del bastión. Tanque.",
+          "branch": "Tanque",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-tank-bash"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "tank"
+          ]
+        },
+        {
+          "id": "learn-tank-wall",
+          "classId": "warrior",
+          "name": "Muralla protectora",
+          "description": "Desbloquea Muralla protectora. Tanque.",
+          "branch": "Tanque",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-tank-taunt"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "tank"
+          ]
+        },
+        {
+          "id": "learn-healer-weakness",
+          "classId": "healer",
+          "name": "Debilidad",
+          "description": "Desbloquea Debilidad. Maldiciones.",
+          "branch": "Maldiciones",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-decay",
+          "classId": "healer",
+          "name": "Marchitar",
+          "description": "Desbloquea Marchitar. Maldiciones.",
+          "branch": "Maldiciones",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-healer-weakness"
+          ],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-blight",
+          "classId": "healer",
+          "name": "Sello de aflicción",
+          "description": "Desbloquea Sello de aflicción. Maldiciones.",
+          "branch": "Maldiciones",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-healer-decay"
+          ],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-blessing",
+          "classId": "healer",
+          "name": "Bendición vital",
+          "description": "Desbloquea Bendición vital. Bendiciones.",
+          "branch": "Bendiciones",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-haste",
+          "classId": "healer",
+          "name": "Gracia veloz",
+          "description": "Desbloquea Gracia veloz. Bendiciones.",
+          "branch": "Bendiciones",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-healer-blessing"
+          ],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-sanctuary",
+          "classId": "healer",
+          "name": "Santuario",
+          "description": "Desbloquea Santuario. Bendiciones.",
+          "branch": "Bendiciones",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-healer-haste"
+          ],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-mend",
+          "classId": "healer",
+          "name": "Restauración",
+          "description": "Desbloquea Restauración. Curación.",
+          "branch": "Curación",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-chorus",
+          "classId": "healer",
+          "name": "Coro de vida",
+          "description": "Desbloquea Coro de vida. Curación.",
+          "branch": "Curación",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-healer-mend"
+          ],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-healer-renew",
+          "classId": "healer",
+          "name": "Renacer del alba",
+          "description": "Desbloquea Renacer del alba. Curación.",
+          "branch": "Curación",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-healer-chorus"
+          ],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-fire-bolt",
+          "classId": "mage",
+          "name": "Proyectil de fuego",
+          "description": "Desbloquea Proyectil de fuego. Fuego.",
+          "branch": "Fuego",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": [
+            "fire"
+          ]
+        },
+        {
+          "id": "learn-fire-storm",
+          "classId": "mage",
+          "name": "Tormenta ígnea",
+          "description": "Desbloquea Tormenta ígnea. Fuego.",
+          "branch": "Fuego",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-fire-bolt"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "fire"
+          ]
+        },
+        {
+          "id": "learn-fire-embers",
+          "classId": "mage",
+          "name": "Ascua compartida",
+          "description": "Desbloquea Ascua compartida. Fuego.",
+          "branch": "Fuego",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-fire-storm"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "fire"
+          ]
+        },
+        {
+          "id": "learn-ice-lance",
+          "classId": "mage",
+          "name": "Lanza de hielo",
+          "description": "Desbloquea Lanza de hielo. Hielo.",
+          "branch": "Hielo",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": [
+            "ice"
+          ]
+        },
+        {
+          "id": "learn-ice-frost",
+          "classId": "mage",
+          "name": "Prisión de escarcha",
+          "description": "Desbloquea Prisión de escarcha. Hielo.",
+          "branch": "Hielo",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-ice-lance"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "ice"
+          ]
+        },
+        {
+          "id": "learn-ice-armor",
+          "classId": "mage",
+          "name": "Armadura glacial",
+          "description": "Desbloquea Armadura glacial. Hielo.",
+          "branch": "Hielo",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-ice-frost"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "ice"
+          ]
+        },
+        {
+          "id": "learn-water-wave",
+          "classId": "mage",
+          "name": "Oleada",
+          "description": "Desbloquea Oleada. Agua.",
+          "branch": "Agua",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": [
+            "water"
+          ]
+        },
+        {
+          "id": "learn-water-tide",
+          "classId": "mage",
+          "name": "Marea reparadora",
+          "description": "Desbloquea Marea reparadora. Agua.",
+          "branch": "Agua",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-water-wave"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "water"
+          ]
+        },
+        {
+          "id": "learn-water-flow",
+          "classId": "mage",
+          "name": "Fluir compartido",
+          "description": "Desbloquea Fluir compartido. Agua.",
+          "branch": "Agua",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-water-tide"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "water"
+          ]
+        },
+        {
+          "id": "learn-earth-rock",
+          "classId": "mage",
+          "name": "Lanza de roca",
+          "description": "Desbloquea Lanza de roca. Tierra.",
+          "branch": "Tierra",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": [
+            "earth"
+          ]
+        },
+        {
+          "id": "learn-earth-quake",
+          "classId": "mage",
+          "name": "Terremoto",
+          "description": "Desbloquea Terremoto. Tierra.",
+          "branch": "Tierra",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-earth-rock"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "earth"
+          ]
+        },
+        {
+          "id": "learn-earth-skin",
+          "classId": "mage",
+          "name": "Piel de piedra",
+          "description": "Desbloquea Piel de piedra. Tierra.",
+          "branch": "Tierra",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-earth-quake"
+          ],
+          "effects": {},
+          "specializationIds": [
+            "earth"
+          ]
+        },
+        {
+          "id": "learn-summon-sprite",
+          "classId": "mage",
+          "name": "Invocar familiar",
+          "description": "Desbloquea Invocar familiar. Invocación.",
+          "branch": "Invocación",
+          "minLevel": 2,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-summon-guardian",
+          "classId": "mage",
+          "name": "Invocar guardián",
+          "description": "Desbloquea Invocar guardián. Invocación.",
+          "branch": "Invocación",
+          "minLevel": 4,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-summon-sprite"
+          ],
+          "effects": {},
+          "specializationIds": []
+        },
+        {
+          "id": "learn-summon-ancient",
+          "classId": "mage",
+          "name": "Invocar ancestral",
+          "description": "Desbloquea Invocar ancestral. Invocación.",
+          "branch": "Invocación",
+          "minLevel": 6,
+          "maxRank": 1,
+          "cost": 1,
+          "requires": [
+            "learn-summon-guardian"
+          ],
+          "effects": {},
+          "specializationIds": []
+        }
+      ]
+    },
+    "weaponSets": [
+      {
+        "id": "warrior-guardia-1",
+        "name": "Guardia de acero · Nv. 1",
+        "classId": "warrior",
+        "minLevel": 1,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Espada del comienzo",
+          "kind": "sword",
+          "hands": 1,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Escudo del comienzo",
+          "kind": "shield",
+          "hands": 1,
+          "attributes": {
+            "defense": 2
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-duelista-1",
+        "name": "Filos gemelos · Nv. 1",
+        "classId": "warrior",
+        "minLevel": 1,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Espada del comienzo",
+          "kind": "sword",
+          "hands": 1,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Daga del comienzo",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-vanguardia-1",
+        "name": "Vanguardia · Nv. 1",
+        "classId": "warrior",
+        "minLevel": 1,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Mandoble del comienzo",
+          "kind": "greatsword",
+          "hands": 2,
+          "attributes": {
+            "attack": 2
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": null,
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-guardia-5",
+        "name": "Guardia de acero · Nv. 5",
+        "classId": "warrior",
+        "minLevel": 5,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Espada · Nv. 5",
+          "kind": "sword",
+          "hands": 1,
+          "attributes": {
+            "attack": 3
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Escudo · Nv. 5",
+          "kind": "shield",
+          "hands": 1,
+          "attributes": {
+            "defense": 4
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-duelista-5",
+        "name": "Filos gemelos · Nv. 5",
+        "classId": "warrior",
+        "minLevel": 5,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Espada · Nv. 5",
+          "kind": "sword",
+          "hands": 1,
+          "attributes": {
+            "attack": 3
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Daga · Nv. 5",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 1
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-vanguardia-5",
+        "name": "Vanguardia · Nv. 5",
+        "classId": "warrior",
+        "minLevel": 5,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Mandoble · Nv. 5",
+          "kind": "greatsword",
+          "hands": 2,
+          "attributes": {
+            "attack": 6
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": null,
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-guardia-10",
+        "name": "Guardia de acero · Nv. 10",
+        "classId": "warrior",
+        "minLevel": 10,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Espada · Nv. 10",
+          "kind": "sword",
+          "hands": 1,
+          "attributes": {
+            "attack": 6
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Escudo · Nv. 10",
+          "kind": "shield",
+          "hands": 1,
+          "attributes": {
+            "defense": 6
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "tank"
+        ]
+      },
+      {
+        "id": "warrior-duelista-10",
+        "name": "Filos gemelos · Nv. 10",
+        "classId": "warrior",
+        "minLevel": 10,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Espada · Nv. 10",
+          "kind": "sword",
+          "hands": 1,
+          "attributes": {
+            "attack": 6
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Daga · Nv. 10",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 2
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "warrior-vanguardia-10",
+        "name": "Vanguardia · Nv. 10",
+        "classId": "warrior",
+        "minLevel": 10,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Mandoble · Nv. 10",
+          "kind": "greatsword",
+          "hands": 2,
+          "attributes": {
+            "attack": 10
+          },
+          "primary": "#d9e5e6",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": null,
+        "specializationIds": [
+          "swordsman"
+        ]
+      },
+      {
+        "id": "mage-astral-1",
+        "name": "Báculo astral · Nv. 1",
+        "classId": "mage",
+        "minLevel": 1,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Báculo del comienzo",
+          "kind": "staff",
+          "hands": 2,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": null,
+        "specializationIds": []
+      },
+      {
+        "id": "mage-canalizador-1",
+        "name": "Canalizador dual · Nv. 1",
+        "classId": "mage",
+        "minLevel": 1,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Báculo corto del comienzo",
+          "kind": "staff",
+          "hands": 1,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": {
+          "name": "Vara arcana del comienzo",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-orbe-1",
+        "name": "Círculo de enfoque · Nv. 1",
+        "classId": "mage",
+        "minLevel": 1,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara de cristal del comienzo",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": {
+          "name": "Orbe del comienzo",
+          "kind": "orb",
+          "hands": 1,
+          "attributes": {
+            "attack": 0,
+            "critical": 1
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-astral-5",
+        "name": "Báculo astral · Nv. 5",
+        "classId": "mage",
+        "minLevel": 5,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Báculo · Nv. 5",
+          "kind": "staff",
+          "hands": 2,
+          "attributes": {
+            "attack": 3
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": null,
+        "specializationIds": []
+      },
+      {
+        "id": "mage-canalizador-5",
+        "name": "Canalizador dual · Nv. 5",
+        "classId": "mage",
+        "minLevel": 5,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Báculo corto · Nv. 5",
+          "kind": "staff",
+          "hands": 1,
+          "attributes": {
+            "attack": 3
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": {
+          "name": "Vara arcana · Nv. 5",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 1
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-orbe-5",
+        "name": "Círculo de enfoque · Nv. 5",
+        "classId": "mage",
+        "minLevel": 5,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara de cristal · Nv. 5",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 3
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": {
+          "name": "Orbe · Nv. 5",
+          "kind": "orb",
+          "hands": 1,
+          "attributes": {
+            "attack": 1,
+            "critical": 2
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-astral-10",
+        "name": "Báculo astral · Nv. 10",
+        "classId": "mage",
+        "minLevel": 10,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Báculo · Nv. 10",
+          "kind": "staff",
+          "hands": 2,
+          "attributes": {
+            "attack": 6
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": null,
+        "specializationIds": []
+      },
+      {
+        "id": "mage-canalizador-10",
+        "name": "Canalizador dual · Nv. 10",
+        "classId": "mage",
+        "minLevel": 10,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Báculo corto · Nv. 10",
+          "kind": "staff",
+          "hands": 1,
+          "attributes": {
+            "attack": 6
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": {
+          "name": "Vara arcana · Nv. 10",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 2
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "mage-orbe-10",
+        "name": "Círculo de enfoque · Nv. 10",
+        "classId": "mage",
+        "minLevel": 10,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara de cristal · Nv. 10",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 6
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "offHand": {
+          "name": "Orbe · Nv. 10",
+          "kind": "orb",
+          "hands": 1,
+          "attributes": {
+            "attack": 2,
+            "critical": 3
+          },
+          "primary": "#b9c5ef",
+          "secondary": "#6d527e",
+          "glow": "#af91ef"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-alba-1",
+        "name": "Varas del alba · Nv. 1",
+        "classId": "healer",
+        "minLevel": 1,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Vara de luz del comienzo",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 0,
+            "healing": 0
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Vara de amparo del comienzo",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 0,
+            "healing": 0
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-santuario-1",
+        "name": "Custodio del santuario · Nv. 1",
+        "classId": "healer",
+        "minLevel": 1,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara bendita del comienzo",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 0,
+            "healing": 0
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Escudo consagrado del comienzo",
+          "kind": "shield",
+          "hands": 1,
+          "attributes": {
+            "defense": 2,
+            "healing": 0
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-liturgia-1",
+        "name": "Liturgia de luz · Nv. 1",
+        "classId": "healer",
+        "minLevel": 1,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara del canto del comienzo",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 0,
+            "healing": 0
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Libro de plegarias del comienzo",
+          "kind": "tome",
+          "hands": 1,
+          "attributes": {
+            "attack": 0,
+            "healing": 0,
+            "recovery": 0.1
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-alba-5",
+        "name": "Varas del alba · Nv. 5",
+        "classId": "healer",
+        "minLevel": 5,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Vara de luz · Nv. 5",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 3,
+            "healing": 4
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Vara de amparo · Nv. 5",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 1,
+            "healing": 2
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-santuario-5",
+        "name": "Custodio del santuario · Nv. 5",
+        "classId": "healer",
+        "minLevel": 5,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara bendita · Nv. 5",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 3,
+            "healing": 4
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Escudo consagrado · Nv. 5",
+          "kind": "shield",
+          "hands": 1,
+          "attributes": {
+            "defense": 4,
+            "healing": 2
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-liturgia-5",
+        "name": "Liturgia de luz · Nv. 5",
+        "classId": "healer",
+        "minLevel": 5,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara del canto · Nv. 5",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 3,
+            "healing": 4
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Libro de plegarias · Nv. 5",
+          "kind": "tome",
+          "hands": 1,
+          "attributes": {
+            "attack": 1,
+            "healing": 2,
+            "recovery": 0.30000000000000004
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-alba-10",
+        "name": "Varas del alba · Nv. 10",
+        "classId": "healer",
+        "minLevel": 10,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Vara de luz · Nv. 10",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 6,
+            "healing": 8
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Vara de amparo · Nv. 10",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 2,
+            "healing": 4
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-santuario-10",
+        "name": "Custodio del santuario · Nv. 10",
+        "classId": "healer",
+        "minLevel": 10,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara bendita · Nv. 10",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 6,
+            "healing": 8
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Escudo consagrado · Nv. 10",
+          "kind": "shield",
+          "hands": 1,
+          "attributes": {
+            "defense": 6,
+            "healing": 4
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "healer-liturgia-10",
+        "name": "Liturgia de luz · Nv. 10",
+        "classId": "healer",
+        "minLevel": 10,
+        "autoEquip": false,
+        "mainHand": {
+          "name": "Vara del canto · Nv. 10",
+          "kind": "wand",
+          "hands": 1,
+          "attributes": {
+            "attack": 6,
+            "healing": 8
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "offHand": {
+          "name": "Libro de plegarias · Nv. 10",
+          "kind": "tome",
+          "hands": 1,
+          "attributes": {
+            "attack": 2,
+            "healing": 4,
+            "recovery": 0.5
+          },
+          "primary": "#eee4ba",
+          "secondary": "#709987",
+          "glow": "#b7efc9"
+        },
+        "specializationIds": []
+      },
+      {
+        "id": "warrior-assassin-1",
+        "name": "Dagas del acechador · Nv. 1",
+        "classId": "warrior",
+        "minLevel": 1,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Daga principal del acechador",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 1
+          },
+          "primary": "#a7adc5",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Daga secundaria del acechador",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 0
+          },
+          "primary": "#a7adc5",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-assassin-5",
+        "name": "Dagas del acechador · Nv. 5",
+        "classId": "warrior",
+        "minLevel": 5,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Daga principal del acechador",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 4
+          },
+          "primary": "#a7adc5",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Daga secundaria del acechador",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 1
+          },
+          "primary": "#a7adc5",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      },
+      {
+        "id": "warrior-assassin-10",
+        "name": "Dagas del acechador · Nv. 10",
+        "classId": "warrior",
+        "minLevel": 10,
+        "autoEquip": true,
+        "mainHand": {
+          "name": "Daga principal del acechador",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 7
+          },
+          "primary": "#a7adc5",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "offHand": {
+          "name": "Daga secundaria del acechador",
+          "kind": "dagger",
+          "hands": 1,
+          "attributes": {
+            "attack": 2
+          },
+          "primary": "#a7adc5",
+          "secondary": "#947b4c",
+          "glow": "#609687"
+        },
+        "specializationIds": [
+          "assassin"
+        ]
+      }
+    ],
+    "specializations": [
+      {
+        "id": "swordsman",
+        "classId": "warrior",
+        "name": "Espadachín",
+        "description": "Espadas, mandobles y contraataques; combina movilidad y daño.",
+        "weaponKinds": [
+          "sword",
+          "dagger",
+          "greatsword"
+        ],
+        "armorStyles": [
+          "leather",
+          "mail"
+        ],
+        "effects": {}
+      },
+      {
+        "id": "assassin",
+        "classId": "warrior",
+        "name": "Asesino",
+        "description": "Dagas dobles, veneno y golpes críticos. Esta especialidad no modifica la ciudadanía.",
+        "weaponKinds": [
+          "dagger"
+        ],
+        "armorStyles": [
+          "leather"
+        ],
+        "effects": {
+          "maxHp": -10,
+          "criticalChance": 5,
+          "speed": 0.3
+        }
+      },
+      {
+        "id": "tank",
+        "classId": "warrior",
+        "name": "Tanque",
+        "description": "Espada, escudo y placas para resistir y atraer a las criaturas.",
+        "weaponKinds": [
+          "sword",
+          "shield"
+        ],
+        "armorStyles": [
+          "plate"
+        ],
+        "effects": {
+          "maxHp": 20,
+          "defense": 2,
+          "speed": -0.3
+        }
+      },
+      {
+        "id": "fire",
+        "classId": "mage",
+        "name": "Fuego",
+        "description": "Magia de fuego, habilidades individuales y de área; comparte la rama de invocación.",
+        "weaponKinds": [
+          "staff",
+          "wand",
+          "orb",
+          "tome"
+        ],
+        "armorStyles": [
+          "tunic"
+        ],
+        "effects": {}
+      },
+      {
+        "id": "ice",
+        "classId": "mage",
+        "name": "Hielo",
+        "description": "Magia de hielo, habilidades individuales y de área; comparte la rama de invocación.",
+        "weaponKinds": [
+          "staff",
+          "wand",
+          "orb",
+          "tome"
+        ],
+        "armorStyles": [
+          "tunic"
+        ],
+        "effects": {}
+      },
+      {
+        "id": "water",
+        "classId": "mage",
+        "name": "Agua",
+        "description": "Magia de agua, habilidades individuales y de área; comparte la rama de invocación.",
+        "weaponKinds": [
+          "staff",
+          "wand",
+          "orb",
+          "tome"
+        ],
+        "armorStyles": [
+          "tunic"
+        ],
+        "effects": {}
+      },
+      {
+        "id": "earth",
+        "classId": "mage",
+        "name": "Tierra",
+        "description": "Magia de tierra, habilidades individuales y de área; comparte la rama de invocación.",
+        "weaponKinds": [
+          "staff",
+          "wand",
+          "orb",
+          "tome"
+        ],
+        "armorStyles": [
+          "tunic"
+        ],
+        "effects": {}
+      },
+      {
+        "id": "healer",
+        "classId": "healer",
+        "name": "Sanador",
+        "description": "Combina curación, maldiciones y bendiciones.",
+        "weaponKinds": [
+          "wand",
+          "staff",
+          "shield",
+          "orb",
+          "tome"
+        ],
+        "armorStyles": [
+          "tunic",
+          "leather"
+        ],
+        "effects": {}
+      }
+    ],
+    "skills": [
+      {
+        "id": "sword-sweep",
+        "classId": "warrior",
+        "name": "Barrido de acero",
+        "description": "Espadachín · Daño directo",
+        "specializationIds": [
+          "swordsman"
+        ],
+        "talentId": "learn-sword-sweep",
+        "kind": "damage",
+        "element": "physical",
+        "power": 1.3,
+        "range": 3,
+        "radius": 3,
+        "duration": 0,
+        "cooldown": 8,
+        "effects": {}
+      },
+      {
+        "id": "sword-cross",
+        "classId": "warrior",
+        "name": "Corte cruzado",
+        "description": "Espadachín · Daño directo",
+        "specializationIds": [
+          "swordsman"
+        ],
+        "talentId": "learn-sword-cross",
+        "kind": "damage",
+        "element": "physical",
+        "power": 2,
+        "range": 3,
+        "radius": 0,
+        "duration": 0,
+        "cooldown": 12,
+        "effects": {}
+      },
+      {
+        "id": "sword-focus",
+        "classId": "warrior",
+        "name": "Ritmo del duelista",
+        "description": "Espadachín · Mejora temporal",
+        "specializationIds": [
+          "swordsman"
+        ],
+        "talentId": "learn-sword-focus",
+        "kind": "buff",
+        "element": "physical",
+        "power": 0,
+        "range": 0,
+        "radius": 0,
+        "duration": 8,
+        "cooldown": 25,
+        "effects": {
+          "damage": 4,
+          "speed": 0.4
+        }
+      },
+      {
+        "id": "assassin-ambush",
+        "classId": "warrior",
+        "name": "Golpe furtivo",
+        "description": "Asesino · Daño directo",
+        "specializationIds": [
+          "assassin"
+        ],
+        "talentId": "learn-assassin-ambush",
+        "kind": "damage",
+        "element": "physical",
+        "power": 2.2,
+        "range": 3,
+        "radius": 0,
+        "duration": 0,
+        "cooldown": 10,
+        "effects": {}
+      },
+      {
+        "id": "assassin-venom",
+        "classId": "warrior",
+        "name": "Veneno de sombra",
+        "description": "Asesino · Maldición y efectos temporales",
+        "specializationIds": [
+          "assassin"
+        ],
+        "talentId": "learn-assassin-venom",
+        "kind": "curse",
+        "element": "shadow",
+        "power": 5,
+        "range": 3,
+        "radius": 0,
+        "duration": 6,
+        "cooldown": 18,
+        "effects": {
+          "defense": -2
+        }
+      },
+      {
+        "id": "assassin-step",
+        "classId": "warrior",
+        "name": "Paso de sombra",
+        "description": "Asesino · Mejora temporal",
+        "specializationIds": [
+          "assassin"
+        ],
+        "talentId": "learn-assassin-step",
+        "kind": "buff",
+        "element": "shadow",
+        "power": 0,
+        "range": 0,
+        "radius": 0,
+        "duration": 6,
+        "cooldown": 22,
+        "effects": {
+          "speed": 1,
+          "criticalChance": 10
+        }
+      },
+      {
+        "id": "tank-bash",
+        "classId": "warrior",
+        "name": "Golpe de escudo",
+        "description": "Tanque · Daño directo",
+        "specializationIds": [
+          "tank"
+        ],
+        "talentId": "learn-tank-bash",
+        "kind": "damage",
+        "element": "physical",
+        "power": 1.2,
+        "range": 3,
+        "radius": 0,
+        "duration": 0,
+        "cooldown": 10,
+        "effects": {}
+      },
+      {
+        "id": "tank-taunt",
+        "classId": "warrior",
+        "name": "Desafío del bastión",
+        "description": "Tanque · Atrae criaturas cercanas",
+        "specializationIds": [
+          "tank"
+        ],
+        "talentId": "learn-tank-taunt",
+        "kind": "taunt",
+        "element": "physical",
+        "power": 0,
+        "range": 6,
+        "radius": 6,
+        "duration": 5,
+        "cooldown": 18,
+        "effects": {}
+      },
+      {
+        "id": "tank-wall",
+        "classId": "warrior",
+        "name": "Muralla protectora",
+        "description": "Tanque · Mejora temporal",
+        "specializationIds": [
+          "tank"
+        ],
+        "talentId": "learn-tank-wall",
+        "kind": "buff",
+        "element": "earth",
+        "power": 0,
+        "range": 0,
+        "radius": 4,
+        "duration": 8,
+        "cooldown": 28,
+        "effects": {
+          "defense": 6
+        }
+      },
+      {
+        "id": "healer-weakness",
+        "classId": "healer",
+        "name": "Debilidad",
+        "description": "Maldiciones · Maldición y efectos temporales",
+        "specializationIds": [],
+        "talentId": "learn-healer-weakness",
+        "kind": "curse",
+        "element": "shadow",
+        "power": 0,
+        "range": 9,
+        "radius": 0,
+        "duration": 8,
+        "cooldown": 14,
+        "effects": {
+          "damage": -4,
+          "defense": -2
+        }
+      },
+      {
+        "id": "healer-decay",
+        "classId": "healer",
+        "name": "Marchitar",
+        "description": "Maldiciones · Maldición y efectos temporales",
+        "specializationIds": [],
+        "talentId": "learn-healer-decay",
+        "kind": "curse",
+        "element": "shadow",
+        "power": 6,
+        "range": 9,
+        "radius": 0,
+        "duration": 6,
+        "cooldown": 18,
+        "effects": {}
+      },
+      {
+        "id": "healer-blight",
+        "classId": "healer",
+        "name": "Sello de aflicción",
+        "description": "Maldiciones · Maldición y efectos temporales",
+        "specializationIds": [],
+        "talentId": "learn-healer-blight",
+        "kind": "curse",
+        "element": "shadow",
+        "power": 4,
+        "range": 9,
+        "radius": 3,
+        "duration": 6,
+        "cooldown": 24,
+        "effects": {
+          "speed": -0.7
+        }
+      },
+      {
+        "id": "healer-blessing",
+        "classId": "healer",
+        "name": "Bendición vital",
+        "description": "Bendiciones · Mejora temporal",
+        "specializationIds": [],
+        "talentId": "learn-healer-blessing",
+        "kind": "buff",
+        "element": "light",
+        "power": 0,
+        "range": 9,
+        "radius": 0,
+        "duration": 10,
+        "cooldown": 20,
+        "effects": {
+          "defense": 4,
+          "healing": 6
+        }
+      },
+      {
+        "id": "healer-haste",
+        "classId": "healer",
+        "name": "Gracia veloz",
+        "description": "Bendiciones · Mejora temporal",
+        "specializationIds": [],
+        "talentId": "learn-healer-haste",
+        "kind": "buff",
+        "element": "light",
+        "power": 0,
+        "range": 9,
+        "radius": 4,
+        "duration": 8,
+        "cooldown": 24,
+        "effects": {
+          "speed": 1,
+          "skillPower": 0.15
+        }
+      },
+      {
+        "id": "healer-sanctuary",
+        "classId": "healer",
+        "name": "Santuario",
+        "description": "Bendiciones · Mejora temporal",
+        "specializationIds": [],
+        "talentId": "learn-healer-sanctuary",
+        "kind": "buff",
+        "element": "light",
+        "power": 0,
+        "range": 0,
+        "radius": 6,
+        "duration": 6,
+        "cooldown": 28,
+        "effects": {
+          "defense": 8
+        }
+      },
+      {
+        "id": "healer-mend",
+        "classId": "healer",
+        "name": "Restauración",
+        "description": "Curación · Restaura PV",
+        "specializationIds": [],
+        "talentId": "learn-healer-mend",
+        "kind": "heal",
+        "element": "light",
+        "power": 50,
+        "range": 9,
+        "radius": 0,
+        "duration": 0,
+        "cooldown": 10,
+        "effects": {}
+      },
+      {
+        "id": "healer-chorus",
+        "classId": "healer",
+        "name": "Coro de vida",
+        "description": "Curación · Restaura PV",
+        "specializationIds": [],
+        "talentId": "learn-healer-chorus",
+        "kind": "heal",
+        "element": "light",
+        "power": 45,
+        "range": 0,
+        "radius": 6,
+        "duration": 0,
+        "cooldown": 16,
+        "effects": {}
+      },
+      {
+        "id": "healer-renew",
+        "classId": "healer",
+        "name": "Renacer del alba",
+        "description": "Curación · Restaura PV",
+        "specializationIds": [],
+        "talentId": "learn-healer-renew",
+        "kind": "heal",
+        "element": "light",
+        "power": 70,
+        "range": 0,
+        "radius": 6,
+        "duration": 0,
+        "cooldown": 24,
+        "effects": {}
+      },
+      {
+        "id": "fire-bolt",
+        "classId": "mage",
+        "name": "Proyectil de fuego",
+        "description": "Fuego · Daño directo",
+        "specializationIds": [
+          "fire"
+        ],
+        "talentId": "learn-fire-bolt",
+        "kind": "damage",
+        "element": "fire",
+        "power": 1.7,
+        "range": 12,
+        "radius": 0,
+        "duration": 0,
+        "cooldown": 8,
+        "effects": {}
+      },
+      {
+        "id": "fire-storm",
+        "classId": "mage",
+        "name": "Tormenta ígnea",
+        "description": "Fuego · Daño directo",
+        "specializationIds": [
+          "fire"
+        ],
+        "talentId": "learn-fire-storm",
+        "kind": "damage",
+        "element": "fire",
+        "power": 1.4,
+        "range": 11,
+        "radius": 4,
+        "duration": 0,
+        "cooldown": 16,
+        "effects": {}
+      },
+      {
+        "id": "fire-embers",
+        "classId": "mage",
+        "name": "Ascua compartida",
+        "description": "Fuego · Mejora temporal",
+        "specializationIds": [
+          "fire"
+        ],
+        "talentId": "learn-fire-embers",
+        "kind": "buff",
+        "element": "fire",
+        "power": 0,
+        "range": 0,
+        "radius": 4,
+        "duration": 8,
+        "cooldown": 24,
+        "effects": {
+          "damage": 5
+        }
+      },
+      {
+        "id": "ice-lance",
+        "classId": "mage",
+        "name": "Lanza de hielo",
+        "description": "Hielo · Daño directo",
+        "specializationIds": [
+          "ice"
+        ],
+        "talentId": "learn-ice-lance",
+        "kind": "damage",
+        "element": "ice",
+        "power": 1.7,
+        "range": 12,
+        "radius": 0,
+        "duration": 0,
+        "cooldown": 8,
+        "effects": {}
+      },
+      {
+        "id": "ice-frost",
+        "classId": "mage",
+        "name": "Prisión de escarcha",
+        "description": "Hielo · Maldición y efectos temporales",
+        "specializationIds": [
+          "ice"
+        ],
+        "talentId": "learn-ice-frost",
+        "kind": "curse",
+        "element": "ice",
+        "power": 0,
+        "range": 11,
+        "radius": 4,
+        "duration": 6,
+        "cooldown": 18,
+        "effects": {
+          "speed": -1.5
+        }
+      },
+      {
+        "id": "ice-armor",
+        "classId": "mage",
+        "name": "Armadura glacial",
+        "description": "Hielo · Mejora temporal",
+        "specializationIds": [
+          "ice"
+        ],
+        "talentId": "learn-ice-armor",
+        "kind": "buff",
+        "element": "ice",
+        "power": 0,
+        "range": 9,
+        "radius": 0,
+        "duration": 8,
+        "cooldown": 24,
+        "effects": {
+          "defense": 5
+        }
+      },
+      {
+        "id": "water-wave",
+        "classId": "mage",
+        "name": "Oleada",
+        "description": "Agua · Daño directo",
+        "specializationIds": [
+          "water"
+        ],
+        "talentId": "learn-water-wave",
+        "kind": "damage",
+        "element": "water",
+        "power": 1.5,
+        "range": 11,
+        "radius": 3,
+        "duration": 0,
+        "cooldown": 10,
+        "effects": {}
+      },
+      {
+        "id": "water-tide",
+        "classId": "mage",
+        "name": "Marea reparadora",
+        "description": "Agua · Restaura PV",
+        "specializationIds": [
+          "water"
+        ],
+        "talentId": "learn-water-tide",
+        "kind": "heal",
+        "element": "water",
+        "power": 30,
+        "range": 0,
+        "radius": 5,
+        "duration": 0,
+        "cooldown": 18,
+        "effects": {}
+      },
+      {
+        "id": "water-flow",
+        "classId": "mage",
+        "name": "Fluir compartido",
+        "description": "Agua · Mejora temporal",
+        "specializationIds": [
+          "water"
+        ],
+        "talentId": "learn-water-flow",
+        "kind": "buff",
+        "element": "water",
+        "power": 0,
+        "range": 0,
+        "radius": 5,
+        "duration": 8,
+        "cooldown": 24,
+        "effects": {
+          "speed": 0.6,
+          "healing": 5
+        }
+      },
+      {
+        "id": "earth-rock",
+        "classId": "mage",
+        "name": "Lanza de roca",
+        "description": "Tierra · Daño directo",
+        "specializationIds": [
+          "earth"
+        ],
+        "talentId": "learn-earth-rock",
+        "kind": "damage",
+        "element": "earth",
+        "power": 2.1,
+        "range": 9,
+        "radius": 0,
+        "duration": 0,
+        "cooldown": 11,
+        "effects": {}
+      },
+      {
+        "id": "earth-quake",
+        "classId": "mage",
+        "name": "Terremoto",
+        "description": "Tierra · Daño directo",
+        "specializationIds": [
+          "earth"
+        ],
+        "talentId": "learn-earth-quake",
+        "kind": "damage",
+        "element": "earth",
+        "power": 1.5,
+        "range": 9,
+        "radius": 5,
+        "duration": 0,
+        "cooldown": 20,
+        "effects": {}
+      },
+      {
+        "id": "earth-skin",
+        "classId": "mage",
+        "name": "Piel de piedra",
+        "description": "Tierra · Mejora temporal",
+        "specializationIds": [
+          "earth"
+        ],
+        "talentId": "learn-earth-skin",
+        "kind": "buff",
+        "element": "earth",
+        "power": 0,
+        "range": 9,
+        "radius": 0,
+        "duration": 8,
+        "cooldown": 25,
+        "effects": {
+          "defense": 8,
+          "speed": -0.5
+        }
+      },
+      {
+        "id": "summon-sprite",
+        "classId": "mage",
+        "name": "Invocar familiar",
+        "description": "Invocación · Invoca un aliado temporal contra criaturas",
+        "specializationIds": [],
+        "talentId": "learn-summon-sprite",
+        "kind": "summon",
+        "element": "specialization",
+        "power": 12,
+        "range": 10,
+        "radius": 0,
+        "duration": 20,
+        "cooldown": 35,
+        "effects": {}
+      },
+      {
+        "id": "summon-guardian",
+        "classId": "mage",
+        "name": "Invocar guardián",
+        "description": "Invocación · Invoca un aliado temporal contra criaturas",
+        "specializationIds": [],
+        "talentId": "learn-summon-guardian",
+        "kind": "summon",
+        "element": "specialization",
+        "power": 22,
+        "range": 12,
+        "radius": 0,
+        "duration": 25,
+        "cooldown": 45,
+        "effects": {}
+      },
+      {
+        "id": "summon-ancient",
+        "classId": "mage",
+        "name": "Invocar ancestral",
+        "description": "Invocación · Invoca un aliado temporal contra criaturas",
+        "specializationIds": [],
+        "talentId": "learn-summon-ancient",
+        "kind": "summon",
+        "element": "specialization",
+        "power": 32,
+        "range": 12,
+        "radius": 0,
+        "duration": 30,
+        "cooldown": 55,
+        "effects": {}
+      }
+    ]
+  },
+  "schemaRevision": 6,
+  "pvp": {
+    "enabled": true,
+    "selfDefense": true,
+    "penalizeMurdererKills": true,
+    "minLevel": 1,
+    "initialCitizenship": 100,
+    "minCitizenship": -1000,
+    "maxCitizenship": 100,
+    "murderPenalty": 25,
+    "murdererThreshold": 50,
+    "murdererSeconds": 600,
+    "aggressionSeconds": 60,
+    "combatSeconds": 20,
+    "spawnProtectionSeconds": 15,
+    "safeRadius": 10,
+    "portalSafeRadius": 4,
+    "damageMultiplier": 0.65,
+    "redemptionCost": 100,
+    "redemptionPoints": 5,
+    "redemptionCooldownSeconds": 60
+  },
+  "crafting": {
+    "enabled": true,
+    "maxInventory": 100,
+    "maxProfessionLevel": 50,
+    "xpPerLevel": 100,
+    "upgradeExperience": 10,
+    "stationRange": 4,
+    "initialMaterials": {
+      "iron": 6,
+      "wood": 4,
+      "fiber": 8,
+      "leather": 4,
+      "crystal": 2
+    },
+    "potionPrice": 12,
+    "saleMultiplier": 0.3,
+    "professions": [
+      {
+        "id": "blacksmith",
+        "name": "Herrería",
+        "stationRole": "smith",
+        "description": "Forja armas, escudos y armaduras. Da forma a báculos, varas y focos mágicos."
+      },
+      {
+        "id": "tailor",
+        "name": "Sastrería",
+        "stationRole": "tailor",
+        "description": "Cose ropa, túnicas y conjuntos para magos y sanadores."
+      },
+      {
+        "id": "mining",
+        "name": "Minería",
+        "stationRole": "mine",
+        "description": "Extrae cobre, hierro, mithril y cristal. Los yacimientos más raros requieren experiencia."
+      },
+      {
+        "id": "lumberjack",
+        "name": "Leñador",
+        "stationRole": "forest",
+        "description": "Recolecta pino, roble y madera ancestral para armas y talleres."
+      }
+    ],
+    "materials": [
+      {
+        "id": "iron",
+        "name": "Hierro",
+        "price": 6
+      },
+      {
+        "id": "wood",
+        "name": "Pino",
+        "price": 3
+      },
+      {
+        "id": "fiber",
+        "name": "Fibra",
+        "price": 2
+      },
+      {
+        "id": "leather",
+        "name": "Cuero",
+        "price": 4
+      },
+      {
+        "id": "crystal",
+        "name": "Cristal",
+        "price": 12
+      },
+      {
+        "id": "copper",
+        "name": "Cobre",
+        "price": 4
+      },
+      {
+        "id": "mithril",
+        "name": "Mithril",
+        "price": 18
+      },
+      {
+        "id": "oak",
+        "name": "Roble",
+        "price": 9
+      },
+      {
+        "id": "ancientwood",
+        "name": "Madera ancestral",
+        "price": 20
+      }
+    ],
+    "monsterDrops": {
+      "boar": {
+        "fiber": 2,
+        "leather": 1
+      },
+      "guardian": {
+        "iron": 4,
+        "crystal": 2,
+        "wood": 3
+      }
+    },
+    "recipes": [
+      {
+        "id": "craft-warrior-guardia-1-mainHand",
+        "name": "Espada del comienzo · Guardia de acero · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-guardia-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "iron": 3,
+          "wood": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-guardia-1-offHand",
+        "name": "Escudo del comienzo · Guardia de acero · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-guardia-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 1,
+          "copper": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "copper": 2
+        },
+        "bonusAttributes": {
+          "defense": 1
+        },
+        "upgradeAttributes": {
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-duelista-1-mainHand",
+        "name": "Espada del comienzo · Filos gemelos · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-duelista-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "iron": 3,
+          "wood": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-duelista-1-offHand",
+        "name": "Daga del comienzo · Filos gemelos · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-duelista-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 1,
+          "copper": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "copper": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-vanguardia-1-mainHand",
+        "name": "Mandoble del comienzo · Vanguardia · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-vanguardia-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "iron": 3,
+          "wood": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-guardia-5-mainHand",
+        "name": "Espada · Nv. 5 · Guardia de acero · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-guardia-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-guardia-5-offHand",
+        "name": "Escudo · Nv. 5 · Guardia de acero · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-guardia-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "defense": 1
+        },
+        "upgradeAttributes": {
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-duelista-5-mainHand",
+        "name": "Espada · Nv. 5 · Filos gemelos · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-duelista-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-duelista-5-offHand",
+        "name": "Daga · Nv. 5 · Filos gemelos · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-duelista-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-vanguardia-5-mainHand",
+        "name": "Mandoble · Nv. 5 · Vanguardia · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-vanguardia-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-guardia-10-mainHand",
+        "name": "Espada · Nv. 10 · Guardia de acero · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-guardia-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-guardia-10-offHand",
+        "name": "Escudo · Nv. 10 · Guardia de acero · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-guardia-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "defense": 1
+        },
+        "upgradeAttributes": {
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-duelista-10-mainHand",
+        "name": "Espada · Nv. 10 · Filos gemelos · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-duelista-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-duelista-10-offHand",
+        "name": "Daga · Nv. 10 · Filos gemelos · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-duelista-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-vanguardia-10-mainHand",
+        "name": "Mandoble · Nv. 10 · Vanguardia · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-vanguardia-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-astral-1-mainHand",
+        "name": "Báculo del comienzo · Báculo astral · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-astral-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 1,
+          "crystal": 1
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-canalizador-1-mainHand",
+        "name": "Báculo corto del comienzo · Canalizador dual · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-canalizador-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 1,
+          "crystal": 1
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-canalizador-1-offHand",
+        "name": "Vara arcana del comienzo · Canalizador dual · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-canalizador-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "crystal": 1,
+          "copper": 1
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-orbe-1-mainHand",
+        "name": "Vara de cristal del comienzo · Círculo de enfoque · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-orbe-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 1,
+          "crystal": 1
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-orbe-1-offHand",
+        "name": "Orbe del comienzo · Círculo de enfoque · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-orbe-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "crystal": 1,
+          "copper": 1
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-astral-5-mainHand",
+        "name": "Báculo · Nv. 5 · Báculo astral · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-astral-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-canalizador-5-mainHand",
+        "name": "Báculo corto · Nv. 5 · Canalizador dual · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-canalizador-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-canalizador-5-offHand",
+        "name": "Vara arcana · Nv. 5 · Canalizador dual · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-canalizador-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-orbe-5-mainHand",
+        "name": "Vara de cristal · Nv. 5 · Círculo de enfoque · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-orbe-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-orbe-5-offHand",
+        "name": "Orbe · Nv. 5 · Círculo de enfoque · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-orbe-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-astral-10-mainHand",
+        "name": "Báculo · Nv. 10 · Báculo astral · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-astral-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-canalizador-10-mainHand",
+        "name": "Báculo corto · Nv. 10 · Canalizador dual · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-canalizador-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-canalizador-10-offHand",
+        "name": "Vara arcana · Nv. 10 · Canalizador dual · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-canalizador-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-orbe-10-mainHand",
+        "name": "Vara de cristal · Nv. 10 · Círculo de enfoque · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-orbe-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-mage-orbe-10-offHand",
+        "name": "Orbe · Nv. 10 · Círculo de enfoque · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "mage-orbe-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-healer-alba-1-mainHand",
+        "name": "Vara de luz del comienzo · Varas del alba · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-alba-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 1,
+          "crystal": 1
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-alba-1-offHand",
+        "name": "Vara de amparo del comienzo · Varas del alba · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-alba-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "crystal": 1,
+          "copper": 1
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-santuario-1-mainHand",
+        "name": "Vara bendita del comienzo · Custodio del santuario · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-santuario-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 1,
+          "crystal": 1
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-santuario-1-offHand",
+        "name": "Escudo consagrado del comienzo · Custodio del santuario · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-santuario-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 1,
+          "copper": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "copper": 2
+        },
+        "bonusAttributes": {
+          "defense": 1
+        },
+        "upgradeAttributes": {
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-healer-liturgia-1-mainHand",
+        "name": "Vara del canto del comienzo · Liturgia de luz · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-liturgia-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 1,
+          "crystal": 1
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-liturgia-1-offHand",
+        "name": "Libro de plegarias del comienzo · Liturgia de luz · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-liturgia-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 2,
+          "crystal": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "crystal": 1,
+          "copper": 1
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-alba-5-mainHand",
+        "name": "Vara de luz · Nv. 5 · Varas del alba · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-alba-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-alba-5-offHand",
+        "name": "Vara de amparo · Nv. 5 · Varas del alba · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-alba-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-santuario-5-mainHand",
+        "name": "Vara bendita · Nv. 5 · Custodio del santuario · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-santuario-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-santuario-5-offHand",
+        "name": "Escudo consagrado · Nv. 5 · Custodio del santuario · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-santuario-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "defense": 1
+        },
+        "upgradeAttributes": {
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-healer-liturgia-5-mainHand",
+        "name": "Vara del canto · Nv. 5 · Liturgia de luz · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-liturgia-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-liturgia-5-offHand",
+        "name": "Libro de plegarias · Nv. 5 · Liturgia de luz · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-liturgia-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "crystal": 2,
+          "oak": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "crystal": 2,
+          "mithril": 2
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-alba-10-mainHand",
+        "name": "Vara de luz · Nv. 10 · Varas del alba · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-alba-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-alba-10-offHand",
+        "name": "Vara de amparo · Nv. 10 · Varas del alba · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-alba-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-santuario-10-mainHand",
+        "name": "Vara bendita · Nv. 10 · Custodio del santuario · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-santuario-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-santuario-10-offHand",
+        "name": "Escudo consagrado · Nv. 10 · Custodio del santuario · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-santuario-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "defense": 1
+        },
+        "upgradeAttributes": {
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-healer-liturgia-10-mainHand",
+        "name": "Vara del canto · Nv. 10 · Liturgia de luz · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-liturgia-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-liturgia-10-offHand",
+        "name": "Libro de plegarias · Nv. 10 · Liturgia de luz · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "healer-liturgia-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "crystal": 3,
+          "ancientwood": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "crystal": 3,
+          "mithril": 3
+        },
+        "bonusAttributes": {
+          "healing": 1
+        },
+        "upgradeAttributes": {
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-1",
+        "name": "Vestiduras del aprendiz · chico",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-male-1",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "iron": 3,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-5",
+        "name": "Cota del caminante · chico",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-male-5",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "leather": 4,
+          "mithril": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-10",
+        "name": "Placas del horizonte · chico",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-male-10",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "leather": 6,
+          "mithril": 9
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-1",
+        "name": "Vestiduras del aprendiz · chica",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-female-1",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "iron": 3,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-5",
+        "name": "Cota del caminante · chica",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-female-5",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "leather": 4,
+          "mithril": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-10",
+        "name": "Placas del horizonte · chica",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-female-10",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "leather": 6,
+          "mithril": 9
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-mage-male-1",
+        "name": "Túnica del iniciado · chico",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "mage-male-1",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "fiber": 4,
+          "leather": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "fiber": 3
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-mage-male-5",
+        "name": "Manto de runas · chico",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "mage-male-5",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "fiber": 8,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "fiber": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-mage-male-10",
+        "name": "Vestiduras del firmamento · chico",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "mage-male-10",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "fiber": 12,
+          "leather": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "fiber": 9
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-mage-female-1",
+        "name": "Túnica del iniciado · chica",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "mage-female-1",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "fiber": 4,
+          "leather": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "fiber": 3
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-mage-female-5",
+        "name": "Manto de runas · chica",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "mage-female-5",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "fiber": 8,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "fiber": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-mage-female-10",
+        "name": "Vestiduras del firmamento · chica",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "mage-female-10",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "fiber": 12,
+          "leather": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "fiber": 9
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-male-1",
+        "name": "Hábito del alba · chico",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "healer-male-1",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "fiber": 4,
+          "leather": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "fiber": 3
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-male-5",
+        "name": "Manto del amparo · chico",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "healer-male-5",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "fiber": 8,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "fiber": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-male-10",
+        "name": "Vestiduras del santuario · chico",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "healer-male-10",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "fiber": 12,
+          "leather": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "fiber": 9
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-female-1",
+        "name": "Hábito del alba · chica",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "healer-female-1",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "fiber": 4,
+          "leather": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "fiber": 3
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-female-5",
+        "name": "Manto del amparo · chica",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "healer-female-5",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "fiber": 8,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "fiber": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-healer-female-10",
+        "name": "Vestiduras del santuario · chica",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "healer-female-10",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "fiber": 12,
+          "leather": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "fiber": 9
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "healing": 1
+        }
+      },
+      {
+        "id": "craft-warrior-assassin-1-mainHand",
+        "name": "Daga principal del acechador · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-assassin-1",
+        "slot": "mainHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "iron": 3,
+          "wood": 1
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-assassin-1-offHand",
+        "name": "Daga secundaria del acechador · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-assassin-1",
+        "slot": "offHand",
+        "minProfessionLevel": 1,
+        "colCost": 10,
+        "materials": {
+          "wood": 1,
+          "copper": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 15,
+        "upgradeMaterials": {
+          "copper": 2
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-assassin-5-mainHand",
+        "name": "Daga principal del acechador · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-assassin-5",
+        "slot": "mainHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-assassin-5-offHand",
+        "name": "Daga secundaria del acechador · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-assassin-5",
+        "slot": "offHand",
+        "minProfessionLevel": 2,
+        "colCost": 20,
+        "materials": {
+          "mithril": 6,
+          "oak": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 30,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-assassin-10-mainHand",
+        "name": "Daga principal del acechador · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-assassin-10",
+        "slot": "mainHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-assassin-10-offHand",
+        "name": "Daga secundaria del acechador · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "weapon",
+        "targetId": "warrior-assassin-10",
+        "slot": "offHand",
+        "minProfessionLevel": 3,
+        "colCost": 30,
+        "materials": {
+          "mithril": 9,
+          "ancientwood": 3
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 45,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "attack": 1
+        },
+        "upgradeAttributes": {
+          "attack": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-1-assassin",
+        "name": "Acechador · chico · Nv. 1",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "warrior-male-1-assassin",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "fiber": 4,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "leather": 1
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "critical": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-1-tank",
+        "name": "Bastión · chico · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-male-1-tank",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "iron": 3,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-5-assassin",
+        "name": "Acechador · chico · Nv. 5",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "warrior-male-5-assassin",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "fiber": 8,
+          "leather": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "leather": 2
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "critical": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-5-tank",
+        "name": "Bastión · chico · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-male-5-tank",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "leather": 4,
+          "mithril": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-10-assassin",
+        "name": "Acechador · chico · Nv. 10",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "warrior-male-10-assassin",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "fiber": 12,
+          "leather": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "leather": 3
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "critical": 1
+        }
+      },
+      {
+        "id": "craft-warrior-male-10-tank",
+        "name": "Bastión · chico · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-male-10-tank",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "leather": 6,
+          "mithril": 9
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-1-assassin",
+        "name": "Acechador · chica · Nv. 1",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "warrior-female-1-assassin",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "fiber": 4,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "leather": 1
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "critical": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-1-tank",
+        "name": "Bastión · chica · Nv. 1",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-female-1-tank",
+        "slot": "armor",
+        "minProfessionLevel": 1,
+        "colCost": 8,
+        "materials": {
+          "iron": 3,
+          "leather": 2
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 12,
+        "upgradeMaterials": {
+          "iron": 2
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-5-assassin",
+        "name": "Acechador · chica · Nv. 5",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "warrior-female-5-assassin",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "fiber": 8,
+          "leather": 4
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "leather": 2
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "critical": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-5-tank",
+        "name": "Bastión · chica · Nv. 5",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-female-5-tank",
+        "slot": "armor",
+        "minProfessionLevel": 2,
+        "colCost": 16,
+        "materials": {
+          "leather": 4,
+          "mithril": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 24,
+        "upgradeMaterials": {
+          "mithril": 4
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-10-assassin",
+        "name": "Acechador · chica · Nv. 10",
+        "professionId": "tailor",
+        "kind": "armor",
+        "targetId": "warrior-female-10-assassin",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "fiber": 12,
+          "leather": 6
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "leather": 3
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "critical": 1
+        }
+      },
+      {
+        "id": "craft-warrior-female-10-tank",
+        "name": "Bastión · chica · Nv. 10",
+        "professionId": "blacksmith",
+        "kind": "armor",
+        "targetId": "warrior-female-10-tank",
+        "slot": "armor",
+        "minProfessionLevel": 3,
+        "colCost": 24,
+        "materials": {
+          "leather": 6,
+          "mithril": 9
+        },
+        "experience": 25,
+        "maxUpgrade": 5,
+        "upgradeColCost": 36,
+        "upgradeMaterials": {
+          "mithril": 6
+        },
+        "bonusAttributes": {
+          "health": 5
+        },
+        "upgradeAttributes": {
+          "health": 5,
+          "defense": 1
+        }
+      }
+    ]
+  },
+  "gathering": {
+    "enabled": true,
+    "range": 3,
+    "cooldownSeconds": 1.5,
+    "resources": [
+      {
+        "id": "copper-vein",
+        "name": "Veta de cobre",
+        "professionId": "mining",
+        "materialId": "copper",
+        "minProfessionLevel": 1,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 20,
+        "kind": "rock",
+        "color": "#b97852"
+      },
+      {
+        "id": "iron-vein",
+        "name": "Veta de hierro",
+        "professionId": "mining",
+        "materialId": "iron",
+        "minProfessionLevel": 1,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 25,
+        "kind": "rock",
+        "color": "#9babb3"
+      },
+      {
+        "id": "mithril-vein",
+        "name": "Veta de mithril",
+        "professionId": "mining",
+        "materialId": "mithril",
+        "minProfessionLevel": 2,
+        "amount": 2,
+        "experience": 25,
+        "respawnSeconds": 35,
+        "kind": "rock",
+        "color": "#83d0e9"
+      },
+      {
+        "id": "crystal-vein",
+        "name": "Cristal arcano",
+        "professionId": "mining",
+        "materialId": "crystal",
+        "minProfessionLevel": 2,
+        "amount": 2,
+        "experience": 25,
+        "respawnSeconds": 35,
+        "kind": "rock",
+        "color": "#b498e9"
+      },
+      {
+        "id": "pine-tree",
+        "name": "Pino maderable",
+        "professionId": "lumberjack",
+        "materialId": "wood",
+        "minProfessionLevel": 1,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 20,
+        "kind": "tree",
+        "color": "#738e46"
+      },
+      {
+        "id": "oak-tree",
+        "name": "Roble maderable",
+        "professionId": "lumberjack",
+        "materialId": "oak",
+        "minProfessionLevel": 2,
+        "amount": 3,
+        "experience": 25,
+        "respawnSeconds": 30,
+        "kind": "tree",
+        "color": "#769044"
+      },
+      {
+        "id": "ancient-tree",
+        "name": "Árbol ancestral",
+        "professionId": "lumberjack",
+        "materialId": "ancientwood",
+        "minProfessionLevel": 3,
+        "amount": 2,
+        "experience": 25,
+        "respawnSeconds": 45,
+        "kind": "tree",
+        "color": "#759eaa"
+      }
+    ]
+  }
+}
