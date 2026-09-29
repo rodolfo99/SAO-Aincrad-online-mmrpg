@@ -1,5 +1,7 @@
 # Ejecutables de esta entrega
 
+Estos archivos también están publicados en la rama `main` de [SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). Consulta [arranque y puertos](../docs/ARRANQUE-Y-PUERTOS.md) y [publicación y empaquetado](../docs/PUBLICACION.md).
+
 `aincrad-server-0.2.0.jar` es el resultado de Maven `verify` con Java 17.0.20. Las fuentes, pruebas y `pom.xml` están en `server/`.
 
 El cliente construido se encuentra en `client/dist/aincrad/browser/`. Para reducir duplicación, el ZIP conserva las ilustraciones únicamente en `client/public/assets/`: `scripts/iniciar.sh` las copia a la carpeta del cliente al arrancar. No necesita descargarlas.

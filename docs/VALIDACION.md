@@ -1,6 +1,21 @@
 # Validación de la entrega · 29 de septiembre de 2026 (UTC)
 
-## Cuentas, recuperación por correo y mercado · revisión actual
+## Revisión de publicación y documentación · 29 de septiembre de 2026
+
+Se verificaron los **255 archivos** del commit de publicación `944b3ab778733de18708a87381dcfe5952e0c806` comparando sus hashes de objetos Git con los bytes del ZIP de entrega; todos coincidieron. Esta revisión añade las guías de [arranque y puertos](ARRANQUE-Y-PUERTOS.md) y [publicación y actualización](PUBLICACION.md), actualiza los documentos relacionados y regenera `SHA256SUMS.txt` para los archivos distribuidos. El código, los compilados y la versión v0.2.0 se conservan.
+
+Se comprobaron los enlaces locales de los documentos modificados y los enlaces de SAO en el README del perfil, la sintaxis Bash de sus bloques de comandos y el JSON del ejemplo de proxy.
+
+Con **OpenJDK 17.0.20**, datos temporales y una copia aislada del mundo se comprobaron dos arranques del JAR publicado:
+
+- `scripts/iniciar.sh` con `PORT=8081`: `/api/health` respondió `status=ok` y `version=0.2.0`; `/`, `/admin` y `/assets/lyra.png` respondieron HTTP 200.
+- JAR directo con `PORT=18081` y `--server.port=18082`: las mismas comprobaciones respondieron correctamente en **18082**, confirmando el efecto del argumento explícito. Se usó otro puerto para mantener aislada la comprobación.
+
+Ambos procesos se detuvieron de forma ordenada; los datos y las credenciales temporales no forman parte de la publicación. Estas comprobaciones verifican el arranque, las rutas y una imagen servida; no equivalen a una sesión de juego ni a una prueba visual de navegador.
+
+No se repitieron Maven, la batería Node/Python ni el build Angular por este cambio documental. Las cifras que siguen pertenecen a la validación anterior del paquete. Docker Compose, el proxy Angular en ejecución, la partida completa en Ubuntu 26.04, la carga masiva y la entrega de correo externo no se ejecutaron en esta revisión. Las instrucciones de Compose/proxy se contrastaron con los archivos publicados.
+
+## Cuentas, recuperación por correo y mercado · validación anterior del paquete
 
 Se aprobaron **136 pruebas Maven**, **12 pruebas Node**, **7 pruebas Python** y la compilación Angular de producción. Las comprobaciones nuevas cubren autenticación obligatoria, propiedad y conservación de personajes, recuperación de contraseñas, utilidad de correo, venta de recursos y compra de equipo. No se incluyen cuentas ni partidas de prueba en la entrega.
 

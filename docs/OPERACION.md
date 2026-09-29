@@ -1,5 +1,7 @@
 # Operación y configuración
 
+Para seleccionar el puerto local de Spring Boot, configurar 8081 en Docker o ajustar el proxy Angular consulta [ARRANQUE-Y-PUERTOS.md](ARRANQUE-Y-PUERTOS.md). La descarga, actualización por Git y generación del ZIP están en [PUBLICACION.md](PUBLICACION.md).
+
 ## Archivos persistentes
 
 | Archivo / volumen | Contenido |
@@ -24,11 +26,14 @@ El ZIP de distribución excluye estos datos locales, contraseñas, `.env`, cach�
 | `DATA_DIR` | ./data |
 | `ROOT_PASSWORD` | Sin valor; obligatoria solo en primer inicio |
 | `ALLOWED_ORIGINS` | localhost/127.0.0.1:8080 y :4200 en Java; Compose publica :8080 |
+| `APP_PUBLIC_URL` | http://localhost:8080; URL de los enlaces de recuperación |
 | `PLAYER_REGISTRATION_ENABLED` | true; false cierra nuevos registros |
 | `PLAYER_SESSION_HOURS` | 12; rango 1–168 |
 | `PLAYER_COOKIE_SECURE` | false en HTTP local; true para HTTPS público |
 
 El panel y el WebSocket son del mismo origen que la web. Si cambias puerto o IP, incluye el origen exacto (esquema, IP/nombre y puerto) en `ALLOWED_ORIGINS`. No uses comodines.
+
+En ejecución local `scripts/iniciar.sh` recibe las variables por entorno; no carga `.env` ni reenvía argumentos a Java. Compose sí utiliza `.env` para su configuración: `WEB_PORT` cambia el puerto publicado en el equipo y `HOST_BIND` la dirección de publicación, mientras Java permanece en 8080 dentro del contenedor. `APP_PUBLIC_URL` debe apuntar a la URL que abren los jugadores.
 
 LAN local, ejemplo:
 

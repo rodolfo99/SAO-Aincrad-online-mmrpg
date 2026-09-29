@@ -4,6 +4,28 @@ Proyecto semilla de un MMORPG 3D inspirado en el universo de **Sword Art Online*
 
 Es un prototipo fan con gráficos originales y dos pisos jugables. No es un juego oficial ni una recreación completa de los cien pisos, y no contiene recursos extraídos del anime ni de otros juegos.
 
+Repositorio: [rodolfo99/SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). El nombre del repositorio se conserva como `SAO-Aircraft-online-mmrpg`; el mundo del juego se llama **Aincrad**.
+
+## Obtener el proyecto desde GitHub
+
+**Publicado en `main` el 29 de septiembre de 2026:** fuentes, ilustraciones, JAR v0.2.0, Angular compilado, scripts, configuración Docker y documentación. Para ejecutar esta entrega utiliza Java 17 o 21 y un navegador con WebGL 2. El arranque con los compilados incluidos no necesita Maven ni Node.js.
+
+```bash
+git clone https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg.git
+cd SAO-Aircraft-online-mmrpg
+chmod +x scripts/*.sh
+PORT=8081 \
+ALLOWED_ORIGINS=http://localhost:8081,http://127.0.0.1:8081 \
+APP_PUBLIC_URL=http://localhost:8081 \
+./scripts/iniciar.sh
+```
+
+Abre <http://localhost:8081>; la administración está en <http://localhost:8081/admin>. En el primer inicio el script solicita la contraseña de root. El servidor Java sirve Angular, la API y el WebSocket en el mismo puerto; `npm start` se usa únicamente para desarrollar el cliente.
+
+También puedes usar **Code → Download ZIP** en GitHub. Extrae el archivo, entra en la carpeta que contiene `scripts/`, `server/` y `client/`, y ejecuta el mismo arranque. Ese archivo sigue el contenido de `main`; el paquete `aincrad-seed-v0.2.0.zip` tiene una raíz llamada `aincrad-seed/`.
+
+Guías: [arranque y puertos](docs/ARRANQUE-Y-PUERTOS.md) · [publicación, actualización y empaquetado](docs/PUBLICACION.md) · [operación y respaldos](docs/OPERACION.md) · [validación y límites](docs/VALIDACION.md).
+
 ## Inicio rápido en Linux
 
 El paquete de entrega incluye el servidor compilado y el cliente construido. Para ejecutarlos basta **Java 17 o 21** y un navegador de escritorio con WebGL 2.
@@ -25,6 +47,12 @@ En el **primer inicio** el script solicita y confirma la contraseña de `root` (
 La contraseña se almacena mediante PBKDF2-HMAC-SHA256, sal aleatoria y 210 000 iteraciones en `data/admin.json`. En arranques siguientes se utiliza la contraseña guardada; cambiar `ROOT_PASSWORD` no reemplaza la existente. Puedes cambiarla desde el panel. No compartas `data/`, respaldos ni `.env`.
 
 Si actualizas una instalación anterior, consulta [PISOS-AMPLIADOS.md](docs/PISOS-AMPLIADOS.md) para ampliar su mundo conservando los personajes, la cuenta root y los ajustes. Una instalación nueva ya incluye los pisos grandes.
+
+### Si el puerto 8080 está ocupado
+
+Utiliza el comando de arranque con `PORT=8081` mostrado arriba y abre el navegador en 8081. `PORT` cambia la escucha de Spring Boot; `ALLOWED_ORIGINS` autoriza el origen del navegador y `APP_PUBLIC_URL` establece la URL de los enlaces de recuperación. Las tres opciones deben corresponder a tu instalación.
+
+`scripts/iniciar.sh` no carga `.env` ni reenvía argumentos como `--server.port=8081`. Para imponer ese argumento debes ejecutar el JAR directamente como explica [ARRANQUE-Y-PUERTOS.md](docs/ARRANQUE-Y-PUERTOS.md). En Docker Compose usa `WEB_PORT=8081`: Java permanece en 8080 dentro del contenedor.
 
 ## Cuentas de jugador
 
