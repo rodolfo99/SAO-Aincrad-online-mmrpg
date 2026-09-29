@@ -6,6 +6,8 @@ Es un prototipo fan con gráficos originales y dos pisos jugables. No es un jueg
 
 Repositorio: [rodolfo99/SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). El nombre del repositorio se conserva como `SAO-Aircraft-online-mmrpg`; el mundo del juego se llama **Aincrad**.
 
+**Validación en Ubuntu 26.04:** partida completa realizada y confirmada por el usuario el 29 de septiembre de 2026. Consulta el registro de [validación manual](docs/VALIDACION.md#validación-manual-en-ubuntu-2604--confirmación-del-usuario).
+
 ## Obtener el proyecto desde GitHub
 
 **Publicado en `main` el 29 de septiembre de 2026:** fuentes, ilustraciones, JAR v0.2.0, Angular compilado, scripts, configuración Docker y documentación. Para ejecutar esta entrega utiliza Java 17 o 21 y un navegador con WebGL 2. El arranque con los compilados incluidos no necesita Maven ni Node.js.
@@ -223,7 +225,7 @@ Las pruebas de navegador editan perfiles de prueba y modifican/restauran el nomb
 - `scripts/`, `Dockerfile`, `compose*.yaml`, `.env.example`: construcción y operación.
 - `docs/ARQUITECTURA.md`, `docs/MUNDO.md`: protocolo y puntos de extensión.
 
-Esta semilla tiene límite de 32 jugadores conectados y un único proceso/zona lógica. **Ese límite no es una prueba de carga ni una promesa de escala MMORPG.** Quedan por desarrollar cuentas completas, autenticación de jugadores con recuperación, shards, comercio entre jugadores, subastas, grupos, rutas, terreno avanzado, mallas GLTF y contenido extenso. No se ha validado una partida real completa en Ubuntu 26.04 ni una ejecución masiva en producción.
+Esta semilla tiene límite de 32 jugadores conectados y un único proceso/zona lógica. **Ese límite no es una prueba de carga ni una promesa de escala MMORPG.** El registro, la autenticación de jugadores y la recuperación de cuentas están implementados. Quedan por desarrollar shards, comercio entre jugadores, subastas, grupos, rutas, terreno avanzado, mallas GLTF y contenido extenso. La partida completa en Ubuntu 26.04 fue confirmada por el usuario; sigue pendiente validar una ejecución masiva en producción.
 
 ## Revisión visual del mundo
 

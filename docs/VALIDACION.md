@@ -1,5 +1,11 @@
 # Validación de la entrega · 29 de septiembre de 2026 (UTC)
 
+## Validación manual en Ubuntu 26.04 · confirmación del usuario
+
+El usuario confirmó el **29 de septiembre de 2026** que ya realizó la **partida completa en Ubuntu 26.04**. Se registra como validación manual de la entrega v0.2.0 y se actualiza su estado de pendiente a realizada en la documentación y en el perfil de GitHub.
+
+La fuente de este resultado es la confirmación del usuario. Las comprobaciones automatizadas se describen en los apartados siguientes; la validación de carga multijugador masiva y la entrega de correo a proveedores externos conservan su estado pendiente.
+
 ## Revisión de publicación y documentación · 29 de septiembre de 2026
 
 Se verificaron los **255 archivos** del commit de publicación `944b3ab778733de18708a87381dcfe5952e0c806` comparando sus hashes de objetos Git con los bytes del ZIP de entrega; todos coincidieron. Esta revisión añade las guías de [arranque y puertos](ARRANQUE-Y-PUERTOS.md) y [publicación y actualización](PUBLICACION.md), actualiza los documentos relacionados y regenera `SHA256SUMS.txt` para los archivos distribuidos. El código, los compilados y la versión v0.2.0 se conservan.
@@ -13,7 +19,7 @@ Con **OpenJDK 17.0.20**, datos temporales y una copia aislada del mundo se compr
 
 Ambos procesos se detuvieron de forma ordenada; los datos y las credenciales temporales no forman parte de la publicación. Estas comprobaciones verifican el arranque, las rutas y una imagen servida; no equivalen a una sesión de juego ni a una prueba visual de navegador.
 
-No se repitieron Maven, la batería Node/Python ni el build Angular por este cambio documental. Las cifras que siguen pertenecen a la validación anterior del paquete. Docker Compose, el proxy Angular en ejecución, la partida completa en Ubuntu 26.04, la carga masiva y la entrega de correo externo no se ejecutaron en esta revisión. Las instrucciones de Compose/proxy se contrastaron con los archivos publicados.
+No se repitieron Maven, la batería Node/Python ni el build Angular por este cambio documental. Las cifras que siguen pertenecen a la validación anterior del paquete. Docker Compose, el proxy Angular en ejecución, la carga masiva y la entrega de correo externo no se ejecutaron en esta revisión. Las instrucciones de Compose/proxy se contrastaron con los archivos publicados. La partida completa en Ubuntu 26.04 confirmada posteriormente por el usuario está registrada en el apartado de validación manual.
 
 ## Cuentas, recuperación por correo y mercado · validación anterior del paquete
 
@@ -114,10 +120,10 @@ Las pruebas reproducibles están en `client/tests/browser.mjs` y `client/tests/e
 
 Estos 19 flujos corresponden a la validación previa; no se presentan como repetidos en esta ampliación. El registro de aquella ejecución, con la versión del navegador y pasos aprobados, se incluye en `docs/browser-result.json` y `docs/expansion-browser-result.json`. Se inspeccionaron capturas de creación, talleres y entrenamiento; se ajustaron rótulos largos y contraste de los indicadores.
 
-## Límites de la verificación
+## Límites de la verificación automatizada
 
 - No se ejecutó un modelo LLM real de Ollama. Se probó el adaptador Spring AI contra respuestas HTTP controladas; el usuario debe instalar/descargar su modelo para validar calidad, latencia y consumo de memoria.
 - No había Docker Engine disponible: no se construyeron ni arrancaron los contenedores, y no se probó GPU/NVIDIA. Se verificaron sus archivos de configuración; su ejecución queda pendiente en el equipo de destino.
-- No se probó Ubuntu 26.04 completo, Java 21, dispositivos móviles reales, Safari ni hardware GPU del usuario. El ancho móvil de 390 px se comprobó en Chromium de escritorio.
+- En el entorno automatizado no se probaron Java 21, dispositivos móviles reales, Safari ni hardware GPU del usuario. El ancho móvil de 390 px se comprobó en Chromium de escritorio. La partida completa en Ubuntu 26.04 fue confirmada por el usuario y se registra como validación manual.
 - La prueba con dos jugadores verifica sincronización funcional. No es una prueba de carga de 32 jugadores ni una validación de escala masiva.
 - El mapa, los monstruos y las reglas se probaron por partes; no se presenta como terminada una campaña de cien pisos.

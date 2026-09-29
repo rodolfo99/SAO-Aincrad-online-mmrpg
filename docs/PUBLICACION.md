@@ -87,4 +87,4 @@ La verificación de hashes corresponde a los archivos de esa entrega. Una modifi
 
 ## Validación y límites
 
-La coincidencia de los archivos confirma la subida y no equivale a una partida completa, una prueba de carga ni una nueva ejecución de toda la batería de pruebas. Los resultados anteriores permanecen identificados en [VALIDACION.md](VALIDACION.md). No se ha validado una partida real completa en Ubuntu 26.04 ni una ejecución masiva en producción; tampoco se ha confirmado la entrega de correo a un proveedor externo.
+La coincidencia de los archivos confirma la subida y no equivale a una partida completa, una prueba de carga ni una nueva ejecución de toda la batería de pruebas. La partida completa en Ubuntu 26.04 fue realizada y confirmada por el usuario el 29 de septiembre de 2026. Ese resultado manual y las comprobaciones automatizadas están registrados en [VALIDACION.md](VALIDACION.md). Siguen pendientes la validación de una ejecución masiva en producción y la confirmación de entrega de correo a un proveedor externo.
