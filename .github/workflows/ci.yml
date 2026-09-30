@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  CI: 'true'
+  NG_CLI_ANALYTICS: 'false'
+  JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+
+jobs:
+  server:
+    name: Servidor Spring Boot
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Obtener fuentes
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Preparar JDK 17 y caché Maven
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          cache-dependency-path: server/pom.xml
+      - name: Verificar servidor
+        run: mvn -B -f server/pom.xml verify
+
+  angular:
+    name: Cliente Angular
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Obtener fuentes
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Preparar Node y caché npm
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: client/package-lock.json
+      - name: Instalar dependencias del lockfile
+        run: npm --prefix client ci --no-audit --no-fund
+      - name: Probar Angular
+        run: npm --prefix client test
+      - name: Compilar Angular para producción
+        run: npm --prefix client run build
+
+  java-desktop:
+    name: Cliente Java Desktop
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Obtener fuentes
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Preparar JDK 17 y caché Maven
+        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          cache-dependency-path: |
+            server/pom.xml
+            client-java/pom.xml
+      # Los contratos Java arrancan este JAR en un directorio temporal.
+      # Las pruebas del servidor se ejecutan en su trabajo independiente.
+      - name: Compilar servidor para las pruebas de contrato
+        run: mvn -B -f server/pom.xml package -DskipTests
+      - name: Preparar el JAR recién compilado
+        run: |
+          mkdir -p release
+          cp server/target/aincrad-server-0.2.0.jar release/aincrad-server-0.2.0.jar
+      - name: Verificar y empaquetar Java Desktop
+        run: bash scripts/compilar-cliente-java.sh
