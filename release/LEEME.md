@@ -1,6 +1,6 @@
 # Ejecutables de esta entrega
 
-Estos archivos también están publicados en la rama `main` de [SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). Consulta [arranque y puertos](../docs/ARRANQUE-Y-PUERTOS.md) y [publicación y empaquetado](../docs/PUBLICACION.md).
+Estos archivos también están publicados en la rama `main` de [SAO-Aincrad-online-mmrpg](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg). Consulta [arranque y puertos](../docs/ARRANQUE-Y-PUERTOS.md) y [publicación y empaquetado](../docs/PUBLICACION.md).
 
 `aincrad-server-0.2.0.jar` es el resultado de Maven `verify` con Java 17.0.20. Las fuentes, pruebas y `pom.xml` están en `server/`.
 
