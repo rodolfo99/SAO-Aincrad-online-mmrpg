@@ -1,5 +1,20 @@
 # Validación de la entrega · 29 de septiembre de 2026 (UTC)
 
+## Rutas autoritativas por clic · ejecución del 30 de septiembre de 2026 (UTC)
+
+Se verificó la revisión de fuentes basada en `main` del commit `9e893fee3e581863ae95ab28e708761edf484192`, con **Java 17.0.20 y Node 24.19.0** en Linux:
+
+- **`mvn -B -f server/pom.xml verify`: 160 pruebas, cero fallos, cero errores y cero omitidas.** Construcción y reempaquetado del JAR aprobados. Incluye 9 pruebas de `WorldPathfinderTest`, 14 de `ClickMovementTest` y las 6 de `ServerIntegrationTest`.
+- **`npm --prefix client test` aprobado.** Se ejecutaron además sus cuatro archivos con `node --test --test-isolation=none --test-reporter=spec tests/*.test.mjs`: **16 casos, todos aprobados**, incluidos los cuatro nuevos del protocolo de clic/parada.
+- **`npm --prefix client run build` aprobado.** El cliente conserva sus mensajes y el bundle resultante; la búsqueda vive en el servidor.
+- **`git diff --check` aprobado.** Se actualiza `SHA256SUMS.txt` para las fuentes, pruebas y guías de esta revisión; el JAR precompilado de la entrega original permanece identificado como tal.
+
+Se probaron los obstáculos reales de ambos pisos (edificios, árboles, cristales y recursos), segmentos con extremos libres que cruzan un círculo, destinos bloqueados y transitables pero encerrados, límites de coordenadas y búsqueda, determinismo y ausencia de caché obsoleta. La simulación verificó llegada exacta, presupuesto de velocidad único al cruzar una esquina, modificadores, entradas neutras/antiguas/inválidas, reemplazo y parada, deslizamiento WASD, cambios de colisión, portal, desconexión/reconexión, persistencia y muerte PvE/PvP.
+
+La prueba de transporte registró una cuenta e inició sesión por HTTP, conectó un WebSocket real y recorrió ambos lados de la sastrería del primer piso. Observó el desvío y la velocidad en `state`, comprobó que una entrada neutra no cancelara la ruta, que campos extra no alteraran HP/col, que un destino bloqueado o un mensaje inválido produjera `error`, y que `stop` detuviera la cola incluso ante una secuencia antigua posterior.
+
+Las pruebas que abren sockets se ejecutaron con acceso a puertos locales temporales; el intento inicial dentro del sandbox fallaba al abrirlos. El comando final `verify` sí ejecutó toda la batería correctamente. Estas comprobaciones no repiten una partida completa manual en Ubuntu 26.04 ni una prueba de carga. Para activar las rutas en una instalación, recompila el servidor: [MOVIMIENTO-POR-CLIC.md](MOVIMIENTO-POR-CLIC.md).
+
 ## Validación manual en Ubuntu 26.04 · confirmación del usuario
 
 El usuario confirmó el **29 de septiembre de 2026** que ya realizó la **partida completa en Ubuntu 26.04**. Se registra como validación manual de la entrega v0.2.0 y se actualiza su estado de pendiente a realizada en la documentación y en el perfil de GitHub.

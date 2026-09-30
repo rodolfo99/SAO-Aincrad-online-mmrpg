@@ -12,8 +12,8 @@ Antes de conectar a `/ws`, el jugador debe registrarse e iniciar sesión mediant
 |---|---|
 | `join` | `characterId` propio para continuar; vacío/omitido con `name` y `appearance` para crear. La cuenta procede de la sesión, nunca del mensaje |
 | `input` | `seq` creciente, `dx` y `dz` entre −1 y 1; vector normalizado |
-| `move` | `x`, `z` del destino; nunca teletransporta |
-| `stop` | Cancela dirección y destino; pérdida de foco lo envía |
+| `move` | `x`, `z` del destino; el servidor calcula y sigue la ruta; nunca teletransporta |
+| `stop` | Cancela dirección, destino y todos los puntos intermedios; pérdida de foco lo envía |
 | `target` | `id` y `kind`: `monster` (incluye muñecos) o `player` del piso |
 | `attack` | `skill`: false/true, enfriamiento y alcance en servidor |
 | `potion`, `interact`, `portal` | Acciones validadas por distancia y reglas |
@@ -34,6 +34,12 @@ Antes de conectar a `/ws`, el jugador debe registrarse e iniciar sesión mediant
 | `ping` | Mantiene sesión; sin mensajes durante 20 s se desconecta |
 
 La dirección continua caduca a los 250 ms si deja de llegar entrada. El destino de clic mantiene una intención de caminar; una tecla de movimiento la cancela. Los campos del cliente que intenten fijar HP, daño, col, XP o posición instantánea no se aplican. Una entrada inválida produce `error`.
+
+`WorldPathfinder` usa A* sobre una malla de 1 m, ocho vecinos y un máximo de 8192 nodos expandidos por búsqueda. Conecta origen/destino exactos a sus vecinos transitables y simplifica puntos solo si el atajo completo está libre. `WorldData.walkableSegment` comprueba ambos extremos con `walkable` y la distancia mínima del segmento a cada prop con su radio y el margen existente de 0,4 m. El borde del piso sigue siendo el disco de radio `floor.radius - 1`. No se incorporan colisiones procedentes de los modelos del navegador.
+
+Java conserva la cola de puntos en memoria y reparte un único presupuesto `player.speed() * dt` entre todos los tramos recorridos en un tick; vuelve a comprobar cada tramo antes de avanzar. WASD mantiene su normalización, caducidad y deslizamiento por ejes. Una entrada neutra o con secuencia antigua no cancela la ruta; una entrada nueva con dirección sí lo hace. Un clic válido reemplaza la cola y limpia la dirección residual. Parada, desconexión, muerte y aparición/cambio de piso vacían toda la cola. Los destinos rechazados conservan la intención anterior. Si se bloquea un tramo después de planificar, se detiene la ruta y se emite un `notice`.
+
+El cliente sigue enviando únicamente `{type:'move', x, z}` y dibujando las posiciones de `state`. La cola no se expone en el protocolo ni se persiste con el perfil. Las rutas no se transfieren entre pisos. Los pasos estrechos que no tengan conexión en la malla pueden rechazarse aunque exista un recorrido continuo. Detalles de activación y pruebas en [MOVIMIENTO-POR-CLIC.md](MOVIMIENTO-POR-CLIC.md).
 
 | Servidor → cliente | Uso |
 |---|---|

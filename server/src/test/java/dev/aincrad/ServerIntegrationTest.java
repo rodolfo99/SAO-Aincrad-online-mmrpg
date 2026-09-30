@@ -51,4 +51,48 @@ class ServerIntegrationTest {
  @Test @Order(4) void rootCharacterApiDoesNotExposePlayerSecrets()throws Exception{assertEquals(403,request("/api/admin/characters","GET",null,null,null).statusCode());String cookie=login();var response=request("/api/admin/characters","GET",null,cookie,null);assertEquals(200,response.statusCode());assertFalse(response.body().contains("tokenHash"));assertFalse(response.body().contains("token"));JsonNode p=json.readTree(response.body()).get(0);ObjectNode edit=json.createObjectNode();edit.put("name","Configurado");edit.set("appearance",p.get("appearance"));edit.put("xp",150);edit.put("col",77);edit.put("potions",9);String path="/api/admin/characters/"+p.path("id").asText();assertEquals(403,request(path,"PATCH",edit.toString(),null,null).statusCode());var updated=request(path,"PATCH",edit.toString(),cookie,null);assertEquals(200,updated.statusCode(),updated.body());assertEquals(77,json.readTree(updated.body()).path("col").asInt());assertEquals(2,json.readTree(updated.body()).path("level").asInt());}
  @Test @Order(5) void newCharacterMutationsRequireRootAndValidatePayloads()throws Exception{String cookie=login();var p=json.readTree(request("/api/admin/characters","GET",null,cookie,null).body()).get(0);String path="/api/admin/characters/"+p.path("id").asText();for(String endpoint:new String[]{"weapons","citizenship","crafting"})assertEquals(403,request(path+"/"+endpoint,"PATCH","{}",null,null).statusCode());assertEquals(200,request(path+"/weapons","PATCH","{\"weaponSetId\":\"\"}",cookie,null).statusCode());assertEquals(400,request(path+"/citizenship","PATCH","{\"citizenship\":1.5}",cookie,null).statusCode());assertEquals(200,request(path+"/citizenship","PATCH","{\"citizenship\":100,\"pardon\":true}",cookie,null).statusCode());assertEquals(200,request(path+"/crafting","PATCH","{\"professionXp\":{\"mining\":100},\"materials\":{\"iron\":50}}",cookie,null).statusCode());assertEquals(400,request(path+"/crafting","PATCH","{\"professionXp\":{},\"materials\":{\"iron\":-1}}",cookie,null).statusCode());}
 
+ JsonNode ownPlayer(JsonNode state,String id){for(JsonNode p:state.path("players"))if(p.path("id").asText().equals(id))return p;throw new AssertionError("Jugador ausente");}
+ JsonNode awaitPlayer(Listener listener,String id,java.util.function.Predicate<JsonNode> condition)throws Exception{
+  long end=System.nanoTime()+TimeUnit.SECONDS.toNanos(8);
+  while(System.nanoTime()<end){JsonNode p=ownPlayer(await(listener,"state"),id);if(condition.test(p))return p;}
+  throw new AssertionError("No llegó el estado esperado del jugador");
+ }
+ JsonNode awaitPosition(Listener listener,String id,double x,double z)throws Exception{
+  return awaitPlayer(listener,id,p->Math.hypot(p.path("x").asDouble()-x,p.path("z").asDouble()-z)<1e-6);
+ }
+ @Test @Order(6) void realWebSocketClickDetoursAndKeepsMoveInputStopAndErrorProtocol()throws Exception{
+  Listener listener=new Listener();WebSocket socket=connect(listener);
+  try{
+   socket.sendText("{\"type\":\"join\",\"name\":\"ClicRuta\"}",true).join();String id=await(listener,"welcome").path("id").asText();
+   socket.sendText("{\"type\":\"move\",\"x\":4,\"z\":19}",true).join();awaitPosition(listener,id,4,19);
+   socket.sendText("{\"type\":\"move\",\"x\":13.6,\"z\":19,\"hp\":999,\"col\":9999,\"speed\":999,\"route\":[{\"x\":10,\"z\":19}]}",true).join();
+   // Normal idle input from the existing browser must not cancel a click route.
+   socket.sendText("{\"type\":\"input\",\"seq\":10,\"dx\":0,\"dz\":0}",true).join();
+   double lastX=4,lastZ=19,lastTime=-1;boolean detoured=false,arrived=false;
+   long deadline=System.nanoTime()+TimeUnit.SECONDS.toNanos(8);
+   while(System.nanoTime()<deadline){
+    JsonNode state=await(listener,"state"),p=ownPlayer(state,id);
+    if(p.path("sequence").asLong()<10)continue;
+    double x=p.path("x").asDouble(),z=p.path("z").asDouble(),time=state.path("time").asDouble();
+    assertTrue(Math.hypot(x-10,z-19)>=3.5-1e-8,"Entered the authoritative building collision");
+    if(lastTime>=0)assertTrue(Math.hypot(x-lastX,z-lastZ)<=p.path("speed").asDouble()*(time-lastTime)+1e-8,"Movement exceeded server speed");
+    assertEquals(100,p.path("hp").asInt());assertEquals(0,p.path("col").asInt());assertFalse(p.has("route"));
+    detoured|=Math.abs(z-19)>3;lastX=x;lastZ=z;lastTime=time;
+    if(Math.hypot(x-13.6,z-19)<1e-6){arrived=true;break;}
+   }
+   assertTrue(detoured);assertTrue(arrived);
+   for(String invalid:new String[]{"{\"type\":\"move\",\"x\":10,\"z\":19}","{\"type\":\"move\",\"x\":9999,\"z\":0}","{\"type\":\"move\",\"x\":\"NaN\",\"z\":0}","{\"type\":\"path\",\"points\":[]}"}){
+    socket.sendText(invalid,true).join();assertFalse(await(listener,"error").path("text").asText().isEmpty());
+   }
+   socket.sendText("{\"type\":\"move\",\"x\":0,\"z\":16}",true).join();
+   awaitPlayer(listener,id,p->p.path("x").asDouble()<13.2);
+   socket.sendText("{\"type\":\"stop\"}",true).join();socket.sendText("{\"type\":\"input\",\"seq\":11,\"dx\":0,\"dz\":0}",true).join();
+   JsonNode stopped=awaitPlayer(listener,id,p->p.path("sequence").asLong()>=11);
+   socket.sendText("{\"type\":\"input\",\"seq\":10,\"dx\":1,\"dz\":0}",true).join();
+   for(int i=0;i<5;i++){
+    var p=ownPlayer(await(listener,"state"),id);assertEquals(stopped.path("x").asDouble(),p.path("x").asDouble());assertEquals(stopped.path("z").asDouble(),p.path("z").asDouble());
+   }
+  }finally{socket.sendClose(1000,"click-test").join();}
+ }
+
 }

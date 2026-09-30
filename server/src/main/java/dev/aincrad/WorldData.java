@@ -7,6 +7,7 @@ import java.util.*;
 
 /** All geometry that affects navigation is generated here, once, from the shared seed. */
 public class WorldData {
+    private static final double PLAYER_CLEARANCE=.4;
     public List<Bestiary.Species> monsterSpecies;public int schemaRevision=7;public Gathering.Rules gathering;public Crafting.Rules crafting;public Pvp.Rules pvp=new Pvp.Rules();public int version; public long seed; public String name; public List<Floor> floors;public CharacterOptions characterOptions;
     public record Choice(String id,String name){}
     public record Ability(String name,String kind,double range,double power,double cooldown){}
@@ -95,6 +96,18 @@ public class WorldData {
     private static void checkPoint(Floor f,double x,double z) {if(!Double.isFinite(x)||!Double.isFinite(z)||Math.hypot(x,z)>f.radius-2)throw new IllegalArgumentException("Coordenada fuera del piso "+f.id);}
     public boolean walkable(int floor,double x,double z) {
         Floor f=floor(floor);if(!Double.isFinite(x)||!Double.isFinite(z)||Math.hypot(x,z)>f.radius-1)return false;
-        return f.props.stream().noneMatch(p->Math.hypot(x-p.x(),z-p.z())<p.radius()+.4);
+        return f.props.stream().noneMatch(p->Math.hypot(x-p.x(),z-p.z())<p.radius()+PLAYER_CLEARANCE);
+    }
+    /** Swept clearance for the same circular blockers and player margin as walkable. */
+    public boolean walkableSegment(int floor,double fromX,double fromZ,double toX,double toZ) {
+        if(!walkable(floor,fromX,fromZ)||!walkable(floor,toX,toZ))return false;
+        // The floor boundary is a convex disk, so valid endpoints keep the segment inside it.
+        double dx=toX-fromX,dz=toZ-fromZ,lengthSquared=dx*dx+dz*dz;
+        if(lengthSquared==0)return true;
+        for(Prop prop:floor(floor).props){
+            double t=Math.max(0,Math.min(1,((prop.x()-fromX)*dx+(prop.z()-fromZ)*dz)/lengthSquared));
+            if(Math.hypot(fromX+t*dx-prop.x(),fromZ+t*dz-prop.z())<prop.radius()+PLAYER_CLEARANCE)return false;
+        }
+        return true;
     }
 }
