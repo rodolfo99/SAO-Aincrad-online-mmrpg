@@ -1,10 +1,25 @@
 # SAO Java Desktop 0.1.0 — paquete completo de fuentes
 
+**Cliente Java publicado en `main` el 30 de septiembre de 2026:** incorporado en [`7530b5f`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg/commit/7530b5fcbb14ca785b977f4063da27834ea77c63), seguido por la corrección [`e60cb843`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg/commit/e60cb8430eef195bc340be13745c55315e4ed324) de recursos Angular y exclusiones del cliente Java. `client-java/` es una carpeta normal del repositorio, con fuentes, recursos, pruebas, documentación y scripts; no es un submódulo y no existe `.gitmodules`.
+
 Esta entrega contiene el código fuente original del cliente Java, sus recursos gráficos, pruebas, documentación y scripts de compilación. También incluye los fuentes de Angular y del servidor, el mundo y los JAR originales del servidor: el POM Java usa ilustraciones de `client/public/assets/`, y sus pruebas de contrato necesitan `world/world.json` y `release/aincrad-server-0.2.0.jar`.
 
-## Descomprimir y compilar el cliente Java
+## Obtener y compilar la versión publicada
 
 Necesitas un JDK 17 o 21 y Maven 3.9.9 o posterior. Maven descarga las dependencias en la primera compilación; se requiere Internet. Node.js no es necesario para compilar el cliente Java porque el arte ya está incluido.
+
+```bash
+git clone --branch main https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg.git
+cd SAO-Aircraft-online-mmrpg
+chmod +x scripts/*.sh client-java/iniciar-cliente.sh
+./scripts/compilar-cliente-java.sh
+```
+
+Para actualizar una copia clonada, consulta [Publicación y actualización](docs/PUBLICACION.md#actualizar-una-copia-clonada). No se necesita `git submodule update` ni copiar el cliente desde un ZIP.
+
+### Alternativa histórica: paquete de fuentes del 30 de septiembre de 2026
+
+Estas instrucciones siguen siendo útiles si conservas `SAO-Java-Desktop-0.1.0-fuentes-completo.zip`. Ese ZIP es una instantánea de su preparación; para obtener la documentación y correcciones posteriores utiliza `main`.
 
 ```bash
 unzip SAO-Java-Desktop-0.1.0-fuentes-completo.zip
@@ -13,7 +28,7 @@ chmod +x scripts/*.sh client-java/iniciar-cliente.sh
 ./scripts/compilar-cliente-java.sh
 ```
 
-La compilación ejecuta 27 pruebas y genera:
+En ambos casos, la compilación ejecuta las 27 pruebas existentes y genera:
 
 - `client-java/target/aincrad-client-java-0.1.0.jar`
 - `client-java/target/lib/`
@@ -54,21 +69,24 @@ El script compila y prueba Angular y el servidor mediante `compilar.sh`, actuali
 
 - [Guía detallada del cliente](client-java/README.md)
 - [Funciones, protocolo, gráficos, plataformas y pruebas](docs/CLIENTE-JAVA.md)
-- [Contenido del paquete y cómo subir el módulo a GitHub](docs/PAQUETE-FUENTES-JAVA.md)
-- [Comprobaciones de este paquete](docs/VALIDACION-PAQUETE-JAVA.md)
+- [Estado publicado y referencia de empaquetado](docs/PAQUETE-FUENTES-JAVA.md)
+- [Comprobaciones históricas del paquete de fuentes](docs/VALIDACION-PAQUETE-JAVA.md)
 - [Documentación general](README.md)
 - [Avisos y licencias](client-java/NOTICE.md)
 
-El ZIP no incluye `.git`, datos de partidas, contraseñas, `.env`, cachés, `node_modules` ni directorios `target`. `SHA256SUMS.txt` permite comprobar los archivos incluidos:
+## Empaquetado e integridad
+
+El ZIP no incluye `.git`, datos de partidas, contraseñas, `.env`, cachés, `node_modules` ni directorios `target`. Dentro de una extracción sin modificar, su `SHA256SUMS.txt` permite comprobar los archivos de esa entrega:
 
 ```bash
 sha256sum -c SHA256SUMS.txt
 ```
 
-Para repetir el empaquetado después de modificar los fuentes:
+El manifiesto versionado procede del paquete original y no certifica los cambios posteriores de `main`. Para preparar otra distribución desde una copia limpia con los recursos necesarios, el script regenera el manifiesto y el ZIP:
 
 ```bash
 python3 scripts/empaquetar-fuentes-java.py
+sha256sum -c SHA256SUMS.txt
 ```
 
-El ZIP resultante se guarda junto a la carpeta del proyecto. Tener este paquete no confirma que el cliente Java ya esté publicado en `main`; la publicación se realiza aparte con Git.
+El ZIP resultante se guarda junto a la carpeta del proyecto con el mismo nombre; conserva una entrega anterior antes de reemplazarla. Empaquetar sirve para distribuir una instantánea de los archivos locales. El cliente Java ya está publicado en `main`; no queda pendiente una subida inicial.

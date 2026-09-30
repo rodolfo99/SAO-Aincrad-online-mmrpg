@@ -1,14 +1,14 @@
 # Aincrad · Ecos del primer piso — v0.2.0
 
-Esta copia incluye el cliente Java Desktop 0.1.0 y sus fuentes completos. Para descomprimir, compilar y subir el módulo, comienza por [README-FUENTES-JAVA.md](README-FUENTES-JAVA.md).
+El cliente Java Desktop 0.1.0 está publicado en `main` desde el 30 de septiembre de 2026, integrado como carpeta normal en `client-java/`. Para obtenerlo, compilarlo o consultar el paquete histórico de fuentes, comienza por [README-FUENTES-JAVA.md](README-FUENTES-JAVA.md).
 
-Proyecto semilla de un MMORPG 3D inspirado en el universo de **Sword Art Online**: servidor autoritativo **Java / Spring Boot**, cliente web **Angular + JavaScript / Three.js**, administración de mundo y NPC conversacionales con **Spring AI + Ollama**.
+Proyecto semilla de un MMORPG 3D inspirado en el universo de **Sword Art Online**: servidor autoritativo **Java / Spring Boot**, cliente web **Angular + JavaScript / Three.js**, cliente de escritorio **JavaFX + jMonkeyEngine/OpenGL**, administración de mundo y NPC conversacionales con **Spring AI + Ollama**.
 
 Es un prototipo fan con gráficos originales y dos pisos jugables. No es un juego oficial ni una recreación completa de los cien pisos, y no contiene recursos extraídos del anime ni de otros juegos.
 
 Repositorio: [rodolfo99/SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). El nombre del repositorio se conserva como `SAO-Aircraft-online-mmrpg`; el mundo del juego se llama **Aincrad**.
 
-**Validación en Ubuntu 26.04:** partida completa realizada y confirmada por el usuario el 29 de septiembre de 2026. Consulta el registro de [validación manual](docs/VALIDACION.md#validación-manual-en-ubuntu-2604--confirmación-del-usuario).
+**Validación manual del cliente web en Ubuntu 26.04:** partida completa realizada y confirmada por el usuario el 29 de septiembre de 2026. Consulta el registro de [validación manual](docs/VALIDACION.md#validación-manual-en-ubuntu-2604--confirmación-del-usuario). Las comprobaciones del cliente Java se documentan por separado en [CLIENTE-JAVA.md](docs/CLIENTE-JAVA.md#validación-reproducible).
 
 ## Obtener el proyecto desde GitHub
 
