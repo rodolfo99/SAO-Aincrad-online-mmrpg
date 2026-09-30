@@ -1,5 +1,7 @@
 # Aincrad · Ecos del primer piso — v0.2.0
 
+Esta copia incluye el cliente Java Desktop 0.1.0 y sus fuentes completos. Para descomprimir, compilar y subir el módulo, comienza por [README-FUENTES-JAVA.md](README-FUENTES-JAVA.md).
+
 Proyecto semilla de un MMORPG 3D inspirado en el universo de **Sword Art Online**: servidor autoritativo **Java / Spring Boot**, cliente web **Angular + JavaScript / Three.js**, administración de mundo y NPC conversacionales con **Spring AI + Ollama**.
 
 Es un prototipo fan con gráficos originales y dos pisos jugables. No es un juego oficial ni una recreación completa de los cien pisos, y no contiene recursos extraídos del anime ni de otros juegos.
@@ -27,6 +29,17 @@ Abre <http://localhost:8081>; la administración está en <http://localhost:8081
 También puedes usar **Code → Download ZIP** en GitHub. Extrae el archivo, entra en la carpeta que contiene `scripts/`, `server/` y `client/`, y ejecuta el mismo arranque. Ese archivo sigue el contenido de `main`; el paquete `aincrad-seed-v0.2.0.zip` tiene una raíz llamada `aincrad-seed/`.
 
 Guías: [arranque y puertos](docs/ARRANQUE-Y-PUERTOS.md) · [publicación, actualización y empaquetado](docs/PUBLICACION.md) · [operación y respaldos](docs/OPERACION.md) · [validación y límites](docs/VALIDACION.md).
+
+## Cliente de escritorio Java
+
+El cliente adicional de **JavaFX + jMonkeyEngine/OpenGL** comparte servidor, cuentas, personajes, chat y reglas con Angular. Incluye modelos detallados originales, sombras, materiales de superficie, SSAO, bloom, habilidades, oficios, mercado, PvP y administración root. Angular conserva su funcionamiento.
+
+```bash
+./scripts/compilar-cliente-java.sh
+./scripts/iniciar-cliente-java.sh http://localhost:8081
+```
+
+Para compilar se necesitan JDK 17/21 y Maven 3.9.9+. El ZIP del cliente Java lleva las dependencias y puede ejecutarse sin Maven ni Node. Consulta la [guía de uso](client-java/README.md), [compatibilidad, funciones, capturas y validación](docs/CLIENTE-JAVA.md) y los [avisos de dependencias](client-java/NOTICE.md). El servidor sigue iniciándose con los scripts habituales.
 
 ## Inicio rápido en Linux
 

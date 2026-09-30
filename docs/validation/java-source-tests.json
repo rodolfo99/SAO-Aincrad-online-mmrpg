@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-30",
+  "platform": "Linux x86_64",
+  "jdk": "OpenJDK 17.0.20",
+  "maven": "3.9.9",
+  "source_classes": 21,
+  "test_classes": 3,
+  "tests": 27,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "compiled_from_extracted_source_zip": true,
+  "executable_package_build": "BUILD SUCCESS",
+  "reports": [
+    {
+      "name": "dev.aincrad.client.ArtContractTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.369"
+    },
+    {
+      "name": "dev.aincrad.client.CoreTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.075"
+    },
+    {
+      "name": "dev.aincrad.client.ServerContractTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "26.286"
+    }
+  ]
+}

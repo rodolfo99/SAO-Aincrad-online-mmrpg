@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "models": 562,
+  "geometries": 322,
+  "materials": 166,
+  "bytes": 6208865,
+  "sha256": "dc0685c1d012af21f9586bf84be112379d66fe3c3ad1fe5f48294749b3f643b5",
+  "sourceCommit": "9e893fe",
+  "sources": {
+    "avatar-model.js": "bb3e21729681c7fd01685cbddf47d21ce3905d228a9b3371a97d7340c5fe5c61",
+    "render-kit.js": "f6e3cec63928a435b0dc067af5ea64f378f00370356d2ca2d705a16f7f325cf7",
+    "environment-model.js": "b4283218a653f8f686d0edb43c244255747d4ae83393a9b1d1af39a2d07ab1f9",
+    "creature-model.js": "0027138b0b2d7ae7d00096e5aba423f643ee9755ebb300cb06dfd0130fbed402",
+    "equipment.mjs": "d36c4505e4ab8c4403be9d8c9536d0c05d369d2154bb30288bf7292a83e42553"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "server": "http://127.0.0.1:18081",
+  "angularConnected": true,
+  "javaConnected": true,
+  "sharedFloor": 1,
+  "nativeVisibleInAngular": true,
+  "nativeMovementVisibleInAngular": true,
+  "angularMovement": true,
+  "javaChatVisibleInAngular": true,
+  "angularChatVisibleInJava": true,
+  "openGLFrames": 24,
+  "browserErrors": []
+}
