@@ -72,7 +72,7 @@ Si tienes personajes de la entrega anterior, inicia sesión y pulsa **Vincular p
 - Herrería, sastrería, minería y leñador; 84 recetas, nueve materiales y recolección compartida. Bolsa con venta de recursos y mercado con 28 productos básicos de armas, ropa y armaduras, configurables por root.
 - Herrería, sastrería y tienda visibles y configurables; patio con cuatro muñecos para practicar daño, curaciones y mejoras.
 - PvP con ciudadanía, defensa propia, marca de asesino y protección del refugio, portales y patio.
-- Movimiento con teclado o clic; cámara giratoria; objetivo seleccionado; ataque normal y habilidad de clase.
+- Movimiento con teclado o clic con rutas autoritativas por puntos intermedios; cámara giratoria; objetivo seleccionado; ataque normal y habilidad de clase.
 - Cinco zonas de caza: slimes 1–3, perros 4–6, trasgos 7–10, orcos 11–15 y trolls 16–20; 26 criaturas nuevas con modelos 3D propios.
 - Combate autoritativo, atributos y recompensas por nivel, persecución territorial, golpes anunciados, muerte y reaparición.
 - Misión de tres jabalíes, EXP, niveles, col, pociones, mejora de arma y portal desbloqueable.
@@ -90,7 +90,7 @@ Si tienes personajes de la entrega anterior, inicia sesión y pulsa **Vincular p
 | Control | Acción |
 |---|---|
 | WASD / flechas | Mover respecto a la cámara |
-| Clic en suelo | Caminar, a la misma velocidad que con teclado |
+| Clic en suelo | Buscar una ruta en el servidor y caminar, a la misma velocidad que con teclado |
 | Clic en enemigo | Seleccionar objetivo |
 | Arrastrar con botón derecho | Girar cámara |
 | Rueda | Acercar/alejar cámara |
@@ -101,7 +101,9 @@ Si tienes personajes de la entrega anterior, inicia sesión y pulsa **Vincular p
 | ◎ Entrenamiento | Ir al patio, elegir muñeco y consultar DPS/curación |
 | E / R / F | Interactuar / poción / portal |
 
-El clic sigue una dirección recta con deslizamiento ante obstáculos; todavía no hay búsqueda de rutas. Si una casa bloquea el camino, rodea por el sendero.
+El servidor calcula una ruta por puntos intermedios para rodear edificios, árboles, cristales y recursos usando las mismas colisiones de `WorldData.walkable`. WASD/flechas o la pérdida de foco cancelan la ruta. Un destino bloqueado, inaccesible en la malla o cuya búsqueda alcance el límite produce el `error` habitual y conserva el movimiento anterior. La malla de 1 m puede omitir pasos estrechos que requieran un desvío; cada búsqueda expande como máximo 8192 nodos. [Funcionamiento, pruebas y límites](docs/MOVIMIENTO-POR-CLIC.md).
+
+**Para activar esta mejora recompila con `./scripts/compilar.sh` antes de arrancar.** El JAR precompilado de la entrega original v0.2.0 conserva su comportamiento anterior; esta revisión actualiza fuentes, pruebas y documentación.
 
 ## Administración del mundo
 
@@ -225,7 +227,7 @@ Las pruebas de navegador editan perfiles de prueba y modifican/restauran el nomb
 - `scripts/`, `Dockerfile`, `compose*.yaml`, `.env.example`: construcción y operación.
 - `docs/ARQUITECTURA.md`, `docs/MUNDO.md`: protocolo y puntos de extensión.
 
-Esta semilla tiene límite de 32 jugadores conectados y un único proceso/zona lógica. **Ese límite no es una prueba de carga ni una promesa de escala MMORPG.** El registro, la autenticación de jugadores y la recuperación de cuentas están implementados. Quedan por desarrollar shards, comercio entre jugadores, subastas, grupos, rutas, terreno avanzado, mallas GLTF y contenido extenso. La partida completa en Ubuntu 26.04 fue confirmada por el usuario; sigue pendiente validar una ejecución masiva en producción.
+Esta semilla tiene límite de 32 jugadores conectados y un único proceso/zona lógica. **Ese límite no es una prueba de carga ni una promesa de escala MMORPG.** El registro, la autenticación de jugadores, la recuperación de cuentas y las rutas de clic dentro de cada piso están implementados. Quedan por desarrollar shards, comercio entre jugadores, subastas, grupos, navegación entre pisos, terreno avanzado, mallas GLTF y contenido extenso. La partida completa en Ubuntu 26.04 fue confirmada por el usuario; sigue pendiente validar una ejecución masiva en producción.
 
 ## Revisión visual del mundo
 

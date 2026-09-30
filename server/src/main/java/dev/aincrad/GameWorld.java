@@ -16,6 +16,7 @@ public class GameWorld {
         public boolean quest,reward,unlocked,online; public long sequence=-1;
         public Map<String,Integer> attributeRanks=new HashMap<>(),talentRanks=new HashMap<>();
         public Double goalX,goalZ; public String target="";
+        private final Deque<WorldData.Point> route=new ArrayDeque<>();
         WorldData.Outfit outfit(){var made=Crafting.equipped(this,"armor");if(made!=null)return made.armor;return catalog.equipmentSets.stream().filter(g->Specializations.armor(specialty(),g)&&g.gender().equals(appearance.gender())&&g.minLevel()<=level()).max(Comparator.comparingInt(WorldData.Outfit::minLevel)).orElseThrow();}
         Specializations.Specialty specialty(){return Specializations.resolve(catalog,appearance.classId(),appearance.specializationId());}
         Races.Race race(){return catalog.races.stream().filter(r->r.id.equals(appearance.race())).findFirst().orElseThrow();}
@@ -36,13 +37,14 @@ public class GameWorld {
         Map<String,Object> view(){return Map.ofEntries(Map.entry("id",id),Map.entry("name",name),Map.entry("kind",kind),Map.entry("model",practice()?"dummy":species.model()),Map.entry("color",practice()?"#d0ac6f":species.color()),Map.entry("level",level),Map.entry("zoneId",zone==null?"":zone.id()),Map.entry("returning",returning),Map.entry("damage",practice()?0:species.damage(level)),Map.entry("xpReward",practice()?0:species.xp(level)),Map.entry("colReward",practice()?0:species.col(level)),Map.entry("floor",floor),Map.entry("x",x),Map.entry("z",z),Map.entry("heading",heading),Map.entry("hp",hp),Map.entry("maxHp",maxHp),Map.entry("windup",windupUntil>0),Map.entry("training",practice()),Map.entry("ally",support()),Map.entry("defense",practice()?dummy.defense():species.defense(level)),Map.entry("effects",effects.stream().map(e->e.name).distinct().toList()));}
     }
     public final WorldData data; final PlayerStore store;
+    private final WorldPathfinder pathfinder;
     final Map<String,Player> profiles=new LinkedHashMap<>();final Map<String,Player> online=new LinkedHashMap<>();final Map<String,Monster> monsters=new LinkedHashMap<>();
     private final Gathering.Store gatheringStore;private final PvpJournal journal;private final java.util.function.LongSupplier clock;private final BiConsumer<String,Map<String,Object>> events;private double time;private int ticks;
     public GameWorld(WorldData data,PlayerStore store,BiConsumer<String,Map<String,Object>> events)throws IOException {
         this(data,store,events,System::currentTimeMillis);
     }
     GameWorld(WorldData data,PlayerStore store,BiConsumer<String,Map<String,Object>> events,java.util.function.LongSupplier clock)throws IOException {
-        this.data=data;this.store=store;this.events=events;this.clock=clock;this.journal=store.journal();this.gatheringStore=store.gathering();
+        this.data=data;this.pathfinder=new WorldPathfinder(data);this.store=store;this.events=events;this.clock=clock;this.journal=store.journal();this.gatheringStore=store.gathering();
         for(var p:store.load()){
             Player a=new Player();initialize(a);a.skills=p.skills()==null?new Skills.State():p.skills().copy();a.crafting=p.crafting()==null?Crafting.initial(data.crafting):p.crafting().copy();a.pvp=p.pvp()==null?new Pvp.State(data.pvp.initialCitizenship):p.pvp().copy();a.pvp.citizenship=Math.max(data.pvp.minCitizenship,Math.min(data.pvp.maxCitizenship,a.pvp.citizenship));a.weaponSetId=Objects.toString(p.weaponSetId(),"");a.catalog=data.characterOptions;a.appearance=p.appearance();try{a.appearance=data.validateAppearance(a.appearance);}catch(IllegalArgumentException invalid){a.appearance=data.defaultAppearance();}a.profession=data.profession(a.appearance.classId());a.id=p.id();a.accountId=Objects.toString(p.accountId(),"");a.hash=p.tokenHash();a.name=p.name();a.floor=p.floor();a.x=p.x();a.z=p.z();a.hp=p.hp();a.xp=p.xp();a.col=p.col();a.potions=p.potions();a.kills=p.kills();a.quest=p.quest();a.reward=p.reward();a.unlocked=p.unlocked();a.weapon=p.weapon();a.attributeRanks=new HashMap<>(p.attributeRanks()==null?Map.of():p.attributeRanks());a.talentRanks=new HashMap<>(p.talentRanks()==null?Map.of():p.talentRanks());reconcile(a);a.hp=Math.min(a.hp,a.maxHp());
             if(data.floors.stream().noneMatch(f->f.id==a.floor)){a.floor=data.floors.get(0).id;spawn(a);}if(!data.walkable(a.floor,a.x,a.z))spawn(a);profiles.put(a.hash,a);
@@ -69,7 +71,7 @@ public class GameWorld {
             p=new Player();initialize(p);p.catalog=data.characterOptions;p.appearance=data.validateAppearance(appearance);p.profession=data.profession(p.appearance.classId());p.id=UUID.randomUUID().toString();p.name=name;p.hash=hash(returned);p.floor=data.floors.get(0).id;spawn(p);store.save(p.profile());profiles.put(p.hash,p);
         }
         if(p.online)throw new IllegalArgumentException("Este personaje ya está conectado en otra pestaña");
-        p.online=true;p.dx=p.dz=0;p.goalX=p.goalZ=null;p.sequence=-1;p.target="";online.put(p.id,p);
+        p.online=true;p.dx=p.dz=0;cancelRoute(p);p.sequence=-1;p.target="";online.put(p.id,p);
         return Map.of("type","welcome","id",p.id,"token",returned,"player",p.view());
     }
     public synchronized List<Map<String,Object>> ownedCharacters(String accountId) {
@@ -93,7 +95,7 @@ public class GameWorld {
             p.floor=data.floors.get(0).id;spawn(p);store.save(p.profile());profiles.put(p.hash,p);
         }
         if(p.online)throw new IllegalArgumentException("Este personaje ya está conectado en otra pestaña");
-        p.online=true;p.dx=p.dz=0;p.goalX=p.goalZ=null;p.sequence=-1;p.target="";online.put(p.id,p);
+        p.online=true;p.dx=p.dz=0;cancelRoute(p);p.sequence=-1;p.target="";online.put(p.id,p);
         return Map.of("type","welcome","id",p.id,"player",p.view());
     }
     public synchronized Map<String,Object> claimLegacy(String accountId,String token)throws IOException {
@@ -111,16 +113,22 @@ public class GameWorld {
         try{store.save(p.profile());}catch(IOException e){p.accountId=Objects.toString(previous.accountId(),"");throw e;}
         return Map.of("id",p.id,"name",p.name,"level",p.level());
     }
-    public synchronized void leave(String id)throws IOException {Player p=online.get(id);if(p!=null){p.online=false;p.dx=p.dz=0;p.goalX=p.goalZ=null;p.pvpMode=false;store.save(p.profile());if(p.pvp.combatUntil<=clock.getAsLong()||p.hp<=0)online.remove(id);}}
-    private void spawn(Player p){var spawn=data.floor(p.floor).spawn;p.x=spawn.x();p.z=spawn.z();p.hp=p.maxHp();p.dx=p.dz=0;p.goalX=p.goalZ=null;p.target="";p.targetKind="monster";p.effects.clear();p.racialShield=0;p.racialEffect="";p.racialBonus=0;p.pvp.spawnProtectedUntil=clock.getAsLong()+data.pvp.spawnProtectionSeconds*1000L;}
+    private static void cancelRoute(Player p){p.goalX=p.goalZ=null;p.route.clear();}
+    public synchronized void leave(String id)throws IOException {Player p=online.get(id);if(p!=null){p.online=false;p.dx=p.dz=0;cancelRoute(p);p.pvpMode=false;store.save(p.profile());if(p.pvp.combatUntil<=clock.getAsLong()||p.hp<=0)online.remove(id);}}
+    private void spawn(Player p){var spawn=data.floor(p.floor).spawn;p.x=spawn.x();p.z=spawn.z();p.hp=p.maxHp();p.dx=p.dz=0;cancelRoute(p);p.target="";p.targetKind="monster";p.effects.clear();p.racialShield=0;p.racialEffect="";p.racialBonus=0;p.pvp.spawnProtectedUntil=clock.getAsLong()+data.pvp.spawnProtectionSeconds*1000L;}
     private static double num(JsonNode n,String k){JsonNode v=n.get(k);if(v==null||!v.isNumber()||!Double.isFinite(v.doubleValue()))throw new IllegalArgumentException("Número inválido: "+k);return v.doubleValue();}
     public synchronized void command(String id,JsonNode n){
         Player p=online.get(id);if(p==null||!p.online)throw new IllegalArgumentException("Primero entra al mundo");
         String type=n.path("type").asText();if(type.equals("ping")){return;}if(p.hp<=0)return;
         switch(type){
-            case "input" -> {if(!n.path("seq").isIntegralNumber()||!n.path("seq").canConvertToLong()||n.path("seq").asLong()<0)throw new IllegalArgumentException("Secuencia inválida");long seq=n.path("seq").asLong(-1);if(seq<=p.sequence)return;double x=num(n,"dx"),z=num(n,"dz");if(Math.abs(x)>1||Math.abs(z)>1)throw new IllegalArgumentException("Entrada fuera de rango");double len=Math.max(1,Math.hypot(x,z));p.sequence=seq;p.dx=x/len;p.dz=z/len;p.inputUntil=time+.25;if(x!=0||z!=0)p.goalX=p.goalZ=null;}
-            case "move" -> {double x=num(n,"x"),z=num(n,"z");if(!data.walkable(p.floor,x,z))throw new IllegalArgumentException("Destino bloqueado");p.goalX=x;p.goalZ=z;}
-            case "stop" -> {p.dx=p.dz=0;p.goalX=p.goalZ=null;}
+            case "input" -> {if(!n.path("seq").isIntegralNumber()||!n.path("seq").canConvertToLong()||n.path("seq").asLong()<0)throw new IllegalArgumentException("Secuencia inválida");long seq=n.path("seq").asLong(-1);if(seq<=p.sequence)return;double x=num(n,"dx"),z=num(n,"dz");if(Math.abs(x)>1||Math.abs(z)>1)throw new IllegalArgumentException("Entrada fuera de rango");double len=Math.max(1,Math.hypot(x,z));p.sequence=seq;p.dx=x/len;p.dz=z/len;p.inputUntil=time+.25;if(x!=0||z!=0)cancelRoute(p);}
+            case "move" -> {
+                double x=num(n,"x"),z=num(n,"z");
+                // Plan before mutating intentions: invalid/unreachable clicks preserve the current move.
+                var route=pathfinder.find(p.floor,p.x,p.z,x,z);
+                cancelRoute(p);p.route.addAll(route);p.goalX=x;p.goalZ=z;p.dx=p.dz=0;
+            }
+            case "stop" -> {p.dx=p.dz=0;cancelRoute(p);}
             case "target" -> {String target=n.path("id").asText();if(n.path("kind").asText().equals("player")){Player other=online.get(target);if(other!=null&&other!=p&&other.floor==p.floor&&other.hp>0){p.target=target;p.targetKind="player";}}else{Monster m=monsters.get(target);if(m!=null&&m.floor==p.floor&&m.hp>0){p.target=target;p.targetKind="monster";}}}
             case "pvpMode" -> {p.pvpMode=n.path("enabled").asBoolean();notify(p,p.pvpMode?"Ataques PvP activados. Un asesinato reduce tu ciudadanía.":"Ataques PvP desactivados. Fuera del refugio otros pueden atacarte.");}
             case "racial" -> racial(p);
@@ -288,7 +296,7 @@ public class GameWorld {
         }
         p.pvp=nextAttacker;victim.pvp=nextVictim;victim.racialShield=Math.max(0,victim.racialShield-shield);victim.hp=Math.max(0,victim.hp-damage);
         p.heading=Math.atan2(victim.x-p.x,victim.z-p.z);if(!ongoing)p.attackAt=time+.65;if(skill&&racialDamage==0)p.skillAt=time+skillCooldown(p);
-        if(killed){victim.deadUntil=time+3;victim.dx=victim.dz=0;victim.goalX=victim.goalZ=null;notify(victim,"Caíste en combate PvP. Regresarás al refugio conservando tu progreso.");notify(p,justified?"Baja en defensa propia: sin penalización de ciudadanía.":"Asesinato: −"+r.murderPenalty+" ciudadanía. Ahora estás marcado como asesino.");}
+        if(killed){victim.deadUntil=time+3;victim.dx=victim.dz=0;cancelRoute(victim);notify(victim,"Caíste en combate PvP. Regresarás al refugio conservando tu progreso.");notify(p,justified?"Baja en defensa propia: sin penalización de ciudadanía.":"Asesinato: −"+r.murderPenalty+" ciudadanía. Ahora estás marcado como asesino.");}
         try{store.save(p.profile());store.save(victim.profile());}catch(IOException e){System.err.println("Guardado PvP pendiente; la baja conserva recibo: "+e.getMessage());}
         events.accept("*",Map.of("type","hit","source",p.id,"target",victim.id,"damage",damage,"skill",skill,"critical",critical,"floor",p.floor));return true;
     }
@@ -344,10 +352,13 @@ public class GameWorld {
             if(time>=p.racialUntil){p.racialEffect="";p.racialBonus=0;p.racialShield=0;}
             p.pvp.defendAgainst.entrySet().removeIf(e->e.getValue()<=clock.getAsLong());
             if(p.hp<=0){if(time>=p.deadUntil)spawn(p);continue;}
-            double dx=time<p.inputUntil?p.dx:0,dz=time<p.inputUntil?p.dz:0;
-            if(p.goalX!=null){double vx=p.goalX-p.x,vz=p.goalZ-p.z,len=Math.hypot(vx,vz);if(len<.2){p.goalX=p.goalZ=null;}else{dx=vx/len;dz=vz/len;}}
-            if(dx!=0||dz!=0){double step=p.speed()*dt;if(p.goalX!=null)step=Math.min(step,Math.hypot(p.goalX-p.x,p.goalZ-p.z));double x=p.x+dx*step,z=p.z+dz*step;boolean moved=false;
-                if(data.walkable(p.floor,x,p.z)){p.x=x;moved=true;}if(data.walkable(p.floor,p.x,z)){p.z=z;moved=true;}if(!moved)p.goalX=p.goalZ=null;p.heading=Math.atan2(dx,dz);}
+            if(p.goalX!=null)followRoute(p,p.speed()*dt);
+            else{
+                // Preserve the existing WASD normalization, expiry and separate-axis sliding.
+                double dx=time<p.inputUntil?p.dx:0,dz=time<p.inputUntil?p.dz:0;
+                if(dx!=0||dz!=0){double step=p.speed()*dt,x=p.x+dx*step,z=p.z+dz*step;
+                    if(data.walkable(p.floor,x,p.z))p.x=x;if(data.walkable(p.floor,p.x,z))p.z=z;p.heading=Math.atan2(dx,dz);}
+            }
         }
         tickSkills(dt);
         for(Monster m:monsters.values()){
@@ -362,11 +373,27 @@ public class GameWorld {
             if(d>m.species.attackRange())moveMonster(m,dx/d,dz/d,dt);else if(time>=m.attackAt){if(m.species.windupSeconds()>0){m.windupUntil=time+m.species.windupSeconds();m.victim=p.id;}else{hurt(p,m,m.species.damage(m.level));m.attackAt=time+m.species.attackCooldown();}}
         }
     }
+    private void followRoute(Player p,double remaining){
+        while(!p.route.isEmpty()){
+            var next=p.route.peekFirst();double dx=next.x()-p.x,dz=next.z()-p.z,distance=Math.hypot(dx,dz);
+            if(distance==0){p.route.removeFirst();continue;}
+            if(remaining<=0)break;
+            // Recheck against the current authoritative world; never slide away from a route segment.
+            if(!data.walkableSegment(p.floor,p.x,p.z,next.x(),next.z())){
+                cancelRoute(p);notify(p,"La ruta dejó de estar disponible.");return;
+            }
+            double step=Math.min(remaining,distance);p.heading=Math.atan2(dx,dz);
+            if(step==distance){p.x=next.x();p.z=next.z();p.route.removeFirst();}
+            else{p.x+=dx/distance*step;p.z+=dz/distance*step;}
+            remaining-=step;
+        }
+        if(p.route.isEmpty())cancelRoute(p);
+    }
     private boolean canChase(Monster m,Player p){return p.hp>0&&p.floor==m.floor&&!Training.inside(data.floor(p.floor).training,p.x,p.z)&&Bestiary.inside(m.zone,p.x,p.z)&&Math.hypot(p.x-m.homeX,p.z-m.homeZ)<m.species.leashRange();}
     private void returnHome(Monster m,double dt){if(m.returning&&time-m.evadeAt>=8){m.x=m.homeX;m.z=m.homeZ;}double d=Math.hypot(m.x-m.homeX,m.z-m.homeZ);if(d>.1)moveMonster(m,(m.homeX-m.x)/d,(m.homeZ-m.z)/d,dt);if(d<.4){if(m.zone!=null){m.hp=m.maxHp;m.returning=false;m.effects.clear();m.participants.clear();}else m.hp=Math.min(m.maxHp,m.hp+1);}}
     private void moveMonster(Monster m,double dx,double dz,double dt){double speed=Math.max(.3,Math.min(6,m.species.speed()+Skills.modifier(m.effects,"speed",clock.getAsLong())));double x=m.x+dx*speed*dt,z=m.z+dz*speed*dt;if(monsterWalkable(m,x,m.z))m.x=x;if(monsterWalkable(m,m.x,z))m.z=z;}
     private boolean monsterWalkable(Monster m,double x,double z){return Bestiary.inside(m.zone,x,z)&&!Training.inside(data.floor(m.floor).training,x,z)&&data.walkable(m.floor,x,z);}
-    private void hurt(Player p,Monster m,int damage){if(Training.inside(data.floor(p.floor).training,p.x,p.z))return;damage=absorb(p,Math.max(1,damage+(int)Math.round(Skills.modifier(m.effects,"damage",clock.getAsLong()))-p.defense()));p.hp=Math.max(0,p.hp-damage);events.accept("*",Map.of("type","hit","source",m.id,"target",p.id,"damage",damage,"skill",false,"floor",p.floor));if(p.hp==0){p.deadUntil=time+3;p.dx=p.dz=0;p.goalX=p.goalZ=null;notify(p,"Has caído. Regresarás al refugio en tres segundos; conservas tu progreso.");}}
+    private void hurt(Player p,Monster m,int damage){if(Training.inside(data.floor(p.floor).training,p.x,p.z))return;damage=absorb(p,Math.max(1,damage+(int)Math.round(Skills.modifier(m.effects,"damage",clock.getAsLong()))-p.defense()));p.hp=Math.max(0,p.hp-damage);events.accept("*",Map.of("type","hit","source",m.id,"target",p.id,"damage",damage,"skill",false,"floor",p.floor));if(p.hp==0){p.deadUntil=time+3;p.dx=p.dz=0;cancelRoute(p);notify(p,"Has caído. Regresarás al refugio en tres segundos; conservas tu progreso.");}}
     public synchronized Map<String,Object> snapshot(String id){Player p=online.get(id);if(p==null)return Map.of();return Map.of("type","state","tick",ticks,"time",time,"you",id,"floor",p.floor,"players",online.values().stream().filter(a->a.floor==p.floor).map(a->{var v=a.view();if(!a.id.equals(id)){v.remove("crafting");v.remove("training");}return v;}).toList(),"summons",summons.values().stream().filter(s->s.floor==p.floor).map(Summon::view).toList(),"resources",resourceViews(p.floor),"monsters",monsters.values().stream().filter(m->m.floor==p.floor&&m.hp>0).map(Monster::view).toList(),"cooldowns",Map.of("attack",Math.max(0,p.attackAt-time),"skill",Math.max(0,p.skillAt-time),"potion",Math.max(0,p.potionAt-time),"racial",Math.max(0,(p.pvp.racialReadyAt-clock.getAsLong())/1000.0),"gather",Math.max(0,(p.crafting.gatherReadyAt-clock.getAsLong())/1000.0)));}
     public synchronized List<Map<String,Object>> characters(){return profiles.values().stream().map(p->{Map<String,Object> v=p.view();v.put("online",p.online);v.put("accountId",p.accountId);return v;}).toList();}
     private double skillCooldown(Player p){return Math.max(1,p.profession.ability().cooldown()-Math.max(0,Math.min(10,p.modifier("cooldownReduction"))));}

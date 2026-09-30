@@ -1,5 +1,9 @@
 # Estado de v0.2.0
 
+## Rutas autoritativas de clic · 29 de septiembre de 2026
+
+Los fuentes añaden A* y una cola de puntos intermedios en Java, con las mismas colisiones circulares, margen del jugador, velocidad y validaciones del mundo. Se conservan `move`, `input`, `stop`, WASD y la cancelación al salir, morir o usar portales. Las pruebas cubren obstáculos, destinos encerrados, velocidad y WebSocket real. Hay un límite de 8192 nodos por búsqueda y una malla de 1 m; pueden omitirse desvíos por pasos estrechos. Recompila para activar la mejora en el JAR. [Uso, alcance y pruebas](MOVIMIENTO-POR-CLIC.md).
+
 Semilla funcional con Java/Spring Boot, Angular/Three.js, root configurable al primer inicio y NPC mediante Spring AI/Ollama. Incluye cinco razas, ocho especialidades, 48 talentos, 33 habilidades activas, 30 conjuntos de ropa/armadura y 30 juegos de armas.
 
 PvP y ciudadanía persistentes; herrero, sastre, minería y leñador; 84 recetas, nueve materiales, siete tipos de recurso, 22 nodos compartidos; herrería, sastrería y tienda. Patio configurable con cuatro muñecos, curaciones/mejoras, daño en área, invocaciones y contadores de práctica. Nueve ilustraciones originales y geometría 3D local.
