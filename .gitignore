@@ -6,4 +6,5 @@ client/dist/
 server/target/
 .tools/
 logs/
+client-java/target/
 *.partial
