@@ -34,6 +34,6 @@ Bolsa de recursos con venta parcial/completa al mercader, precios de reventa roo
 
 ## Publicación en GitHub · 29 de septiembre de 2026
 
-Fuentes y compilados v0.2.0 publicados en `main` de [SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). Se comprobó la coincidencia de los 255 archivos de la subida con el ZIP de entrega. La documentación posterior completa [arranque y puertos](ARRANQUE-Y-PUERTOS.md), [publicación y actualización](PUBLICACION.md) y los enlaces de operación y del perfil de GitHub.
+Fuentes y compilados v0.2.0 publicados en `main` de [SAO-Aincrad-online-mmrpg](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg). Se comprobó la coincidencia de los 255 archivos de la subida con el ZIP de entrega. La documentación posterior completa [arranque y puertos](ARRANQUE-Y-PUERTOS.md), [publicación y actualización](PUBLICACION.md) y los enlaces de operación y del perfil de GitHub.
 
 Esta revisión documental conserva el código y la versión v0.2.0. La partida completa en Ubuntu 26.04 está realizada, según la confirmación del usuario del 29 de septiembre de 2026. Siguen pendientes la carga multijugador masiva y la entrega de correo a proveedores externos. Consulta [VALIDACION.md](VALIDACION.md) para el registro de la validación manual y las comprobaciones automatizadas.

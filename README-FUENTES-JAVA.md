@@ -1,6 +1,6 @@
 # SAO Java Desktop 0.1.0 — paquete completo de fuentes
 
-**Cliente Java publicado en `main` el 30 de septiembre de 2026:** incorporado en [`7530b5f`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg/commit/7530b5fcbb14ca785b977f4063da27834ea77c63), seguido por la corrección [`e60cb843`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg/commit/e60cb8430eef195bc340be13745c55315e4ed324) de recursos Angular y exclusiones del cliente Java. `client-java/` es una carpeta normal del repositorio, con fuentes, recursos, pruebas, documentación y scripts; no es un submódulo y no existe `.gitmodules`.
+**Cliente Java publicado en `main` el 30 de septiembre de 2026:** incorporado en [`7530b5f`](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg/commit/7530b5fcbb14ca785b977f4063da27834ea77c63), seguido por la corrección [`e60cb843`](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg/commit/e60cb8430eef195bc340be13745c55315e4ed324) de recursos Angular y exclusiones del cliente Java. `client-java/` es una carpeta normal del repositorio, con fuentes, recursos, pruebas, documentación y scripts; no es un submódulo y no existe `.gitmodules`.
 
 Esta entrega contiene el código fuente original del cliente Java, sus recursos gráficos, pruebas, documentación y scripts de compilación. También incluye los fuentes de Angular y del servidor, el mundo y los JAR originales del servidor: el POM Java usa ilustraciones de `client/public/assets/`, y sus pruebas de contrato necesitan `world/world.json` y `release/aincrad-server-0.2.0.jar`.
 
@@ -9,8 +9,8 @@ Esta entrega contiene el código fuente original del cliente Java, sus recursos 
 Necesitas un JDK 17 o 21 y Maven 3.9.9 o posterior. Maven descarga las dependencias en la primera compilación; se requiere Internet. Node.js no es necesario para compilar el cliente Java porque el arte ya está incluido.
 
 ```bash
-git clone --branch main https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg.git
-cd SAO-Aircraft-online-mmrpg
+git clone --branch main https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg.git
+cd SAO-Aincrad-online-mmrpg
 chmod +x scripts/*.sh client-java/iniciar-cliente.sh
 ./scripts/compilar-cliente-java.sh
 ```

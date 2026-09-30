@@ -6,8 +6,8 @@ El cliente Java Desktop 0.1.0 para el servidor Aincrad 0.2.0 ya está publicado 
 
 | Commit | Cambio publicado |
 | --- | --- |
-| [`7530b5f`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg/commit/7530b5fcbb14ca785b977f4063da27834ea77c63) | Incorporación del cliente Java, documentación y scripts de compilación |
-| [`e60cb843`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg/commit/e60cb8430eef195bc340be13745c55315e4ed324) | Corrección posterior de recursos Angular y exclusiones del cliente Java |
+| [`7530b5f`](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg/commit/7530b5fcbb14ca785b977f4063da27834ea77c63) | Incorporación del cliente Java, documentación y scripts de compilación |
+| [`e60cb843`](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg/commit/e60cb8430eef195bc340be13745c55315e4ed324) | Corrección posterior de recursos Angular y exclusiones del cliente Java |
 
 [`client-java/`](../client-java/) está integrado como carpeta normal del mismo repositorio. No tiene un repositorio Git independiente, no hay `.gitmodules` ni una entrada Git de submódulo. Sus fuentes, pruebas, recursos, guías y scripts ya se obtienen al descargar `main`.
 
@@ -48,8 +48,8 @@ Para reconstruir servidor, Angular y Java, utiliza `./scripts/compilar-todo.sh` 
 Para una instalación nueva, descarga el repositorio completo y compila desde su raíz:
 
 ```bash
-git clone --branch main https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg.git
-cd SAO-Aircraft-online-mmrpg
+git clone --branch main https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg.git
+cd SAO-Aincrad-online-mmrpg
 chmod +x scripts/*.sh client-java/iniciar-cliente.sh
 ./scripts/compilar-cliente-java.sh
 ```

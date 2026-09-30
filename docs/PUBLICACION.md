@@ -2,7 +2,7 @@
 
 ## Estado comprobado el 29 de septiembre de 2026
 
-El proyecto está publicado en [`rodolfo99/SAO-Aircraft-online-mmrpg`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg), rama `main`. La subida del usuario quedó en el commit [`944b3ab`](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg/commit/944b3ab778733de18708a87381dcfe5952e0c806), con el mensaje `Publicar proyecto Aincrad v0.2.0 con fuentes y compilados`.
+El proyecto está publicado en [`rodolfo99/SAO-Aincrad-online-mmrpg`](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg), rama `main`. La subida del usuario quedó en el commit [`944b3ab`](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg/commit/944b3ab778733de18708a87381dcfe5952e0c806), con el mensaje `Publicar proyecto Aincrad v0.2.0 con fuentes y compilados`.
 
 Se compararon los 255 archivos de esa publicación con el ZIP `aincrad-seed-v0.2.0.zip`: sus hashes de objetos Git coinciden. La actualización documental posterior añade esta guía y [ARRANQUE-Y-PUERTOS.md](ARRANQUE-Y-PUERTOS.md), actualiza los documentos relacionados y regenera el manifiesto de integridad. La versión del juego permanece en **v0.2.0**.
 
@@ -24,8 +24,8 @@ En la revisión de publicación no había una **GitHub Release** creada. El ZIP 
 ## Descargar y ejecutar
 
 ```bash
-git clone https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg.git
-cd SAO-Aircraft-online-mmrpg
+git clone https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg.git
+cd SAO-Aincrad-online-mmrpg
 chmod +x scripts/*.sh
 PORT=8081 \
 ALLOWED_ORIGINS=http://localhost:8081,http://127.0.0.1:8081 \

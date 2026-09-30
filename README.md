@@ -6,7 +6,9 @@ Proyecto semilla de un MMORPG 3D inspirado en el universo de **Sword Art Online*
 
 Es un prototipo fan con gráficos originales y dos pisos jugables. No es un juego oficial ni una recreación completa de los cien pisos, y no contiene recursos extraídos del anime ni de otros juegos.
 
-Repositorio: [rodolfo99/SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg). El nombre del repositorio se conserva como `SAO-Aircraft-online-mmrpg`; el mundo del juego se llama **Aincrad**.
+Repositorio canónico: [rodolfo99/SAO-Aincrad-online-mmrpg](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg). El mundo del juego se llama **Aincrad**.
+
+El nombre anterior era `SAO-Aircraft-online-mmrpg`; GitHub redirige actualmente esa ruta al repositorio canónico.
 
 **Validación manual del cliente web en Ubuntu 26.04:** partida completa realizada y confirmada por el usuario el 29 de septiembre de 2026. Consulta el registro de [validación manual](docs/VALIDACION.md#validación-manual-en-ubuntu-2604--confirmación-del-usuario). Las comprobaciones del cliente Java se documentan por separado en [CLIENTE-JAVA.md](docs/CLIENTE-JAVA.md#validación-reproducible).
 
@@ -15,8 +17,8 @@ Repositorio: [rodolfo99/SAO-Aircraft-online-mmrpg](https://github.com/rodolfo99/
 **Publicado en `main` el 29 de septiembre de 2026:** fuentes, ilustraciones, JAR v0.2.0, Angular compilado, scripts, configuración Docker y documentación. Para ejecutar esta entrega utiliza Java 17 o 21 y un navegador con WebGL 2. El arranque con los compilados incluidos no necesita Maven ni Node.js.
 
 ```bash
-git clone https://github.com/rodolfo99/SAO-Aircraft-online-mmrpg.git
-cd SAO-Aircraft-online-mmrpg
+git clone https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg.git
+cd SAO-Aincrad-online-mmrpg
 chmod +x scripts/*.sh
 PORT=8081 \
 ALLOWED_ORIGINS=http://localhost:8081,http://127.0.0.1:8081 \
