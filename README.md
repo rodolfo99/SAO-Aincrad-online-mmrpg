@@ -216,6 +216,8 @@ Para LAN y Ollama en Docker, consulta [docs/OPERACION.md](docs/OPERACION.md) y [
 
 ## Pruebas
 
+El workflow [CI](.github/workflows/ci.yml) comprueba cada `push` y las PR dirigidas a `main`, con tres trabajos independientes: servidor Spring Boot, Angular y Java Desktop. Usa JDK 17 y Node 22.22.0 desde `.nvmrc`, cachés de dependencias y datos sintéticos temporales. No requiere cuentas reales ni interacción manual. Consulta [integración continua](docs/CI.md) para los comandos, la preparación del JAR usado por los contratos Java y los límites de la comprobación.
+
 ```bash
 mvn -f server/pom.xml verify
 npm --prefix client test
