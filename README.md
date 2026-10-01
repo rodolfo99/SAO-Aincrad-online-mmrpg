@@ -1,5 +1,9 @@
 # Aincrad · Ecos del primer piso — v0.2.0
 
+[![CI](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/rodolfo99/SAO-Aincrad-online-mmrpg/actions/workflows/ci.yml)
+
+[Guía de integración continua y comprobaciones](docs/CI.md).
+
 El cliente Java Desktop 0.1.0 está publicado en `main` desde el 30 de septiembre de 2026, integrado como carpeta normal en `client-java/`. Para obtenerlo, compilarlo o consultar el paquete histórico de fuentes, comienza por [README-FUENTES-JAVA.md](README-FUENTES-JAVA.md).
 
 Proyecto semilla de un MMORPG 3D inspirado en el universo de **Sword Art Online**: servidor autoritativo **Java / Spring Boot**, cliente web **Angular + JavaScript / Three.js**, cliente de escritorio **JavaFX + jMonkeyEngine/OpenGL**, administración de mundo y NPC conversacionales con **Spring AI + Ollama**.
